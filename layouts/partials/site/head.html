@@ -14,14 +14,6 @@
 {{ if isset .Site.Params "theme_color" }}<meta name="theme-color" content="{{.Site.Param "theme_color"}}">{{end}}
 {{ if isset .Params "description" }}<meta name="description" content='{{ .Param "description" }}'>{{ end }}
 
-<!-- {{ block "meta-twitter" . }}
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="DISKTREE"/>
-<meta name="twitter:description" value="Serious Fucking Business"/>
-<meta name="twitter:creator" content="@disktree"/>
-<meta name="twitter:site" content="@disktree"/>
-<meta name="twitter:image" content="https://disktree.net/img/disktree.png"/>
-{{ end }} -->
 {{ template "_internal/twitter_cards.html" . }}
 
 <title>{{ .Site.Title }}{{with .Page.Title}}/{{.}}{{end}}</title>
@@ -44,5 +36,5 @@
 <script src="{{ .Site.BaseURL }}/js/app.js"></script>
 
 {{ if ne (getenv "HUGO_ENV") "production" | or (ne .Site.Params.env "production") }}
-<script>console.log('{{block "template-path" .}}{{.}}{{ end }}');</script>
+<script>console.log('PageType: {{ .Page.Type }}');</script>
 {{ end }}
