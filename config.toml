@@ -1,0 +1,48 @@
+#baseURL = "http://192.168.0.10/ii"
+baseURL = "https://disktree.net/ii"
+title = "DISKTREE™"
+defaultContentLanguage = "en"
+languageCode = "en"
+description = "Serious Fucking Business"
+keywords = ["disktree"]
+#themesDir = ""
+#theme = "void"
+theme_color = "#000000"
+#enableGitInfo = true
+enableInlineShortcodes = true
+Paginate = 100
+#rssLimit = 100
+
+[author]
+  name = "disktree"
+  web = "https://disktree.net"
+  twitter = "https://twitter.com/disktree"
+
+[params]
+	theme = "bw"
+	theme_color = "#000000"
+	customCSS = []
+  customJS  = []
+	images = ["disktree-cover.png"]
+[params.admin]
+  mail = "info@disktree.net"
+  web = "https://disktree.net"
+
+	#[[params.menu]]
+    #	name = "about"
+    #	url = "about/"
+  [params.social]
+    github = "tong"
+    twitter = "disktree"
+    mixcloud = "disktree"
+    vimeo = "disktree"
+
+[permalinks]
+  #update = "/:filename/"
+  #project = "/p/:slug"
+	#project = "/:year/:month/:filename/"
+	#project = "/p/:slug"
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"

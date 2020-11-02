@@ -1,0 +1,4 @@
+{{ $theme :=  .Get 0 }}
+{{ if $theme }}
+<link rel="stylesheet" href="{{.Site.BaseURL}}/css/theme/{{$theme}}.css">
+{{ end }}

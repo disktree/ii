@@ -1,0 +1,16 @@
+{{ define "header" }}
+<div style="width:100%;height:100vw;max-width:100vw;max-height:100vh;padding:10vmin;">{{ partial "raa3" . }}</div>
+{{ end }}
+
+{{ define "main" }}
+	<!-- {{ if .Title }}<h1>{{- .Title -}}</h1>{{ end }} -->
+	{{ if .Content }}<article class="content">{{- .Content -}}</article>{{ end }}
+	<ul class="aa">
+		{{ $paginator := .Paginate .Data.Pages }}
+		{{ range $paginator.Pages }}
+			{{ .Render "li" }}
+		{{ end }}
+	</ul>
+	{{ partial "pagination.html" . }}
+{{ end }}
+

@@ -1,0 +1,13 @@
+<li>
+	<h2 class="title"><a href="{{ .Permalink }}">{{- .Title -}}</a></h2>
+	<div class="meta">
+		<ul class="tags">
+			<time datetime="{{.Date}}">{{.Date.Format "06/01/02"}}</time>
+			{{ range .Params.tags }}
+			<li class="tag">
+				<a href="{{ "tags/" | relURL }}{{ . | urlize }}">#{{- . -}}</a>
+			</li>
+			{{ end }}
+		</ul>
+	</div>
+</li>

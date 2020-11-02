@@ -1,0 +1,18 @@
+{{ define "header" }}
+<!-- <a href="aa"  style="width:100%;height:auto;max-width:100vw;max-height:100vh;padding:4rem;">
+	<svg  xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
+		<circle fill="white" cx="0" cy="0" r="50" transform="translate(50 50)"></circle>
+	</svg>
+</a> -->
+{{ partial "raa3" . }}
+{{ end }}
+
+{{ define "main" }}
+	<!-- {{ if .Title }}<h1>{{- .Title -}}</h1>{{ end }} -->
+	<!-- {{ if .Content }}<section class="content">{{- .Content -}}</section>{{ end }} -->
+	<script>
+		window.addEventListener('load', e => {
+			setTimeout(() => { window.location = '{{ .Site.BaseURL }}/aa'; }, 900 );
+		});
+	</script>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ define "debug" }}_default/list.html{{end}}
+
+{{ define "nav" }}
+{{end}}
+
+{{ define "main" }}
+	{{ if .Title }}<h1>{{- .Title -}}</h1>{{ end }}
+	{{ if .Content }}<section class="content">{{- .Content -}}</section>{{ end }}
+	{{ $paginator := .Paginate .Data.Pages }}
+	<ul>
+		{{ range $paginator.Pages }}
+			{{ .Render "li" }}
+		{{ end }}
+	</ul>
+	{{ partial "pagination.html" . }}
+{{ end }}

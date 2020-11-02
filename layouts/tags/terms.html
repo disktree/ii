@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+	{{ if .Title }}<h1 class="ic-hashtag">{{- .Title -}}</h1>{{ end }}
+
+	<article>{{- .Content -}}</article>
+
+	<!-- {{ $paginator := .Paginate .Data.Pages }}
+	<ul>
+		{{ range $paginator.Pages }}
+			{{ .Render "li" }}
+		{{ end }}
+	</ul> -->
+
+	<ol>
+		{{ range $term, $taxonomy := .Site.Taxonomies.tags }}
+		<li>
+			{{ $link := .Page.Permalink }}
+			<h3>
+				<a href="{{ $link }}">
+					<span><i class="ic-hashtag"></i>{{- .Page.Title -}}</span>/<span class="title-thin">{{ .Count }}</span>
+				</a>
+			</h3>
+		</li>
+		{{ end }}
+	</ol>
+
+{{ end }}

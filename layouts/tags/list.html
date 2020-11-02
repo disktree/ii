@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+	{{ if .Title }}<h1 class="ic-hashtag">{{- .Title -}}</h1>{{ end }}
+
+	<ol>
+		{{ range .Paginator.Pages }}
+		<li>{{.Title}}</li>
+		{{ end }}
+		{{ template "_internal/pagination.html" . }}
+	</ol>
+	
+{{ end }}

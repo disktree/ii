@@ -1,0 +1,15 @@
+{{ $src := .Get 0 }}
+{{ if $src }}
+<video src="{{ $src }}"
+	{{ with .Get 1 }} autoplay {{ end }}
+	{{ with .Get 2 }} controls {{ end }}
+	{{ with .Get 3 }} loop {{ end }}
+></video>
+<!-- <style>
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style> -->
+{{ end }}

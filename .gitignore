@@ -1,0 +1,7 @@
+*.[0-9]/
+*.[0-9].*
+public/
+resources/
+static/css/*.css*
+static/js/*.js*
+\#*
