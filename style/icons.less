@@ -16,6 +16,9 @@
 @ic-git-merge: "\e907";
 @ic-git-commit: "\e908";
 @ic-git-branch: "\e909";
+@ic-album: "\e90a";
+@ic-eye: "\e90b";
+@ic-eye_off: "\e90c";
 @ic-vril: "\e900";
 @ic-topy: "\e901";
 @ic-syn: "\e902";
@@ -202,6 +205,7 @@
 @ic-diamond: "\f219";
 @ic-user-secret: "\f21b";
 @ic-motorcycle: "\f21c";
+@ic-wikipedia-w: "\f266";
 @ic-map-signs: "\f277";
 @ic-vimeo: "\f27d";
 @ic-link-vimeo: "\f27d";
@@ -211,9 +215,9 @@
 @ic-american-sign-language-interpreting: "\f2a3";
 @ic-asl-interpreting: "\f2a3";
 @ic-user-o: "\f2c0";
+@ic-bandcamp: "\f2d5";
 @ic-microchip: "\f2db";
 @ic-snowflake-o: "\f2dc";
-
 
 /* 
 [class^="ic-"], [class*=" ic-"] {
@@ -275,6 +279,21 @@ icon[vril] {
 .ic-git-branch {
   &:before {
     content: @ic-git-branch; 
+  }
+}
+.ic-album {
+  &:before {
+    content: @ic-album; 
+  }
+}
+.ic-eye {
+  &:before {
+    content: @ic-eye; 
+  }
+}
+.ic-eye_off {
+  &:before {
+    content: @ic-eye_off; 
   }
 }
 .ic-vril {
@@ -1207,6 +1226,11 @@ icon[vril] {
     content: @ic-motorcycle; 
   }
 }
+.ic-wikipedia-w {
+  &:before {
+    content: @ic-wikipedia-w; 
+  }
+}
 .ic-map-signs {
   &:before {
     content: @ic-map-signs; 
@@ -1252,6 +1276,11 @@ icon[vril] {
     content: @ic-user-o; 
   }
 }
+.ic-bandcamp {
+  &:before {
+    content: @ic-bandcamp; 
+  }
+}
 .ic-microchip {
   &:before {
     content: @ic-microchip; 
@@ -1262,4 +1291,3 @@ icon[vril] {
     content: @ic-snowflake-o; 
   }
 }
-

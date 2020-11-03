@@ -2,10 +2,6 @@
 {{ define "header" }}
 {{ end }}
 
-{{ define "nav" }}
-<a href="{{ .Site.BaseURL}}/aa" class="ic-circle"></a>
-{{ end }}
-
 {{ define "main" }}
 	<div class="aa">
 		<header>
@@ -38,6 +34,8 @@
 						{{ else if eq $url.Host "twitter.com" }}{{ $type = "twitter" }}
 						{{ else if eq $url.Host "vimeo.com" }}{{ $type = "vimeo" }}
 						{{ else if eq $url.Host "youtube.com" }}{{ $type = "youtube" }}
+						{{ else if eq $url.Host "wikipedia.org" }}{{ $type = "wikipedia" }}
+						{{ else if eq $url.Host "steampowered.com" }}{{ $type = "steam" }}
 						{{ end }}
 		
 						<li class="link">

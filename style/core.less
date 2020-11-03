@@ -31,6 +31,8 @@ html {
 
 body {
 	
+	width: 100%;
+	max-width: 100vw;
 	height: 100%;
 	//min-height: 100vh;
 	//overflow-x: hidden;
@@ -126,8 +128,9 @@ hr {
 	// overflow: visible;
 	height: 0;
 	border: none;
-    border-bottom: 1px dashed var(--f_med);
-    background: none;
+    border-bottom: 1px solid var(--f_med);
+	background: none;
+	margin-bottom: @line-height;
 }
 
 img, video {
@@ -135,6 +138,7 @@ img, video {
 	max-width: 100%;
 	border-style: none;
 	outline: none;
+	//background: var(--b_inv);
 }
 
 p {
