@@ -1,5 +1,11 @@
 {{ $src := .Get "src" }}
 {{ $style := .Get "style" }}
+{{ $title := .Get "title" }}
 {{ if $src }}
-<img class="shortcode image" src="{{ $src }}" {{if $style}}style="{{$style}}"{{end}}>
+<img
+	src="{{ $src }}"
+	class="shortcode image"
+	{{ if $style }} style="{{ $style }}"{{ end }}
+	{{ if $title }} title="{{ $title }}"{{ end }}
+>
 {{ end }}

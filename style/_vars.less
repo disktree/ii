@@ -3,21 +3,14 @@
 @vp-medium: 60em;
 @vp-big: 90em;
 
-@line-height: 1.4em;
 
-@font-size: 13px;
+@font-size: 11px;
 @font-path: 'font';
 @font-family-regular: "Regular";
 @font-family-title: "Title";
 //@font-family-1: @font-family-regular;
 //@font-family-2: @font-family-title;
-
-//@font-size: 24px;
-/* 
-@media screen and (min-width: @vp-medium) {
-	@font-size: 22px;
-}
- */
+@line-height: 1.4em;
 
 :root {
 
@@ -29,15 +22,17 @@
 	--h3-size: 2rem;
 	--h4-size: 1.5rem;
 	
-	/* @media screen and (min-width: @vp-medium) {
-		//--font-size: 1rem;
-		--h1-size: 5rem;
-		--h2-size: 4rem;
-		--h3-size: 3rem;
+	@media screen and (min-width: @vp-medium) {
+		--font-size: 12px;
+		// --h1-size: 5rem;
+		// --h2-size: 4rem;
+		// --h3-size: 3rem;
 	}
+	
 	@media screen and (min-width: @vp-big) {
-		--h1-size: 6rem;
-		--h2-size: 5em;
-		--h3-size: 4rem;
-	}  */
+		--font-size: 14px;
+		// --h1-size: 6rem;
+		// --h2-size: 5em;
+		// --h3-size: 4rem;
+	} 
 }

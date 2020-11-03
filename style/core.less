@@ -20,7 +20,7 @@ html, body, iframe {
 html {
 	font-family: var(--font-family-regular);
 	font-size : var(--font-size);
-	// line-height: @line-height;
+	line-height: @line-height;
 	//-webkit-text-size-adjust: 100%;
 	/* @media screen and (min-width: @vp-medium) {
 		//font-size  : 13px;
@@ -31,8 +31,9 @@ html {
 
 body {
 	
-	min-height: 100vh;
-	overflow-x: hidden;
+	height: 100%;
+	//min-height: 100vh;
+	//overflow-x: hidden;
 	//overflow-y: scroll;
 	//-webkit-overflow-scrolling: touch;
 
@@ -79,10 +80,9 @@ blockquote {
 h1, h2, h3, h4, h5, h6 {
     font-family: @font-family-title;
 	text-transform: uppercase;
-	//line-height: 1em;
+	line-height: 1em;
 	//hyphens: none;
 	//word-break: break-word;
-	//white-space: nowrap;
 	/* white-space: nowrap; 
 	overflow: hidden;
 	text-overflow: ellipsis; */
@@ -95,31 +95,31 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: var(--h1-size);
-	letter-spacing: -4px;
-    line-height: 1em;
-	padding-top: 0.25em;
+	letter-spacing: -3px;
+  //  line-height: 1em;
+	//padding-top: 0.25em;
 	//background: blue;
 }
 h2 {
 	font-size: var(--h2-size);
-	letter-spacing: -3px;
-	line-height: 0.8em;
-	padding-top: 0.2em;
-	// background: red;
+	letter-spacing: -2px;
+	//line-height: 1em;
+	//padding-top: 0.2em;
+	//background: red;
 }
 h3 {
 	font-size: var(--h3-size);
 	letter-spacing: -2px;
-	line-height: 0.5em;
-	padding-top: 0.3em;
-	background: green;
+	//line-height: 1em;
+	//padding-top: 0.3em;
+	//background: green;
 }
 h4 {
 	font-size: var(--h4-size);
 	letter-spacing: -1px;
-	//line-height: 0.5em;
+	//line-height: 1.0em;
 	//padding-top: 0.3em;
-	background: magenta;
+	//background: magenta;
 }
 
 hr {
@@ -131,6 +131,7 @@ hr {
 }
 
 img, video {
+	display: block;
 	max-width: 100%;
 	border-style: none;
 	outline: none;
