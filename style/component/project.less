@@ -31,10 +31,13 @@ ol.aa, ul.aa {
 			//display: none;
 		}
 		> .meta {
+			display: flex;
 			position: relative;
+			top: -0.2em;
 			left: 1px;
-			// position: relative;
-			// top: -0.75em;
+			> * {
+				margin-right: 0.66ch;
+			}
 		}
 	}
 }
@@ -43,7 +46,7 @@ div.aa {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto 1fr;
-	//gap: 1rem;
+	gap: 1rem;
 	height: 100%;
 	> header {
 		//display: flex;
