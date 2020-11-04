@@ -1,0 +1,17 @@
+{{ define "header" }}
+HEADER
+{{ end }}
+
+{{ define "main" }}
+
+	<article>{{.Content}}</article>
+
+	<ol class="znn">
+		{{ $paginator := .Paginate .Data.Pages }}
+		{{ range $paginator.Pages }}
+			{{ .Render "znn/li" }}
+		{{ end }}
+	</ol>
+
+{{ end }}
+

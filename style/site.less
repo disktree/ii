@@ -5,7 +5,7 @@ body {
 	grid-template-columns: [site-start] 1rem [content-start] 1fr [mid] 1fr [content-end] 1rem [site-end];
 	grid-template-rows: auto auto [content-start] 1fr [content-end] auto [footer-start] auto [footer-end];
 	//gap: 1.5rem;
-	
+
 	> header {
 		grid-column: site-start / site-end;
 		grid-row: 1;
@@ -27,9 +27,9 @@ body {
 		//margin: 0 1rem;
 		padding: 1rem 0 2rem 0;
 		height: 100%;
-		>*:first-child {
-			//background: red;
-		}
+	}
+	> aside:empty, > footer:empty {
+		display: none;
 	}
 	> aside {
 		grid-column: site-start / site-end;

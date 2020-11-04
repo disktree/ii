@@ -27,7 +27,7 @@
 
 {{ partial "site/favicons" . }}
 
-<!-- <link rel="manifest" href="{{ .Site.BaseURL }}/manifest.json"> -->
+<link rel="manifest" href="{{ .Site.BaseURL }}/manifest.json">
 
 {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s"/>` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

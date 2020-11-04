@@ -1,0 +1,14 @@
+{
+    "name": "disktree/ii",
+    "short_name": "ii",
+	  "description": "Serious Fucking Business",
+    "start_url": "https://disktree.net/ii/",
+    "display": "browser",
+    "theme_color": "#000",
+    "background_color": "#000",
+    "icons": [
+        {
+          "src": "/favicon.svg"
+        }
+      ]
+}

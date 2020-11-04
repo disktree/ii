@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-	<div class="aa">
+	<div class="project">
 		<header>
 			<div class="meta">
 				<time datetime="{{.Date}}">{{.Date.Format "06/01/02"}}</time>
@@ -19,16 +19,16 @@
 			<ol class="links">
 				{{ with .Params.links  }}
 					{{ range . }}
-		
+
 						{{ $urlstr := . }}
 						{{ $type := "web" }}
-						
+
 						{{ if in $urlstr "http" }}{{ else }}
 							{{ $urlstr = (print "https://" $urlstr ) }}
 						{{ end }}
-						
+
 						{{ $url := urls.Parse $urlstr }}
-						
+
 						{{ if eq $url.Host "github.com" }}{{ $type = "github" }}
 						{{ else if eq $url.Host "gitlab.com" }}{{ $type = "gitlab" }}
 						{{ else if eq $url.Host "twitter.com" }}{{ $type = "twitter" }}
@@ -37,11 +37,11 @@
 						{{ else if eq $url.Host "wikipedia.org" }}{{ $type = "wikipedia" }}
 						{{ else if eq $url.Host "steampowered.com" }}{{ $type = "steam" }}
 						{{ end }}
-		
+
 						<li class="link">
 							<a href="{{ $urlstr }}" class="ic-link-{{ $type }}" title="{{ $urlstr }}">{{ trim (print $url.Host $url.Path) "/" }}</a>
-						</li> 
-			
+						</li>
+
 					{{ end }}
 				{{ end }}
 			</ol>

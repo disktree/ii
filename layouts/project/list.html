@@ -3,15 +3,15 @@
 {{ end }}
 
 {{ define "main" }}
-	<!-- {{ if .Title }}<h1>{{- .Title -}}</h1>{{ end }} -->
+	{{ if .Title }}<h1>{{- .Title -}}</h1>{{ end }}
 	{{ if .Content }}<article class="content">{{- .Content -}}</article>{{ end }}
-	<ul class="aa">
+	<ul class="projects">
 		{{ $paginator := .Paginate .Data.Pages }}
 		{{ range $paginator.Pages }}
 			{{ .Render "li" }}
 		{{ end }}
 	</ul>
 	{{ partial "pagination.html" . }}
-	
+
 {{ end }}
 
