@@ -1,0 +1,38 @@
+{{ define "main" }}
+	<h1><a href="{{.Site.BaseURL}}">{{- .Title -}}</a></h1>
+	{{ if .Content }}<article>{{- .Content -}}</article>{{ end }}
+	<style>
+		.theme {
+			cursor: pointer;
+		}
+	</style>
+	<script>
+		let _handleThemeSelect = svg => {
+			let theme = {
+				background: svg.getElementById('background').getAttribute('fill'),
+				f_high: svg.getElementById('f_high').getAttribute('fill'),
+				f_med: svg.getElementById('f_med').getAttribute('fill'),
+				f_low: svg.getElementById('f_low').getAttribute('fill'),
+				f_inv: svg.getElementById('f_inv').getAttribute('fill'),
+				b_high: svg.getElementById('b_high').getAttribute('fill'),
+				b_med: svg.getElementById('b_med').getAttribute('fill'),
+				b_low: svg.getElementById('b_low').getAttribute('fill'),
+				b_inv: svg.getElementById('b_inv').getAttribute('fill')
+			}
+			applyTheme(theme,true);
+		}
+		let selectDefaultTheme = e => {
+			var svg = document.body.querySelector('span.theme_bw').children[0];
+			_handleThemeSelect( svg );
+		}
+	</script>
+	<div>
+		{{ range .Resources.ByType "image" }}
+		<span class='theme theme_{{ replace .Name ".svg" "" }}' onclick="javascript:_handleThemeSelect(children[0])" title="{{.Name}}">{{ .Content | safeHTML }}</span>
+		{{ end }}
+	</div>
+	<div>
+		<span onclick="javascript:selectDefaultTheme()">[DEFAULT]</span>
+		<a href="https://github.com/hundredrabbits/Themes/tree/master/themes">[MORE]</a>
+	</div>
+{{ end }}

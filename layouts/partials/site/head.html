@@ -1,6 +1,8 @@
 {{ $url := urls.Parse .Site.BaseURL }}
 {{ $theme := .Site.Params.theme }}
-{{ if .Params.theme }}{{ $theme = .Params.theme }}{{ end }}
+{{ if .Params.theme }}
+	{{ $theme = .Params.theme }}
+{{ end }}
 {{ $theme_path := printf "theme/%s.html" $theme }}
 
 <meta charset="utf-8">
@@ -13,6 +15,11 @@
 {{ hugo.Generator }}
 {{ if isset .Site.Params "theme_color" }}<meta name="theme-color" content="{{.Site.Param "theme_color"}}">{{ end }}
 {{ if isset .Params "description" }}<meta name="description" content='{{ .Param "description" }}'>{{ end }}
+
+{{ if .Params.theme }}
+<meta name="theme" content="{{ $theme }}">
+{{ end }}
+
 
 {{ template "_internal/twitter_cards.html" . }}
 
@@ -34,6 +41,7 @@
 {{ end -}}
 
 <script src="{{ .Site.BaseURL }}/js/app.js"></script>
+<script src="{{ .Site.BaseURL }}/js/theme.js"></script>
 
 {{ if ne (getenv "HUGO_ENV") "production" | or (ne .Site.Params.env "production") }}
 <script>console.log('PageType: {{ .Page.Type }}');</script>
