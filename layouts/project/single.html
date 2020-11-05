@@ -23,6 +23,7 @@
 						{{ $urlstr := . }}
 						{{ $type := "web" }}
 
+
 						{{ if in $urlstr "http" }}{{ else }}
 							{{ $urlstr = (print "https://" $urlstr ) }}
 						{{ end }}
@@ -38,8 +39,14 @@
 						{{ else if eq $url.Host "steampowered.com" }}{{ $type = "steam" }}
 						{{ end }}
 
+						{{ $is_download := false }}
+						{{ $ext := path.Ext $urlstr }}
+						{{ if eq $ext ".ogg" }}{{ $is_download = true }}
+						{{ else if (eq $ext ".mp3") }}{{ $is_download = true }}
+						{{ end }}
+
 						<li class="link">
-							<a href="{{ $urlstr }}" class="ic-link-{{ $type }}" title="{{ $urlstr }}">{{ trim (print $url.Host $url.Path) "/" }}</a>
+							<a href="{{ $urlstr }}" class="ic-link-{{ $type }}" title="{{ $urlstr }}"{{ with $is_download }} download{{ end }}>{{ trim (print $url.Host $url.Path) "/" }}</a>
 						</li>
 
 					{{ end }}
