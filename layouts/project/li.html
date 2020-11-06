@@ -2,12 +2,6 @@
 	<h2 class="title"><a href="{{ .Permalink }}">{{- .Title -}}</a></h2>
 	<div class="meta">
 		<time datetime="{{.Date}}">{{.Date.Format "06/01/02"}}</time>
-		<ul class="tags">
-			{{ range .Params.tags }}
-			<li class="tag">
-				<a href="{{ "tags/" | relURL }}{{ . | urlize }}">#{{- . -}}</a>
-			</li>
-			{{ end }}
-		</ul>
+		{{ partial "tags" . }}
 	</div>
 </li>

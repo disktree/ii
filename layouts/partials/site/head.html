@@ -40,8 +40,8 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s"/>` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-<script src="{{ .Site.BaseURL }}/js/app.js"></script>
-<script src="{{ .Site.BaseURL }}/js/theme.js"></script>
+<script defer src="{{ .Site.BaseURL }}/js/app.js"></script>
+<script defer src="{{ .Site.BaseURL }}/js/theme.js"></script>
 
 {{ if ne (getenv "HUGO_ENV") "production" | or (ne .Site.Params.env "production") }}
 <script>console.log('PageType: {{ .Page.Type }}');</script>

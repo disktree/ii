@@ -9,7 +9,7 @@
 	<body>
 
 		<header id="header">{{ block "header" . }}{{- partial "site/header.html" . -}}{{ end }}</header>
-		<nav>{{ block "nav" . }}{{ end }}</nav>
+		<nav>{{ block "nav" . }}{{- partial "site/nav.html" . -}}{{ end }}</nav>
 		<main>{{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}</main>
 		<aside>{{ block "aside" . }}{{- partial "site/aside.html" . -}}{{ end }}</aside>
 		<footer>{{ block "footer" . }}{{- partial "site/footer.html" . -}}{{ end }}</footer>
