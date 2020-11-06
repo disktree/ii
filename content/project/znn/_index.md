@@ -3,7 +3,7 @@ title: "ZNN"
 #type: project/znn
 tags: ["music","mixtape","znn"]
 ---
-{{< html >}}<style>:root { --background: #141414; }</style>{{< / html >}}
+{{< html >}}<style>:root { --background: #000; --f_med:#222; }</style>{{< / html >}}
 <!-- {{< image src="OU.png" style="width:30%" >}}
 {{< image src="ON.png" style="width:30%" >}}
 {{< image src="OV.png" style="width:30%" >}}

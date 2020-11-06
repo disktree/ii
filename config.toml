@@ -4,13 +4,17 @@ defaultContentLanguage = "en"
 languageCode = "en"
 description = "Serious Fucking Business"
 keywords = ["disktree"]
-#themesDir = ""
-#theme = "void"
+theme = "void"
 theme_color = "#000000"
+disablePathToLower = true
 #enableGitInfo = true
 enableInlineShortcodes = true
 Paginate = 100
+paginatePath = "list"
+RSSUri = "rss.xml"
 #rssLimit = 100
+#footnoteAnchorPrefix
+#footnoteReturnLinkContents
 
 [author]
   name = "disktree"

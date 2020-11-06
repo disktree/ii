@@ -4,4 +4,4 @@ date: 1984-01-01
 tags: ["music","mixtape"]
 ---
 {{< background-image 84.jpg >}}
-{{< background-audio "https://music.disktree.net/hutter_80_tapes_1.mp3" >}}
+{{< background-audio "https://music.disktree.net/MIX/hutter_80_tapes_2.mp3" >}}
