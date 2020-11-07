@@ -3,5 +3,5 @@
 public/
 resources/
 static/css/*.css*
-static/js/*.js*
+themes/
 \#*
