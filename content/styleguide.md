@@ -2,32 +2,20 @@
 title: "Styleguide"
 type: styleguide
 ---
-# nachteulengeschwader
-# nachteulengeschwader commando
-# Title1
-## Title2
-### Title3
-#### Title4
-##### Title5
-###### Title6
+> ## Typography
 
-# Title1
-# Title1
-# Title1
-## Title2
-## Title2
-## Title2
+# Void H1
+## Void H2
+### Void H3
+#### Void H4
+##### Void H5
+###### Void H6
 
-# H.E.A.D. Revolution - Hedonic Engineering And Development
-## H.E.A.D. Revolution - Hedonic Engineering And Development
-### H.E.A.D. Revolution - Hedonic Engineering And Development
-#### H.E.A.D. Revolution - Hedonic Engineering And Development
 
-#### Many non-authoritarian organizations have foundered on the dubious principle of open membership, which frequently leads to a preponderance of assholes, yahoos, spoilers, whining neurotics, & police agents.
+Void Title 1
+============
 
----
-
-# Title1
+> Quote text
 
 Many non-authoritarian organizations have foundered on the dubious principle of open membership, which frequently leads to a preponderance of assholes, yahoos, spoilers, whining neurotics, & police agents. Some will call this an elitist attitude, but it is not—at least not in the C. Wright Mills sense of the word: that is, a small group which exercises power over non-insiders for its own aggrandizement.
 
@@ -35,13 +23,8 @@ Immediatism does not concern itself with power-relations;—it desires neither t
 
 This [link](https://disktree.net) is an link.
 
-> Quote text
-
 ---
-Some will call this an elitist attitude, but it is not—at least not in the C. Wright Mills sense of the word.  
-AA
-
----
+> ## Icons
 
 {{<icon android>}}
 {{<icon arrow-left>}}
@@ -100,9 +83,7 @@ AA
 {{<icon link-download>}}
 
 ---
-
-{{< html >}}<h2>AAAAAAAAAAAAA</h2>{{< /html >}}
-{{< html >}}<h2>AAAAAAAAAAAAA</h2>{{< /html >}}
+> ## Colors
 
 {{< html >}}<div><div>background</div><div style="width:2rem;height:2rem;background:var(--background);"></div></div>{{< /html >}}
 {{< html >}}<div><div>f_high</div><div style="width:2rem;height:2rem;background:var(--f_high);"></div></div>{{< /html >}}
@@ -113,3 +94,12 @@ AA
 {{< html >}}<div><div>b_med</div><div style="width:2rem;height:2rem;background:var(--b_med);"></div></div>{{< /html >}}
 {{< html >}}<div><div>b_low</div><div style="width:2rem;height:2rem;background:var(--b_low);"></div></div>{{< /html >}}
 {{< html >}}<div><div>b_inv</div><div style="width:2rem;height:2rem;background:var(--b_inv);"></div></div>{{< /html >}}
+
+---
+> ## #Shortcodes
+
+* `{< audio file.mp3 >}`
+{{< audio file.mp3 >}}
+
+* `{< html >} HTML {< /html >}`
+{{< html >}} HTML {{< /html >}}

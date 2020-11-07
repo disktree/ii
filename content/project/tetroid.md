@@ -1,6 +1,6 @@
 ---
 title: "Tetroid"
-date: 2019-05-26T12:54:57+02:00
+date: 2017-05-26T12:54:57+02:00
 tags: ["generative","animation","haxe"]
 links: [
 	https://disktree.net/app/art/tetroid/,

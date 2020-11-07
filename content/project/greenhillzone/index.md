@@ -5,4 +5,4 @@ tags: [android,wallpaper]
 description: "Parallax scrolling live wallpaper for android"
 links: [github.com/tong/greenhillzone]
 ---
-{{< image src=greenhillzone.png >}}
+{{< image src=greenhillzone-feature.png >}}

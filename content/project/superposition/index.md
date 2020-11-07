@@ -9,4 +9,5 @@ links: [
 	github.com/tong/ld47
 ]
 ---
-[{{< image src=superposition-1.jpg >}}](https://disktree.net/app/games/superposition/)
+[{{< image src=superposition-1.webp >}}](https://disktree.net/app/games/superposition/)
+[{{< image src=superposition-2.webp >}}](https://disktree.net/app/games/superposition/)

@@ -14,4 +14,4 @@ description: "No one knows enough to worry."
 {{< image src="gamma-screenshot8.webp" >}}
 {{< image src="gamma-screenshot9.webp" >}}
 {{< image src="gamma-screenshot10.webp" >}}
-{{< videoplayer gamma-bloomflower.mp4 autoplay false true false >}}
+{{< video gamma-bloomflower.mp4 autoplay false true false >}}

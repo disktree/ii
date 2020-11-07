@@ -7,4 +7,4 @@ links: [
 	https://gist.github.com/tong/25051ea43344d7d14083
 ]
 ---
-{{<iframe src="https://disktree.net/app/art/circle-group-render">}}
+{{<iframe src="https://disktree.net/app/art/circle-group-render?color=%000000" >}}
