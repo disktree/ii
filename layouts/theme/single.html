@@ -1,6 +1,6 @@
 {{ define "main" }}
 	<h1><a href="{{.Site.BaseURL}}">{{- .Title -}}</a></h1>
-	<a href="#" disabled onclick="javascript:_selectDefaultTheme()">[DEFAULT]</a>
+	<a href="#" onclick="javascript:_selectDefaultTheme()">[DEFAULT]</a>
 	<a href="https://github.com/hundredrabbits/Themes/tree/master/themes">[MORE]</a>
 	{{ if .Content }}<article>{{- .Content -}}</article>{{ end }}
 	<style>

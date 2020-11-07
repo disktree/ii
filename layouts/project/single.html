@@ -2,10 +2,10 @@
 	<div class="project">
 		<h1 class="title">{{- .Title -}}</h1>
 		<div class="meta">
-			<a href=".." class="ic-circle"></a>
+			<a href=".." class="ic-circle" title="Projects"></a>
+			{{ partial "prev_next" . }}
 			<time class="time" datetime="{{.Date}}">{{.Date.Format "06/01/02"}}</time>
 			{{ partial "tags" . }}
-			{{ partial "prev_next" . }}
 		</div>
 		{{ partial "links" . }}
 		{{ if .Content }}<section class="description">{{ .Params.description | markdownify }}</section>{{ end }}

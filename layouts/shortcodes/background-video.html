@@ -1,5 +1,5 @@
 {{ $src := .Get 0 }}
-{{ if $src }}<video class="background-media" src="{{ $src }}"
+{{ if $src }}<video class="background-media" src="{{ $src | safeURL }}"
 	autoplay
 	loop
 	muted
