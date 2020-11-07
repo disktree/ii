@@ -14,7 +14,7 @@ ol.projects, ul.projects {
 	//flex-direction: column;
 	padding-top: 1.5rem;
 	> li {
-		margin-bottom: 3rem;
+		margin-bottom: 2.55rem;
 		> .title {
 			overflow: hidden;
 			text-overflow: ellipsis;
@@ -53,10 +53,10 @@ nav.prev_next {
 	display: flex;
 	a {
 		&:first-child {
-			padding-right: 0.25ch;
+			padding-right: 0.3ch;
 		}
 		&:last-child {
-			padding-left: 0.25ch;
+			padding-left: 0.3ch;
 		}
 	}
 }
@@ -70,6 +70,7 @@ body > main > div.project {
 	height: 100%;
 	padding-top: 1rem;
 	>.title {
+		//mix-blend-mode: difference;
 		grid-row: 2;
 		//margin-bottom: 0.5rem;
 		overflow: hidden;
@@ -107,10 +108,21 @@ body > main > div.project {
 		//margin-bottom: 1rem;
 	}
 	>.content {
+		//display: grid;
+		//grid-template-columns: repeat(4,1fr);
 		margin-top: 1rem;
 		overflow: hidden;
+		> * {
+			//grid-column: 1 / span 4;
+		}
 		p {
+			//grid-column: 1 / span 3;
+			//columns: 2;
 			//max-width: 800px;
+		}
+		img {
+			max-height: 100vh;
+			margin-bottom: 1rem;
 		}
 	}
 
