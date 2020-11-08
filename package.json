@@ -1,7 +1,7 @@
 {
-  "name": "updates",
+  "name": "ii",
   "version": "0.1.0",
-  "description": "Disktree updates",
+  "description": "Disktree index",
   "private": true,
   "scripts": {
     "clean": "rm -f static/css/*.css* static/js/app.js* && rm -rf public",
