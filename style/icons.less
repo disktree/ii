@@ -1,12 +1,9 @@
-/* --- icons --- */
-@icomoon-font-family: "icon";
-@icomoon-font-path : "font";
 
 @font-face {
-  font-family: '@{icomoon-font-family}';
-  src : url('@{icomoon-font-path}/@{icomoon-font-family}.ttf') format('truetype'),
-  url('@{icomoon-font-path}/@{icomoon-font-family}.woff') format('woff'),
-  url('@{icomoon-font-path}/@{icomoon-font-family}.svg?#@{icomoon-font-family}') format('svg');
+  font-family: '@{font-family-icon}';
+  src : url('@{font-path}/@{font-family-icon}.ttf') format('truetype'),
+  url('@{font-path}/@{font-family-icon}.woff') format('woff'),
+  url('@{font-path}/@{font-family-icon}.svg?#@{font-family-icon}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -200,26 +197,8 @@
 @ic-link-bandcamp: "\f2d5";
 @ic-microchip: "\f2db";
 
-
-/*
-[class^="ic-"], [class*=" ic-"] {
-//i {
-    font-family   : '@{icomoon-font-family}' !important;
-    speak         : never;
-    font-style    : normal;
-    font-size    : 90%;
-    font-weight   : normal;
-    font-variant  : normal;
-    text-transform: none;
-    //line-height   : 1;
-    -webkit-font-smoothing : antialiased;
-    -moz-osx-font-smoothing: grayscale;
-} */
-
-icon,
-[class^="ic-"]::before,
-[class*=" ic-"]::before {
-  font-family : '@{icomoon-font-family}' !important;
+.iconify() {
+  font-family : '@{font-family-icon}' !important;
   speak: never;
   font-style: normal;
   font-size: 90%;
@@ -229,6 +208,12 @@ icon,
   //line-height   : 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+icon,
+[class^="ic-"]::before,
+[class*=" ic-"]::before {
+	.iconify();
 }
 
 //////////////////////////

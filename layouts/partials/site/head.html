@@ -15,33 +15,23 @@
 {{ hugo.Generator }}
 {{ if isset .Site.Params "theme_color" }}<meta name="theme-color" content="{{.Site.Param "theme_color"}}">{{ end }}
 {{ if isset .Params "description" }}<meta name="description" content='{{ .Param "description" }}'>{{ end }}
-
-{{ if .Params.theme }}
-<meta name="theme" content="{{ $theme }}">
-{{ end }}
-
-
+{{ if .Params.theme }}<meta name="theme" content="{{ $theme }}">{{ end }}
 {{ template "_internal/twitter_cards.html" . }}
 
 <title>{{ .Site.Title }}{{with .Page.Title}}/{{.}}{{end}}</title>
 
 {{ partial $theme_path . }}
-
-{{ block "preload" . }}{{ end }}
-
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/style.css"/>
+<link rel="stylesheet" href="{{ (resources.Get "style.css" | resources.Minify).Permalink }}"/>
 {{ block "css" . }}{{ end }}
-
 {{ partial "site/favicons" . }}
-
 <link rel="manifest" href="{{ .Site.BaseURL }}/manifest.json">
 
 {{ range .AlternativeOutputFormats -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s"/>` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
 
-<!-- <script defer src="{{ .Site.BaseURL }}/js/app.js"></script> -->
-<script defer src="{{ .Site.BaseURL }}/js/theme.js"></script>
+<script src="{{ (resources.Get "js/app.js" | resources.Minify).RelPermalink }}"></script>
+<script src="{{ (resources.Get "js/theme.js" | resources.Minify).RelPermalink }}"></script>
 
 {{ if ne (getenv "HUGO_ENV") "production" | or (ne .Site.Params.env "production") }}
 <script>console.log('PageType: {{ .Page.Type }}');</script>
