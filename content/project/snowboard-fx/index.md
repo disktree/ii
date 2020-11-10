@@ -5,6 +5,6 @@ tags: []
 theme: wb
 draft: true
 ---
-{{< image src="snowboard-2.webp" >}}
-{{< image src="snowboard-1.webp" >}}
+{{< picture src="snowboard-2" >}}
+{{< picture src="snowboard-1" >}}
 

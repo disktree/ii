@@ -1,9 +1,9 @@
 {{ if or .NextInSection .PrevInSection }}
 	<nav class="prev_next">
-		{{ with .NextInSection }}
+		{{ with .PrevInSection }}
 		<a href="{{ .RelPermalink }}" rel="prev" class="ic-chevron-left" title="Prev: {{ .Title }}"></a>
 		{{ end }}
-		{{ with .PrevInSection }}
+		{{ with .NextInSection }}
 		<a href="{{ .RelPermalink }}" rel="next" class="ic-chevron-right" title="Next: {{ .Title }}"></a>
 		{{ end }}
 	</nav>

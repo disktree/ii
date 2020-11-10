@@ -1,6 +1,6 @@
 ---
 title: "FuxNews™"
-date: 2018-03-23T12:00:00+02:00
+date: 2018-03-23
 tags: [web,foxnews,video,app]
 links: [
 	disktree.net/app/fuxnews,

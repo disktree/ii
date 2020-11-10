@@ -1,0 +1,19 @@
+<!-- {{ $mp3s := .Resources.Match "*.mp3" }}
+{{ $oggs := .Resources.Match "*.ogg" }}
+{{ $mp3s }}
+{{ $oggs }} -->
+
+<div class="audioplayer" class="paused">
+	<!-- <audio src="{{ index $mp3s 0 }}"></audio> -->
+	<audio controls></audio>
+	<time></time>
+	<div class="controls">
+		<button><i class="ic-pause"></i></button>
+		<button><i class="ic-play"></i></button>
+		<button><i class="ic-step-backward"></i></button>
+		<button><i class="ic-step-forward"></i></button>
+		<input type="range" step="any" max="1">
+	</div>
+	<canvas class="spectrum"></canvas>
+</div>
+<!-- <script>Audioplayer.init()</script> -->

@@ -16,7 +16,7 @@ ol.projects {
 	> li {
 		margin-bottom: 1.66rem;
 		> .title {
-			overflow: hidden;
+			//overflow-x: hidden;
 			text-overflow: ellipsis;
 		}
 		> .meta {
@@ -69,14 +69,14 @@ body > main > div.project {
 	//gap: 0.5rem;
 	height: 100%;
 	padding-top: 1rem;
-	>.title {
+	> .title {
 		//mix-blend-mode: difference;
 		grid-row: 2;
 		//margin-bottom: 0.5rem;
-		overflow: hidden;
+		//overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	>.meta {
+	> .meta {
 		///align-self: end;
 		grid-row: 1;
 		display: flex;
@@ -97,17 +97,19 @@ body > main > div.project {
 			//background: blue;
 		}
 	}
-	.links {
+	> .links {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		text-overflow: "-";
 		position: relative;
 		left: 2px;
-	}
-	>.description {
 		//margin-bottom: 1rem;
 	}
-	>.content {
+	> .description {
+		margin-top: 1rem;
+		//margin-bottom: 1rem;
+	}
+	> article.content {
 		//display: grid;
 		//grid-template-columns: repeat(4,1fr);
 		margin-top: 1rem;
@@ -121,16 +123,19 @@ body > main > div.project {
 			//max-width: 800px;
 		}
 		img {
-			max-height: 100vh;
+			//max-height: 100vh;
 			margin-bottom: 1rem;
+		}
+		.iframe-container:not(:only-child) {
+			margin-bottom: var(--line-height);
 		}
 	}
 
 	@media screen and (min-width: @vp-medium) {
-		>.title {
+		> .title {
 			//margin-bottom: 0.5rem;
 		}
-		>.meta {
+		> .meta {
 			margin-bottom: 1rem;
 		}
 	}

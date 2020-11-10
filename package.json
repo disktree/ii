@@ -8,7 +8,7 @@
     "test-css": "lessc --lint style/index.less --include-path=/home/tong/dev/lib/enron/src",
     "test": "npm run test-css",
     "build-hugo": "hugo --minify",
-    "build-css": "lessc style/index.less static/css/style.css --include-path=/home/tong/dev/lib/enron/src --source-map --clean-css='--s1 --advanced'",
+    "build-css": "lessc style/index.less assets/style.css --include-path=/home/tong/dev/lib/enron/src --source-map --clean-css='--s1 --advanced'",
     "build-js": "haxe app.hxml",
     "build": "npm run build-css && npm run build-js && npm run build-hugo",
     "serve": "hugo server -D"

@@ -1,6 +1,6 @@
 ---
 title: "HUSL Generator"
-date: 2018-01-25T12:54:57+02:00
+date: 2018-01-25
 tags: [color,web,app,haxe]
 description: "HSLuv, the human-friendly alternative to HSL, color palette generator"
 links: [

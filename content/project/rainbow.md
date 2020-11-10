@@ -1,10 +1,10 @@
 ---
 title: "Rainbow"
 date: 2017-05-26
-tags: ["core","music","mixtape"]
+tags: [core,music,mixtape]
 links: [
 	mixcloud.com/disktree/rainbow/,
-	music.disktree.net/MIX/rainbow.mp3
+	disktree.net/music/MIX/rainbow.mp3
 ]
 ---
 {{< mixcloud src=rainbow >}}

@@ -2,7 +2,7 @@
 body {
 
 	--site-margin: 1rem;
-	--footer-height: 4rem;
+	--footer-height: 3rem;
 
 	display: grid;
 	grid-template-columns: [site-start] var(--site-margin) [content-start] 1fr [mid] 1fr [content-end] var(--site-margin) [site-end];
@@ -33,14 +33,15 @@ body {
 	}
 	> aside, > footer {
 		display: flex;
-		padding: 0.7rem 0;
+		padding: 0.5rem 0;
 		color: var(--f_low);
-		border-top: 1px solid var(--f_low);
+		//border-top: 1px dotted var(--f_low);
 	}
 	> aside {
 		grid-column: mid/ content-end;
 		grid-row: footer-start / footer-end;
 		justify-content: flex-end;
+		//background: blue;
 		a {
 			padding-left: 0.3em;
 			&:not(:last-child) {
@@ -49,9 +50,9 @@ body {
 		}
 	}
 	> footer {
-		grid-column: content-start / mid;
+		grid-column: content-start / content-end;
 		grid-row: footer-start / footer-end;
-		justify-content: flex-start;
+		justify-content: flex-end;
 		a {
 			padding-right: 0.3em;
 			&:not(:first-child) {

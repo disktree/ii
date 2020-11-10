@@ -1,7 +1,7 @@
 ---
 title: "Necessary Secrecy"
 date: 2001-09-11
-tags: ["tong"]
+tags: [tong]
 ---
 A Tong can perhaps be defined as a mutual benefit society for people with a common interest which is illegal or dangerously marginal—hence, the necessary secrecy.
 

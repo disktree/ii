@@ -1,11 +1,10 @@
 ---
 title: "Material Icons"
 date: 2020-10-10T12:54:57+02:00
-tags: ["vector","icon"]
+tags: [vector,icon]
 theme: bw
 description: "Additions to the [material iconset](https://material.io/resources/icons/)."
 links: [material.io/resources/icons/]
-draft: false
 ---
 {{< html >}}
 <style>
@@ -21,17 +20,16 @@ draft: false
 </style>
 {{< /html >}}
 
-* ## Archillect
+* #### Archillect
 {{< html >}}
 <p class="icon-preview">
 	<img src="archillect.svg" width="192" title="192px">
 	<img src="archillect.svg" width="96" title="96px">
 	<img src="archillect.svg" width="48" title="48px">
 	<img src="archillect.svg" width="24" title="24px">
-</p>
-{{< /html >}}
+</p>{{< /html >}}
 
-* ## FTL
+* #### FTL
 {{< html >}}
 <p class="icon-preview">
 	<img src="ftl.svg" width="192" title="192px">
@@ -41,7 +39,7 @@ draft: false
 </p>
 {{< /html >}}
 
-* ## Mercury
+* #### Mercury
 {{< html >}}
 <p class="icon-preview">
 	<img src="mercury.svg" width="192" title="192px">
@@ -51,7 +49,7 @@ draft: false
 </p>
 {{< /html >}}
 
-* ## Pentagram
+* #### Pentagram
 {{< html >}}
 <p class="icon-preview">
 	<img src="pentagram.svg" width="192" title="192px">
@@ -61,7 +59,7 @@ draft: false
 </p>
 {{< /html >}}
 
-* ## Salt
+* #### Salt
 {{< html >}}
 <p class="icon-preview">
 	<img src="salt.svg" width="192" title="192px">
@@ -71,7 +69,7 @@ draft: false
 </p>
 {{< /html >}}
 
-* ## Sulfur
+* #### Sulfur
 {{< html >}}
 <p class="icon-preview">
 	<img src="sulfur.svg" width="192" title="192px">
@@ -81,7 +79,7 @@ draft: false
 </p>
 {{< /html >}}
 
-* ## Theprocess
+* #### Theprocess
 {{< html >}}
 <p class="icon-preview">
 	<img src="theprocess.svg" width="192" title="192px">
@@ -91,7 +89,7 @@ draft: false
 </p>
 {{< /html >}}
 
-* ## Theprocess2
+* #### Theprocess2
 {{< html >}}
 <p class="icon-preview">
 	<img src="theprocess2.svg" width="192" title="192px">
@@ -101,7 +99,7 @@ draft: false
 </p>
 {{< /html >}}
 
-* ## Topy
+* #### Topy
 {{< html >}}
 <p class="icon-preview">
 	<img src="topy.svg" width="192" title="192px">
@@ -111,7 +109,7 @@ draft: false
 </p>
 {{< /html >}}
 
-* ## Upsidedowncross
+* #### Upsidedowncross
 {{< html >}}
 <p class="icon-preview">
 	<img src="upsidedowncross.svg" width="192" title="192px">
@@ -121,7 +119,7 @@ draft: false
 </p>
 {{< /html >}}
 
-* ## Vril
+* #### Vril
 {{< html >}}
 <p class="icon-preview">
 	<img src="vril.svg" width="192" title="192px">

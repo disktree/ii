@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+	{{ partial "audioplayer" . }}
+
+	<ol class="playlist">
+	{{ range where .Site.Pages "Type" "project" }}
+		{{ if .Params.links }}
+			{{ range $link := .Params.links }}
+				{{ $ext := path.Ext $link }}
+				{{ if or (eq $ext ".mp3") (eq $ext ".ogg") }}
+					{{ if in $link "http" }}{{ else }}{{ $link = (print "https://" $link ) }}{{ end }}
+					{{ $url := urls.Parse $link }}
+					<li class="track" data-track="{{ $url }}">
+						<div>{{ path.Base $url.Path }}</div>
+					</li>
+				{{ end }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+	</ol>
+
+	<script>Audioplayer.init()</script>
+
+{{ end }}

@@ -1,0 +1,18 @@
+
+div.audioplayer {
+	background: var(--b_low);
+
+	&.playing {
+		background: var(--b_med);
+	}
+
+	> .controls {
+		background: black;
+		> button {
+			background: var(--b_med);
+			> i[class^="ic-"] {
+				color: var(--f_med);
+			}
+		}
+	}
+}

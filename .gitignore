@@ -2,6 +2,7 @@
 *.[0-9].*
 public/
 resources/
-static/css/*.css*
+assets/*.css*
+assets/js/app.js*
 themes/
 \#*

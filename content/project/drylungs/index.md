@@ -1,9 +1,9 @@
 ---
 title: "Drylungs"
 date: 2018-05-26T12:54:57+02:00
-tags: ["web","hugo","noise"]
+tags: [web,hugo,noise]
 links: [
-	https://drylungs.at,
+	drylungs.at,
 	github.com/disktree/drylungs
 ]
 ---

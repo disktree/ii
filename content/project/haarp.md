@@ -1,7 +1,7 @@
 ---
 title: "HAARP"
-date: 2019-09-23T12:54:57+02:00
-tags: ["core","archillect","panzerschokolade"]
+date: 2019-09-23
+tags: [core,archillect,panzerschokolade]
 links: [
 	github.com/weownthenite/haarp,
 	soundcloud.com/gridbug1/live-panzerpfalme-pflasterstrand-vienna-24082019,

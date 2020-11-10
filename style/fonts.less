@@ -1,36 +1,23 @@
-/* --- fonts --- */
+
+@font-face-regular: "JetBrainsMono-Regular";
+@font-face-title: "helvetica_neue_85";
+//@font-face-title: "Inter-UI-Black";
 
 @font-face {
-  font-family : 'Regular';
+  font-family : @font-family-regular;
   font-style  : normal;
   font-display: block;
-  src         :
-    local('Jetbrains Mono'), local('Jetbrains Mono Regular'),
-    url('@{font-path}/JetBrainsMono-Regular.woff2') format('woff2');
+  src:
+		local('Jetbrains Mono'),
+		local('Jetbrains Mono Regular'),
+    url('@{font-path}/@{font-face-regular}.woff2') format('woff2');
 }
-
 @font-face {
-  font-family : 'Title';
+  font-family : @font-family-title;
   font-style  : normal;
   font-display: block;
-  //font-weight : 400;
-  src         : url('@{font-path}/helvetica_neue_85.woff2') format('woff2'),
-    url('@{font-path}/helvetica_neue_85.woff') format('woff'),
-    url('@{font-path}/helvetica_neue_85.ttf') format('truetype');
+	src:
+		//url('@{font-path}/@{font-face-title}.woff2') format('woff2'),
+    //url('@{font-path}/@{font-face-title}.woff') format('woff'),
+    url('@{font-path}/@{font-face-title}.ttf') format('truetype');
 }
-
-/*
-@font-face {
-  font-family : 'Title65';
-  font-style  : normal;
-  font-weight : 400;
-  font-display: block;
-  src         : url('@{font-path}/helvetica_neue_25.woff2') format('woff2'),
-    url('@{font-path}/helvetica_neue_25.woff') format('woff'),
-    url('@{font-path}/helvetica_neue_25.ttf') format('truetype');
-}
-
-.font-title-thin {
-  font-family: 'Title65';
-}
-*/

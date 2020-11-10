@@ -26,7 +26,8 @@
 
 	<script>
 		let _handleThemeSelect = svg => {
-			applyTheme(parseSVGTheme( svg ),true);
+			//Theme.apply( Theme.parseSVG( svg ), true );
+			Theme.applySVG( svg );
 		}
 		let _selectDefaultTheme = e => {
 			var svg = document.body.querySelector('li.theme_bw').children[0];

@@ -10,26 +10,19 @@
 		{{ partial "links" . }}
 		{{ if .Content }}<section class="description">{{ .Params.description | markdownify }}</section>{{ end }}
 		<article class="content">{{- .Content -}}</article>
-
-		<!-- {{ if .Params.links }}
-			<ol>
-				{{ range .Params.links }}
-				{{ $urlstr := . }}
-				{{ if in $urlstr "http" }}{{ else }}{{ $urlstr = (print "https://" $urlstr ) }}{{ end }}
-				{{ $url := urls.Parse $urlstr }}
-					<li>{{ $url.Path }}</li>
-				{{ end }}
-			</ol>
-		{{ end }} -->
-
-		<!-- <script src="{{ .Site.BaseURL }}/js/github.js"></script>
-		<script>
-			Github.loadRepoInfo({{ .Params.github }}, ol => {
-				var project = document.querySelector( 'main>.project' );
-				console.log(ol);
-				project.appendChild( ol );
-			});
-		</script> -->
-
 	</div>
+	<script>
+		window.addEventListener( 'keydown', e => {
+			console.log(e.keyCode);
+			switch( e.keyCode ) {
+			{{ with .PrevInSection }}
+				case 37: window.location = '{{ .RelPermalink }}'; break;
+			{{ end }}
+			{{ with .NextInSection }}
+				case 39: window.location = '{{ .RelPermalink }}'; break;
+			{{ end }}
+			case 38: window.location.href = '../'; break;
+			}
+		}, false );
+	</script>
 {{ end }}

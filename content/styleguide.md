@@ -5,12 +5,16 @@ type: styleguide
 > ## Typography
 
 # Void H1
+# Void H1
 ## Void H2
 ### Void H3
 #### Void H4
 ##### Void H5
 ###### Void H6
 
+# WE OWN THE NI⸸E
+## WE OWN THE NI⸸E
+### WE OWN THE NI⸸E
 
 Void Title 1
 ============
@@ -22,6 +26,7 @@ Many non-authoritarian organizations have foundered on the dubious principle of 
 Immediatism does not concern itself with power-relations;—it desires neither to be ruled nor to rule. The contemporary Tong therefore finds no pleasure in the degeneration of institutions into conspiracies. It wants power for its own purposes of mutuality. It is a free association of individuals who have chosen each other as the subjects of the group’s generosity, its “expansiveness” (to use a sufi term). If this amounts to some kind of “elitism,” then so be it.
 
 This [link](https://disktree.net) is an link.
+
 
 ---
 > ## Icons
@@ -96,7 +101,7 @@ This [link](https://disktree.net) is an link.
 {{< html >}}<div><div>b_inv</div><div style="width:2rem;height:2rem;background:var(--b_inv);"></div></div>{{< /html >}}
 
 ---
-> ## #Shortcodes
+> ## Shortcodes
 
 * `{< audio file.mp3 >}`
 {{< audio file.mp3 >}}

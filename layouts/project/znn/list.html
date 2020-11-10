@@ -1,8 +1,10 @@
 {{ define "header" }}
+	<img src="ZNN-feature.png">
 {{ end }}
 
 {{ define "main" }}
-	<article>{{.Content}}</article>
+
+	{{ if .Content }}<section class="description">{{ .Params.description | markdownify }}</section>{{ end }}
 
 	<ol class="znn">
 		{{ $paginator := .Paginate .Data.Pages }}

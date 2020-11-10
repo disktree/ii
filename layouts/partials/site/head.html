@@ -12,7 +12,6 @@
 <meta name="hostname" content="{{$url.Host}}">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="keywords" content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ .Params.Keywords }}{{ end }}" />
-{{ hugo.Generator }}
 {{ if isset .Site.Params "theme_color" }}<meta name="theme-color" content="{{.Site.Param "theme_color"}}">{{ end }}
 {{ if isset .Params "description" }}<meta name="description" content='{{ .Param "description" }}'>{{ end }}
 {{ if .Params.theme }}<meta name="theme" content="{{ $theme }}">{{ end }}
@@ -31,7 +30,6 @@
 {{ end -}}
 
 <script src="{{ (resources.Get "js/app.js" | resources.Minify).RelPermalink }}"></script>
-<script src="{{ (resources.Get "js/theme.js" | resources.Minify).RelPermalink }}"></script>
 
 {{ if ne (getenv "HUGO_ENV") "production" | or (ne .Site.Params.env "production") }}
 <script>console.log('PageType: {{ .Page.Type }}');</script>

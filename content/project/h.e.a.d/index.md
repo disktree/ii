@@ -3,11 +3,18 @@ title: "H.E.A.D."
 date: 2017-03-23T12:00:00+02:00
 subtitle: "Into the Void"
 description: "H.E.A.D live performance // Vienna, 31.3.2017"
-tags: ["vr","performance","eeg","arduino","haxe"]
-links: [
-	vimeo.com/211392344
-]
+tags: [vr,performance,arduino,eeg,haxe]
+links: [vimeo.com/211392344]
 ---
+Inspired by the the H.E.A.D. Revolution - Hedonic Engineering And Development - The installation uses a closed feedback system of human brainwaves,
+measured using an EEG, and it's visual perception input fed by a
+never ending stream of images collected by a synthetic intelligence
+mapping. The sounds the performer perceives as well as the images he
+views thru the VR-Glasses influence his brainwaves, which again
+produce the given images showed on the screen.
+
+{{< vimeo 211392344 >}}
+
 Over the course of evolution, the human ego has developed and grown to allow us to survive within the impersonal environments of unrelenting Nature. Once a useful and necessary tool by which we could separate ourselves from the herd around us, this irrational concept now threatens to destroy humanity.
 
 It creates a sense of Self. It allows us to say "this is me", and in today's culture, extends so far as to include "this is what I believe... This is what I expect... This is what I demand". Our very identity as human beings, belonging to a race of biologically-similar creatures, hinges upon the premise, and rests squarely within the bounds of what we - as a democratic collective - have decided constitutes a person, or a single individual in our modern world. We are all equal, but only because we have an ego structure which screams to be heard and recognised.
@@ -20,16 +27,4 @@ Without an ego structure as we know it, we would not need empathy, for we would 
 
 To let oneself go - or, perhaps, the sense of oneself - requires great achievement, great discipline and willingness in order to leave the dualistic world of self vs. other behind. Freed from this limitation, we will be able to regard dualisms as the fantasy of sub-Abyssal existence, and step effortlessly across the Abyss anytime we please, recognising immediately that we are no longer owned, manipulated or subservient to our mundane, human egos.
 
-<!-- [{{< video H.E.A.D.1.mp4 autoplay false true true >}}](https://vimeo.com/211392344) -->
-
----
-
-Inspired by the the H.E.A.D. Revolution - Hedonic Engineering And Development - The installation uses a closed feedback system of human brainwaves,
-measured using an EEG, and it's visual perception input fed by a
-never ending stream of images collected by a synthetic intelligence
-mapping. The sounds the performer perceives as well as the images he
-views thru the VR-Glasses influence his brainwaves, which again
-produce the given images showed on the screen.
-
-{{< vimeo 211392344 >}}
-<!-- {{< vimeo 211392344 >}} -->
+<!-- {{< image src="h.e.a.d.svg" >}} -->
