@@ -1,7 +1,10 @@
-import js.html.File;
+
+import haxe.Json;
 import js.Browser.console;
 import js.Browser.document;
 import js.Browser.window;
+import js.html.File;
+import js.html.IFrameElement;
 
 using haxe.io.Path;
 
@@ -11,7 +14,7 @@ class App {
 
 		console.log("%cDISKTREE.NET", "color:#000");
 
-		document.addEventListener('DOMContentLoaded', e -> {
+		document.addEventListener( 'DOMContentLoaded', e -> {
 			var pageTheme = document.head.querySelector('meta[name="theme"]');
 			if( pageTheme == null ) {
 				var theme = Theme.loadLocal();
@@ -50,6 +53,37 @@ class App {
 					} );
 				}
 			});
+
+			/*
+			var iframe : IFrameElement = cast document.body.querySelector( 'main article iframe' );
+			if( iframe != null ) {
+				var source = null;
+				window.addEventListener( 'message', function(e){
+					console.debug(e);
+					var msg : Dynamic = try Json.parse( e.data ) catch(e:Dynamic) {
+						trace(e);
+						return;
+					}
+					console.debug(msg);
+					source = e.source;
+					//var title = document.body.querySelector( 'main .title' );
+					//title.textContent = msg.channel;
+					//e.source.posMessage( Json.stringify( { channel: 'sander-2', video: 1 } ) );
+				}, false );
+
+				window.addEventListener( 'keydown', e -> {
+					switch e.key {
+					case 'd':
+						trace(source);
+						if( source != null ) {
+							source.postMessage( Json.stringify( { channel: 'sander-2', video: 1 } ) );
+						}
+						//iframe.postMessage( { channel: 'sander-2', video: 1 } );
+					default:
+					}
+				});
+			}
+			*/
 		});
 	}
 }

@@ -8,4 +8,4 @@ links: [
 	github.com/tong/atom-videoplayer
 ]
 ---
-{{< image src="atom-videoplayer.png" >}}
+{{< image src="atom-videoplayer-feature.png" >}}

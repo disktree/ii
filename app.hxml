@@ -2,7 +2,6 @@
 -main App
 Audioplayer
 -cp sources
--lib om.core
 -dce full
 -debug
 -D source-header=

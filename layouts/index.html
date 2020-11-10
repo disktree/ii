@@ -3,7 +3,7 @@
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="100%" width="100%">
 		<style>
 			path {
-				stroke: #fff;
+				stroke: var(--f_med);
 				stroke-width: 2;
 			}
 		</style>
@@ -25,11 +25,10 @@
 <!--  -->
 {{ end }}
 
-
 {{ define "scripts" }}
-<script>
-	window.addEventListener('load', e => {
-		setTimeout(() => { window.location = '{{ .Site.BaseURL }}/project'; }, 20 );
-	});
-</script>
+	<script>
+		window.addEventListener('load', e => {
+			setTimeout(() => { window.location = '{{ .Site.BaseURL }}/project'; }, 30 );
+		});
+	</script>
 {{ end }}

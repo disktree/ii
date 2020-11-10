@@ -64,7 +64,7 @@ nav.prev_next {
 body > main > div.project {
 	display: grid;
 	grid-template-columns: 1fr; //repeat(4,1fr);
-	grid-template-rows: auto auto auto auto 1fr;
+	grid-template-rows: minmax(3rem,auto) minmax(5.5rem,auto) auto auto 1fr;
 	//align-items: center;
 	//gap: 0.5rem;
 	height: 100%;
@@ -82,7 +82,7 @@ body > main > div.project {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		margin-bottom: 0.5rem;
+		//margin-bottom: 0.5rem;
 		position: relative;
 		left: 2px;
 		>* {

@@ -7,4 +7,4 @@ links: [
 	github.com/disktree/fuxnews
 ]
 ---
-{{<iframe src="https://disktree.net/app/fuxnews">}}
+{{< iframe src="https://disktree.net/app/fuxnews" >}}
