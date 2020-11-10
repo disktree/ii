@@ -2,13 +2,17 @@
   "name": "ii",
   "version": "0.1.0",
   "description": "Disktree index",
-  "private": true,
+	"private": true,
+	"config": {
+		"less_include_paths": "/home/tong/dev/lib/enron/src:/home/tong/dev/lib/hugo/void/style "
+	},
   "scripts": {
-    "clean": "rm -f static/css/*.css* static/js/app.js* && rm -rf public",
-    "test-css": "lessc --lint style/index.less --include-path=/home/tong/dev/lib/enron/src",
+    "clean": "rm -f assets/js/app.js* && rm -rf public",
+    "test-js": "haxe app.hxml --no-output",
+    "test-css": "lessc --lint style/index.less --include-path=$npm_package_config_less_include_paths",
     "test": "npm run test-css",
-    "build-hugo": "hugo --minify",
-    "build-css": "lessc style/index.less assets/style.css --include-path=/home/tong/dev/lib/enron/src --source-map --clean-css='--s1 --advanced'",
+    "build-hugo": "hugo --environment production --minify",
+    "build-css": "lessc style/index.less assets/style.css --include-path=$npm_package_config_less_include_paths --source-map --clean-css='--s1 --advanced'",
     "build-js": "haxe app.hxml",
     "build": "npm run build-css && npm run build-js && npm run build-hugo",
     "serve": "hugo server -D"
