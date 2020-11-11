@@ -7,6 +7,6 @@ type: project
 links: [
 	disktree.net/app/muzak
 ]
-draft: true
+draft: false
 ---
 {{< iframe src="https://disktree.net/app/muzak/" >}}

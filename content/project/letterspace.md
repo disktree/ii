@@ -7,4 +7,4 @@ links: [
 	http://letterspace.disktree.net/
 ]
 ---
-{{< iframe src="http://letterspace.disktree.net/" >}}
+{{< iframe src="https://disktree.net/app/letterspace" >}}

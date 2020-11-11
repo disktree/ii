@@ -17,7 +17,7 @@ links: [
 	disktree.net/music/jonestown/jonestown-11.mp3,
 	disktree.net/music/jonestown/jonestown-13.mp3,
 ]
-draft: true
+draft: false
 ---
 {{< image src="jonestown_2.jpg" style="position:fixed;right:1rem;bottom:1rem;width:34%;" >}}
 {{< background-image "jonestown_3.jpg" >}}

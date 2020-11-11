@@ -6,19 +6,23 @@ links: [
 	disktree.bandcamp.com,
 	discogs.com/label/28868-Sperrplan-Records
 ]
-draft: true
 ---
-### SPP3 - Unbenannt
+{{<image src="SPP-3_small.webp">}}
+SPP3 - Unbenannt /
 {{<link-external "https://disktree.bandcamp.com/album/spp3">}}
 {{<link-download "http://music.disktree.net/SPP/sperrplan_3_unbenannt.zip">}}
-{{<image src="SPP-3_small.webp">}}
 
-### SPP4 - /
+---
+
+{{<image src="SPP-4_back.png">}}
+{{<image src="SPP-4.png">}}
+SPP4 - /
 {{<link-external "https://disktree.bandcamp.com/album/spp4">}}
 {{<link-download "http://music.disktree.net/SPP/SPERRPLAN_RECORD_004v2.zip">}}
-{{<image src="SPP-4_small.webp">}}
 
-### SPP5 - Holistic Devices
+---
+
+{{<image src="SPP-5_small.webp">}}
+SPP5 - Holistic Devices /
 {{<link-external "https://disktree.bandcamp.com/album/spp5">}}
 {{<link-download "http://music.disktree.net/SPP/sperrplan_5__holistic_devices.zip">}}
-{{<image src="SPP-5_small.webp">}}

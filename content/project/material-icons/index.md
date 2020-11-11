@@ -2,7 +2,7 @@
 title: "Material Icons"
 date: 2020-10-10T12:54:57+02:00
 tags: [vector,icon]
-theme: bw
+theme: "bw"
 description: "Additions to the [material iconset](https://material.io/resources/icons/)."
 links: [material.io/resources/icons/]
 ---

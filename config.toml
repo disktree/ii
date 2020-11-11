@@ -5,10 +5,9 @@ languageCode = "en"
 description = "Serious Fucking Business"
 keywords = ["disktree"]
 theme = "void"
-theme_color = "#000000"
-disablePathToLower = true
-#enableGitInfo = true
-enableInlineShortcodes = true
+# disablePathToLower = true
+# enableGitInfo = true
+# enableInlineShortcodes = true
 Paginate = 100
 paginatePath = "list"
 RSSUri = "rss.xml"
@@ -23,7 +22,6 @@ RSSUri = "rss.xml"
 
 [params]
 	theme = "bw"
-	theme_color = "#000000"
 	customCSS = []
   customJS  = []
 	images = ["disktree-cover.png"]
@@ -31,10 +29,11 @@ RSSUri = "rss.xml"
   mail = "info@disktree.net"
   web = "https://disktree.net"
 
-	#[[params.menu]]
+#[[params.menu]]
     #	name = "about"
     #	url = "about/"
-  [params.social]
+
+[params.social]
     github = "tong"
     twitter = "disktree"
     mixcloud = "disktree"
