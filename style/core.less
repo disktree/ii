@@ -111,10 +111,19 @@ blockquote {
 
 button {
 	background: var(--f_med);
+	color: var(--background);
 	cursor: pointer;
 	appearance: none;
-	border-radius: 2px;
 	padding: 1rem;
+	font-family: var(--font-family-regular);
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	outline: none;
+	&[disabled] {
+		background: var(--f_low);
+		color: var(--f_low);
+		cursor: default;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
