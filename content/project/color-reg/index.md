@@ -1,10 +1,10 @@
 ---
-title: "Vexcon"
+title: "Color Regular"
 date: 2005-06-26
 tags: [font,graphics,typography]
 links: []
 ---
-{{< link-download vexcon.ttf VEXCON.ttf >}}
+{{< link-download color-reg.ttf color-reg.ttf >}}
 
 {{< html >}}
 <br/><br/>
@@ -14,18 +14,21 @@ links: []
 <div class="font-preview">!%/8)=?_.:,;#'+*</div>
 {{< / html >}}
 
-<!-- {{< image src=hf3.png >}} -->
-
 {{< html >}}
 <style>
-@font-face { font-family : "Vexcon"; src: url('vexcon.ttf') format('truetype'); }
+@font-face { font-family : "ColorReg"; src: url('color-reg.ttf') format('truetype'); }
 :root {
-	--font-family-title: 'Vexcon';
-	--h1-size: 8rem;
+	--font-family-title: 'ColorReg';
+	--h1-size: 10rem;
+}
+h1.title {
+	letter-spacing: unset;
+	line-height: 0.7em;
 }
 div.font-preview {
-	font-family : "Vexcon";
+	font-family : "ColorReg";
 	line-height: 1em;
+	/* letter-spacing: 0.5rem; */
 	font-size: 4rem;
 	word-break: break-all;
 }

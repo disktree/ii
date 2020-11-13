@@ -2,7 +2,7 @@
 title: "ZNN"
 #type: project/znn
 #theme: znn
-tags: [music,mixtape,znn]
+tags: [music,mixtape,znn,dark]
 ---
 {{< html >}}
 <style>:root { --background: #141414; --f_med:#000; }</style>

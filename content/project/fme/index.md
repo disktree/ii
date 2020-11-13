@@ -1,10 +1,10 @@
 ---
-title: "Vexcon"
+title: "FME"
 date: 2005-06-26
 tags: [font,graphics,typography]
 links: []
 ---
-{{< link-download vexcon.ttf VEXCON.ttf >}}
+{{< link-download fme-55.ttf  fme-55.ttf >}}
 
 {{< html >}}
 <br/><br/>
@@ -14,18 +14,20 @@ links: []
 <div class="font-preview">!%/8)=?_.:,;#'+*</div>
 {{< / html >}}
 
-<!-- {{< image src=hf3.png >}} -->
-
 {{< html >}}
 <style>
-@font-face { font-family : "Vexcon"; src: url('vexcon.ttf') format('truetype'); }
+@font-face { font-family : "FME"; src: url('fme-55.ttf') format('truetype'); }
 :root {
-	--font-family-title: 'Vexcon';
+	--font-family-title: 'FME';
 	--h1-size: 8rem;
 }
+h1.title {
+	letter-spacing: 0.05em;
+}
 div.font-preview {
-	font-family : "Vexcon";
-	line-height: 1em;
+	font-family : "FME";
+	line-height: 1.1em;
+	/* letter-spacing: 0.5rem; */
 	font-size: 4rem;
 	word-break: break-all;
 }

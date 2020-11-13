@@ -1,31 +1,32 @@
 ---
-title: "Vexcon"
+title: "FMA"
 date: 2005-06-26
 tags: [font,graphics,typography]
 links: []
 ---
-{{< link-download vexcon.ttf VEXCON.ttf >}}
+{{< link-download fma.ttf  fma.ttf >}}
 
 {{< html >}}
 <br/><br/>
-<div class="font-preview">ABCDEFGHIJKLMNOPQRSTWUVXYZ</div>
 <div class="font-preview">abcdefghijklmnopqrstwuvxyz</div>
 <div class="font-preview">1234567890</div>
 <div class="font-preview">!%/8)=?_.:,;#'+*</div>
 {{< / html >}}
 
-<!-- {{< image src=hf3.png >}} -->
-
 {{< html >}}
 <style>
-@font-face { font-family : "Vexcon"; src: url('vexcon.ttf') format('truetype'); }
+@font-face { font-family : "FMA"; src: url('fma.ttf') format('truetype'); }
 :root {
-	--font-family-title: 'Vexcon';
+	--font-family-title: 'FMA';
 	--h1-size: 8rem;
 }
+h1.title {
+	/* letter-spacing: 0.05em; */
+}
 div.font-preview {
-	font-family : "Vexcon";
-	line-height: 1em;
+	font-family : "FMA";
+	line-height: 1.4em;
+	letter-spacing: 0.5rem;
 	font-size: 4rem;
 	word-break: break-all;
 }
