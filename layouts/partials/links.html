@@ -13,6 +13,7 @@
 	{{ $url := urls.Parse $urlstr }}
 
 	{{ if eq $url.Host "github.com" }}{{ $type = "github" }}
+	{{ else if eq $url.Host "gist.github.com" }}{{ $type = "github" }}
 	{{ else if eq $url.Host "gitlab.com" }}{{ $type = "gitlab" }}
 	{{ else if eq $url.Host "bandcamp.com" }}{{ $type = "bandcamp" }}
 	{{ else if eq $url.Host "disktree.bandcamp.com" }}{{ $type = "bandcamp" }}

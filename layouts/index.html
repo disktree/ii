@@ -3,12 +3,14 @@
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="100%" width="100%">
 		<style>
 			path {
-				stroke: var(--f_med);
+				stroke: var(--f_high);
 				stroke-width: 2;
 			}
 		</style>
-		<path d="M 12,2 V 22"/>
-		<path d="m 5.5,15.5 h 13"/>
+		<path d="M 12,22 V 12"/>
+		<path d="M 4,12 H 20"/>
+		<path d="M 2.5,5 12,11"/>
+		<path d="M 21.5,5 12,11"/>
 	</svg>
 </a>
 {{ end }}
@@ -28,7 +30,7 @@
 {{ define "scripts" }}
 	<script>
 		window.addEventListener('load', e => {
-			setTimeout(() => { window.location = '{{ .Site.BaseURL }}/project'; }, 30 );
+			setTimeout(() => { window.location = '{{ .Site.BaseURL }}/project'; }, 300000 );
 		});
 	</script>
 {{ end }}

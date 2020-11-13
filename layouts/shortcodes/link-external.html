@@ -1,1 +1,4 @@
-<a href="{{ .Get 0 }}" class="ic-link-web"></a>
+{{ $src := .Get 0 }}
+{{ $type := .Get 1 }}
+{{ if $type }} {{else}}{{ $type = "web" }}{{ end }}
+<a href="{{ $src }}" class="ic-link-{{ $type }}"></a>
