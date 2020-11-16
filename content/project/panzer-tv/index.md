@@ -10,4 +10,8 @@ links: [
 ---
 {{< html >}}<style>:root { --f_med:#c60042; }</style>{{< / html >}}
 {{< background-iframe src="https://panzerschokolade.disktree.net/tv/" >}}
-
+{{< html >}}
+<style>
+main { cursor: help; }
+</style>
+{{< /html >}}
