@@ -1,7 +1,7 @@
 <li id="-{{ .Title }}">
 	<h2 class="title"><a href="{{ .Permalink }}">{{- .Title -}}</a></h2>
 	<div class="meta">
-		<time datetime="{{.Date}}">{{.Date.Format "06/01/02"}}</time>
+		<time datetime="{{.Date}}">{{.Date.Format "06/01"}}</time>
 		{{ partial "tags" . }}
 	</div>
 </li>
