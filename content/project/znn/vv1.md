@@ -2,6 +2,7 @@
 title: "VV1"
 znn: "vv1"
 date: 2018-07-26
+theme: "znn"
 tags: [music,mixtape,znn]
 links: [disktree.net/music/ZNN/VRIL-1.mp3]
 ---

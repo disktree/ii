@@ -8,4 +8,4 @@ links: [
 	github.com/disktree/musicforprogramming
 ]
 ---
-{{<iframe src="https://musicforprogramming.disktree.net/">}}
+{{<iframe src="https://disktree.net/app/musicforprogramming">}}
