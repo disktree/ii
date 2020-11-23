@@ -26,12 +26,12 @@ body {
 	//transition: all 0.4s;
 
 	filter: none;
+
 	&.dragover {
 		//background: #ffffff;
 		//color: #ff0000;
 		//filter: grayscale(100%);
 		//background: radial-gradient(transparent, black), rgba(0,0,0,0.4);
-
 		background: radial-gradient( circle, transparent 50%, black 150%), var(--background);
   		height: 180px;
 	}
@@ -49,11 +49,11 @@ a {
 	text-decoration: none;
 	background: transparent;
 	color: inherit;
-	/* &:visited {
+	//transition: all .05s ease-in-out;
+/* 	&:visited {
 		//color: var(--f_low);
 	} */
 	&:hover {
-		//background: var(--b_high);
 		color: var(--f_high);
 	}
 	&:focus {
@@ -65,7 +65,7 @@ a {
 	}
 	&[href][class^="ic-"] {
 		&:hover, &:focus {
-			transition: transform 0.1s;
+			//transition: transform 0.1s ease-in-out;
 			transform: scale(1.2);
 			transform-origin: center;
 		}
@@ -118,36 +118,28 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: var(--h1-size);
-	letter-spacing: -5px;
+	letter-spacing: -3px;
     //line-height: 1em;
-	//padding-top: 0.05em;
-	//background: blue;
-	font-variation-settings: 'wght' 870;
-	//font-stretch: 100%;
+	font-variation-settings: 'wght' 800;
+	@media screen and (min-width: @vp-medium) {
+		letter-spacing: -3.5px;
+	}
 }
 h2 {
 	font-size: var(--h2-size);
-	letter-spacing: -2px;
+	letter-spacing: -1px;
 	//line-height: 1.0em;
-	//padding-top: 1.4em;
-	//margin-top: 0.3em;
-	//background: red;
-	//font-variation-settings: 'wght' 870;
-	font-variation-settings: 'wght' 870;
+	font-variation-settings: 'wght' 780;
 }
 h3 {
 	font-size: var(--h3-size);
 	letter-spacing: -1px;
 	//line-height: 1.1em;
-	//padding-top: 0.3em;
-	//background: green;
 }
 h4 {
 	font-size: var(--h4-size);
 	letter-spacing: -1px;
 	//line-height: 1.1em;
-	//padding-top: 0.3em;
-	//background: magenta;
 }
 /* h5 {
 	background: cyan;
