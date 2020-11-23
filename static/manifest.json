@@ -1,14 +1,16 @@
 {
-    "name": "ii",
+    "name": "II",
     "short_name": "ii",
-	  "description": "Serious Fucking Business",
-    "start_url": "https://disktree.net/ii",
+		"description": "Serious Fucking Business",
+		"scope": "./",
+    "start_url": "./",
     "display": "browser",
     "theme_color": "#000",
     "background_color": "#000",
     "icons": [
         {
-          "src": "/favicon.svg"
+					"src": "/favicon.svg",
+					"purpose": "maskable any"
         }
       ]
 }

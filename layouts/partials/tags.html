@@ -1,7 +1,7 @@
-<ul class="tags">
+<dl class="tags">
 	{{ range .Params.tags }}
-	<li class="tag">
+	<dt class="tag">
 		<a href="{{ "tags/" | relURL }}{{ . | urlize }}" rel="tag" tabindex="-1">#{{.}}</a>
-	</li>
+	</dt>
 	{{ end }}
-</ul>
+</dl>

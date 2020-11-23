@@ -1,5 +1,5 @@
 {{ define "header" }}
-<a href="project" style="margin:0 auto;width:100%;max-height:80vh;padding:4rem;-webkit-user-drag:none;">
+<a href="project" style="-webkit-user-drag:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);min-height:10vh;max-height:80vh;min-height:10vh;">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="100%" width="100%">
 		<style>
 			path {
@@ -17,10 +17,12 @@
 
 {{ define "nav" }}
 <!--  -->
+{{/* */}}
 {{ end }}
 
 {{ define "main" }}
 <!--  -->
+{{/* */}}
 {{ end }}
 
 {{ define "footer" }}
@@ -28,9 +30,13 @@
 {{ end }}
 
 {{ define "scripts" }}
-	<script>
-		window.addEventListener('load', e => {
-			setTimeout(() => { window.location = '{{ .Site.BaseURL }}/project'; }, 300000 );
-		});
+<script>
+	window.addEventListener('load', e => {
+		setTimeout(() => { window.location = '{{ .Site.BaseURL }}/project'; }, 300000 );
+	});
 	</script>
+{{ end }}
+
+{{ define "preload" }}
+<link rel="prerender" href="https://disktree.net/ii/project">
 {{ end }}

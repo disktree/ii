@@ -1,4 +1,15 @@
-<a href="https://vimeo.com/" class="ic-vimeo" title="vimeo/disktree"></a>
-<a href="https://twitter.com/disktree" class="ic-twitter" title="twitter/disktree"></a>
-<a href="https://gitlab.com/disktree" class="ic-gitlab" title="gitlab/disktree"></a>
-<a href="https://github.com/tong" class="ic-github-alt" title="github/tong"></a>
+<ul class="gitinfo">
+	{{ if .GitInfo }}
+	<li title="{{ .GitInfo.Subject }}">MOD</li>
+	<li title="{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</li>
+	<li title="{{ .GitInfo.AuthorDate }}">{{ .Params.lastmod.Format "060102" }}</li>
+	<li title="{{ .GitInfo.AuthorEmail }}">{{ .GitInfo.AuthorName }}</li>
+	{{ end }}
+</ul>
+<ul class="social" style="display:none">
+	<li><a href="https://vimeo.com/" class="ic-vimeo" title="vimeo/disktree"></a></li>
+	<li><a href="https://twitter.com/disktree" class="ic-twitter" title="twitter/disktree"></a></li>
+	<li><a href="https://gitlab.com/disktree" class="ic-gitlab" title="gitlab/disktree"></a></li>
+	<li><a href="https://github.com/tong" class="ic-github-alt" title="github/tong"></a></li>
+</ul>
+
