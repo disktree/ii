@@ -1,15 +1,13 @@
 {{ define "header" }}
-	<!-- <div class="raa1" style="margin:0 auto;width:80%;max-width:600px;padding:8rem 4rem;">{{ partial "raa1" . }}</div> -->
 	<div class="raa3" style="display:none;margin:0 auto;width:80%;max-width:600px;padding:8rem 4rem;">{{ partial "raa3" . }}</div>
-	<div class="raa2" style="display:none;width:100%;padding:1rem;">{{ partial "raa2" . }}</div>
+	<div class="raa2" style="display:none;width:100%;padding:1rem 2rem 1rem 1rem;">{{ partial "raa2" . }}</div>
 	<script>
 		var animations = ["raa2","raa3"];
 		var random = Math.floor( Math.random()*animations.length);
-		console.log(random);
-		var ani = animations[random];
+		//var ani = animations[random];
+		var ani = animations[1];
 		var e = document.querySelector('header .'+ani);
 		e.style.display = 'block';
-
 	</script>
 {{ end }}
 
