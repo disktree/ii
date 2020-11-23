@@ -2,6 +2,7 @@
 @font-face {
   font-family: '@{font-family-icon}';
   src :
+		url('@{font-path}/@{font-family-icon}.woff2') format('woff2'),
 		url('@{font-path}/@{font-family-icon}.woff') format('woff'),
 		url('@{font-path}/@{font-family-icon}.svg?#@{font-family-icon}') format('svg'),
 		url('@{font-path}/@{font-family-icon}.ttf') format('truetype');
@@ -19,6 +20,9 @@
 @ic-album: "\e90a";
 @ic-eye: "\e90b";
 @ic-eye_off: "\e90c";
+@ic-itch: "\e90f";
+@ic-itch-io: "\e90f";
+@ic-link-itch: "\e90f";
 @ic-ftl: "\e90e";
 @ic-vril: "\e900";
 @ic-topy: "\e901";
@@ -189,6 +193,7 @@
 @ic-sliders: "\f1de";
 @ic-share-alt: "\f1e0";
 @ic-diamond: "\f219";
+@ic-link-diamond: "\f219";
 @ic-wikipedia: "\f266";
 @ic-link-wikipedia: "\f266";
 @ic-vimeo: "\f27d";
@@ -271,6 +276,21 @@ icon[vril] {
 .ic-eye_off {
   &:before {
     content: @ic-eye_off;
+  }
+}
+.ic-itch {
+  &:before {
+    content: @ic-itch;
+  }
+}
+.ic-itch-io {
+  &:before {
+    content: @ic-itch-io;
+  }
+}
+.ic-link-itch {
+  &:before {
+    content: @ic-link-itch;
   }
 }
 .ic-ftl {
@@ -1121,6 +1141,11 @@ icon[vril] {
 .ic-diamond {
   &:before {
     content: @ic-diamond;
+  }
+}
+.ic-link-diamond {
+  &:before {
+    content: @ic-link-diamond;
   }
 }
 .ic-wikipedia {

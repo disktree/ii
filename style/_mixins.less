@@ -1,0 +1,7 @@
+
+.draw-grid( @size; @color:blue; @thick:1px ) {
+	background-size: @size @size;
+    background-image:
+        linear-gradient(to right, @color @thick, transparent 1px),
+        linear-gradient(to bottom, @color @thick, transparent 1px);
+}

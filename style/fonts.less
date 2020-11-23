@@ -1,23 +1,22 @@
-
-@font-face-regular: "JetBrainsMono-Regular";
-@font-face-title: "helvetica_neue_85";
-//@font-face-title: "Inter-UI-Black";
+//@font-face-regular: "JetBrainsMono-Regular";
+//@font-face-title: "helvetica_neue_85";
+@font-face-regular: "RobotoMono-VF";
+@font-face-title: "Inter-VF";
 
 @font-face {
   font-family : @font-family-regular;
-  font-style  : normal;
-  font-display: block;
-  src:
-		local('Jetbrains Mono'),
-		local('Jetbrains Mono Regular'),
-    url('@{font-path}/@{font-face-regular}.woff2') format('woff2');
-}
-@font-face {
-  font-family : @font-family-title;
-  font-style  : normal;
   font-display: block;
 	src:
-		url('@{font-path}/@{font-face-title}.woff2') format('woff2'),
-    url('@{font-path}/@{font-face-title}.woff') format('woff'),
-    url('@{font-path}/@{font-face-title}.ttf') format('truetype');
+		url('@{font-path}/@{font-face-regular}.woff2') format('woff2 supports variations'),
+		url('@{font-path}/@{font-face-regular}.woff2') format('woff2-variations'),
+		url('@{font-path}/@{font-face-regular}.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: @font-family-title;
+  font-display: block;
+	src:
+		url('@{font-path}/@{font-face-title}.woff2') format('woff2 supports variations'),
+		url('@{font-path}/@{font-face-title}.woff2') format('woff2-variations'),
+		url('@{font-path}/@{font-face-title}.woff2') format('woff2');
 }

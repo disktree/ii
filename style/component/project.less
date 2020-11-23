@@ -6,6 +6,9 @@ ul.tags {
 		&:not(:first-child) {
 			margin-left: 0.5ch;
 		}
+		a {
+			font-variation-settings: 'wght' 600;
+		}
 	}
 }
 
@@ -13,6 +16,7 @@ ol.projects {
 	//display: flex;
 	//flex-direction: column;
 	//padding-top: 1.5rem;
+	padding-bottom: 2rem;
 	> li {
 		padding-top: 1rem;
 		padding-bottom: 1rem;
@@ -40,10 +44,10 @@ ol.links {
 		//overflow: hidden;
 		//text-overflow: ellipsis;
 		//margin-bottom: 0.5rem;
-		a {
+		/* a {
 			//overflow: hidden;
 			//text-overflow: ellipsis;
-		}
+		} */
 		a::before {
 			margin-right: 0.5ch;
 		}
@@ -65,17 +69,21 @@ nav.prev_next {
 body > main > div.project {
 	display: grid;
 	grid-template-columns: 1fr; //repeat(4,1fr);
-	grid-template-rows: minmax(3rem,auto) minmax(4.5rem,auto) auto auto 1fr;
+	grid-template-rows: minmax(3rem,auto) minmax(6.5rem,auto) auto auto 1fr;
 	//align-items: center;
 	//gap: 0.5rem;
 	height: 100%;
 	padding-top: 1rem;
+	a {
+		font-variation-settings: 'wght' 700;
+	}
 	> .title {
 		//mix-blend-mode: difference;
 		grid-row: 2;
 		//margin-bottom: 0.5rem;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		cursor: default;
 	}
 	> .meta {
 		///align-self: end;
@@ -89,14 +97,14 @@ body > main > div.project {
 		>* {
 			margin-right: 0.75ch;
 		}
-		.time {
+		/* .time {
 		}
 		.tags {
 			//flex-grow: 1;
 		}
 		.prev_next {
 			//background: blue;
-		}
+		} */
 	}
 	> .links {
 		overflow: hidden;
@@ -105,23 +113,28 @@ body > main > div.project {
 		position: relative;
 		left: 2px;
 		//margin-bottom: 1rem;
+
 	}
 	> .description {
 		margin-top: 1rem;
-		//margin-bottom: 1rem;
+		margin-bottom: 1rem;
 	}
 	> article.content {
 		//display: grid;
 		//grid-template-columns: repeat(4,1fr);
 		margin-top: 1rem;
 		overflow: hidden;
-		> * {
+	/* 	> * {
 			//grid-column: 1 / span 4;
 		}
 		p {
 			//grid-column: 1 / span 3;
 			//columns: 2;
 			//max-width: 800px;
+		}
+		*/
+		a {
+			font-variation-settings: 'wght' 700;
 		}
 		img {
 			//max-height: 100vh;
@@ -133,9 +146,9 @@ body > main > div.project {
 	}
 
 	@media screen and (min-width: @vp-medium) {
-		> .title {
+		/* > .title {
 			//margin-bottom: 0.5rem;
-		}
+		} */
 		> .meta {
 			margin-bottom: 1rem;
 		}
