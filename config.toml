@@ -1,4 +1,4 @@
-baseURL = "https://disktree.net/ii"
+baseURL = "https://disktree.net/ii/"
 title = "DISKTREE™"
 defaultContentLanguage = "en"
 languageCode = "en"
@@ -6,7 +6,7 @@ description = "Serious Fucking Business"
 keywords = ["disktree"]
 theme = "void"
 # disablePathToLower = true
-# enableGitInfo = true
+enableGitInfo = true
 # enableInlineShortcodes = true
 Paginate = 100
 paginatePath = "list"
@@ -14,6 +14,7 @@ RSSUri = "rss.xml"
 #rssLimit = 100
 #footnoteAnchorPrefix
 #footnoteReturnLinkContents
+disableHugoGeneratorInject = true
 
 [author]
   name = "disktree"

@@ -4,17 +4,17 @@
   "description": "Disktree index",
 	"private": true,
 	"config": {
-		"less_include_paths": "/home/tong/dev/lib/enron/src:/home/tong/dev/lib/hugo/void/style "
+		"less_include_paths": "/home/tong/dev/lib/enron/src:themes/void/style"
 	},
   "scripts": {
     "clean": "rm -f assets/js/app.js* && rm -rf public",
-    "test-js": "haxe app.hxml --no-output",
-    "test-css": "lessc --lint style/index.less --include-path=$npm_package_config_less_include_paths",
+    "test:css": "lessc --lint style/index.less --include-path=$npm_package_config_less_include_paths",
+    "test:js": "haxe app.hxml --no-output",
     "test": "npm run test-css",
-    "build-hugo": "hugo --environment production --minify",
-    "build-css": "lessc style/index.less assets/style.css --include-path=$npm_package_config_less_include_paths --source-map --clean-css='--s1 --advanced'",
-    "build-js": "haxe app.hxml",
-    "build": "npm run build-css && npm run build-js && npm run build-hugo",
+    "build:hugo": "hugo --environment production --minify",
+    "build:css": "lessc style/index.less static/style.css --include-path=$npm_package_config_less_include_paths --source-map --clean-css='--s1 --advanced'",
+    "build:js": "haxe app.hxml",
+    "build": "npm run build:css && npm run build:js && npm run build:hugo",
     "serve": "hugo server -D"
   },
   "repository": {
