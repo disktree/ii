@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+	<style>
+		path {
+			fill: #000;
+		}
+	</style>
+	<path id="arrow" d="M 12,2.01 9.5,6 H 11 v 7.01 h 2 V 6 h 1.5 z"/>
+	<use href="#arrow" transform="rotate(45,12,12)"/>
+	<use href="#arrow" transform="rotate(90,12,12)"/>
+	<use href="#arrow" transform="rotate(135,12,12)"/>
+	<use href="#arrow" transform="rotate(180,12,12)"/>
+	<use href="#arrow" transform="rotate(225,12,12)"/>
+	<use href="#arrow" transform="rotate(270,12,12)"/>
+	<use href="#arrow" transform="rotate(315,12,12)"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24">
+	<style>
+		path {
+			stroke: #000;
+			stroke-width: 2;
+			fill: none;
+		}
+	</style>
+	<path d="m 12,12.526317 v 9.473682 M 6.3157891,17.263158 H 17.684209 M 7.2631576,12.526317 H 16.736841 L 12,3.9999999 Z"/>
+</svg>
