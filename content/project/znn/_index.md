@@ -1,6 +1,7 @@
 ---
 title: "ZNN"
 #type: project/znn
+date: 2012-12-23
 theme: znn
 tags: [music,mixtape,znn,dark]
 ---

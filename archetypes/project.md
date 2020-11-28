@@ -1,8 +1,12 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
 description: ""
+date: {{ .Date }}
+lastmod: {{ .Date }}
 tags: []
 links: []
+images: []
+audio: []
+video: []
 draft: true
 ---

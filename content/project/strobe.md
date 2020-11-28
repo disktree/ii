@@ -8,3 +8,4 @@ links: [
 ]
 ---
 {{<iframe src="https://disktree.net/app/strobe">}}
+<!-- {{<iframe src="http://localhost/web/disktree/strobe/bin/">}} -->
