@@ -1,21 +1,7 @@
-
-ul.tags {
-	display: flex;
-	text-transform: uppercase;
-	li.tag {
-		&:not(:first-child) {
-			margin-left: 0.5ch;
-		}
-		a {
-			font-variation-settings: 'wght' 600;
-		}
-	}
-}
-
 ol.projects {
 	padding-bottom: 2rem;
 	> li {
-		padding-top: 1rem;
+		//padding-top: 1rem;
 		padding-bottom: 1rem;
 		> .title {
 			//overflow-x: hidden;
@@ -24,7 +10,7 @@ ol.projects {
 		> .meta {
 			display: flex;
 			position: relative;
-			top: -0.2em;
+		//	top: -0.2em;
 			left: 1px;
 			> * {
 				margin-right: 0.66ch;
@@ -68,9 +54,9 @@ body > main > div.project {
 	grid-template-columns: 1fr; //repeat(4,1fr);
 	grid-template-rows: minmax(2.5rem,auto) auto auto auto 1fr;
 	//align-items: center;
-	//gap: 0.5rem;
+	gap: 0.5rem;
 	height: 100%;
-	padding-top: 1rem;
+	//padding-top: 1rem;
 	a {
 		font-variation-settings: 'wght' 700;
 	}
@@ -109,10 +95,10 @@ body > main > div.project {
 		//margin-bottom: 1rem;
 
 	}
-	> .description {
-		margin-top: 1rem;
-		margin-bottom: 1rem;
-	}
+	/* > .description {
+		//margin-top: 1rem;
+		//margin-bottom: 1rem;
+	} */
 	> article.content {
 		//display: grid;
 		//grid-template-columns: repeat(4,1fr);

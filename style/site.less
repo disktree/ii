@@ -1,13 +1,10 @@
 body {
-
 	--site-margin: 1rem;
 	--footer-height: 3rem;
-
 	display: grid;
 	grid-template-columns: [site-start] var(--site-margin) [content-start] 1fr [mid] 1fr [content-end] var(--site-margin) [site-end];
 	grid-template-rows: auto auto [content-start] 1fr [content-end] auto [footer-start] var(--footer-height) [footer-end];
 	//gap: 1.5rem;
-
 	> header {
 		grid-column: site-start / site-end;
 		grid-row: 1;
@@ -25,24 +22,27 @@ body {
 	> main {
 		grid-column: content-start / content-end;
 		grid-row: content-start / content-end;
-		display: block;
+		//display: block;
+		padding: 1rem 0;
 		height: 100%;
 	}
 	> aside:empty, > footer:empty {
 		display: none;
 	}
 	> aside, > footer {
+		grid-row: footer-start / footer-end;
 		display: flex;
-		padding: 0.5rem 0;
+		//padding: 0.5rem 0;
 		color: var(--f_low);
 		//border-top: 1px dotted var(--f_low);
 	}
 	> aside {
-		grid-column: mid/ content-end;
-		grid-row: footer-start / footer-end;
-		justify-content: flex-end;
+		grid-column: content-start / mid;
+		justify-content: flex-start;
 		//background: blue;
-		display: none;
+	/* 	.social {
+			//display: none;
+		} */
 		a {
 			padding-left: 0.3em;
 			&:not(:last-child) {
@@ -51,8 +51,7 @@ body {
 		}
 	}
 	> footer {
-		grid-column: content-start / content-end;
-		grid-row: footer-start / footer-end;
+		grid-column: mid / content-end;
 		justify-content: flex-end;
 		a {
 			padding-right: 0.3em;
@@ -61,18 +60,15 @@ body {
 			}
 		}
 	}
-
 	@media screen and (min-width: @vp-medium) {
-
-		--site-margin: 3rem;
+		--site-margin: 2rem;
 		--footer-height: 5rem;
-
 		> main {
-			padding: 2rem 0 1rem 0;
+			padding: 2rem 0;
 		}
-		> aside, > footer {
-			padding: 1rem 0;
-		}
+		/* > aside, > footer {
+			//padding: 1rem 0;
+		} */
 	}
 }
 
