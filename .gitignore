@@ -1,8 +1,11 @@
 *.[0-9]/
 *.[0-9].*
-public/
-resources/
 assets/*.css*
 assets/js/app.js*
+content/draft
+public/
+resources/
+static/js
+static/*.css*
 themes/
 \#*
