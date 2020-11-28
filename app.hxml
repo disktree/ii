@@ -1,4 +1,4 @@
--js assets/js/app.js
+-js static/js/app.js
 -main App
 Audioplayer
 -cp sources

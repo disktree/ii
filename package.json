@@ -7,7 +7,7 @@
 		"less_include_paths": "/home/tong/dev/lib/enron/src:themes/void/style"
 	},
   "scripts": {
-    "clean": "rm -f assets/js/app.js* && rm -rf public",
+    "clean": "rm -f static/js/app.js* && rm -rf public",
     "test:css": "lessc --lint style/index.less --include-path=$npm_package_config_less_include_paths",
     "test:js": "haxe app.hxml --no-output",
     "test": "npm run test-css",
