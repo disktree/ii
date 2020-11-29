@@ -13,11 +13,12 @@
 	{{ $url := urls.Parse $urlstr }}
 
 	{{ if eq $url.Host "github.com" }}{{ $type = "github" }}
-	{{ else if eq $url.Host "disktree.net" }}{{ $type = "diamond" }}
+	{{ else if eq $url.Host "disktree.net" }}{{ $type = "circle" }}
+	{{ else if eq $url.Host "disktree.bandcamp.com" }}{{ $type = "circle" }}
+	{{ else if eq $url.Host "disktree.itch.io" }}{{ $type = "circle" }}
 	{{ else if eq $url.Host "gist.github.com" }}{{ $type = "github" }}
 	{{ else if eq $url.Host "gitlab.com" }}{{ $type = "gitlab" }}
 	{{ else if eq $url.Host "bandcamp.com" }}{{ $type = "bandcamp" }}
-	{{ else if eq $url.Host "disktree.bandcamp.com" }}{{ $type = "bandcamp" }}
 	{{ else if eq $url.Host "twitter.com" }}{{ $type = "twitter" }}
 	{{ else if eq $url.Host "vimeo.com" }}{{ $type = "vimeo" }}
 	{{ else if eq $url.Host "youtube.com" }}{{ $type = "youtube" }}

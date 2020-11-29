@@ -1,42 +1,27 @@
-{{ define "header" }}
-<a href="project" style="-webkit-user-drag:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);min-height:10vh;max-height:80vh;min-height:10vh;">
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="100%" width="100%">
+{{ define "main" }}
+<a href="project" style="max-height:50vh;cursor:vertical-text">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 		<style>
 			path {
-				stroke: var(--f_high);
-				stroke-width: 2;
+				fill: var(--f_med);
 			}
 		</style>
-		<path d="M 12,22 V 12"/>
-		<path d="M 4,12 H 20"/>
-		<path d="M 2.5,5 12,11"/>
-		<path d="M 21.5,5 12,11"/>
+		<path d="M 11,12 h2 V22 h-2 z"/>
+		<path d="M 6,11.5 h12 v2 h-12 z"/>
+		<path d="M 3.5,4.5 h12 v2 h-12 z" transform="rotate(36,3.5,5.5)"/>
+		<path d="M 8.5,4.5 h12 v2 h-12 z" transform="rotate(-36,20.5,5.5)"/>
 	</svg>
 </a>
-{{ end }}
-
-{{ define "nav" }}
-<!--  -->
-{{/* */}}
-{{ end }}
-
-{{ define "main" }}
-<!--  -->
-{{/* */}}
-{{ end }}
-
-{{ define "footer" }}
-<!--  -->
 {{ end }}
 
 {{ define "scripts" }}
 <script>
 	window.addEventListener('load', e => {
-		setTimeout(() => { window.location = '{{ .Site.BaseURL }}/project'; }, 300000 );
+		setTimeout(() => { window.location = '{{ .Site.BaseURL }}/project'; }, 1000 );
 	});
 	</script>
 {{ end }}
 
 {{ define "preload" }}
-<link rel="prerender" href="https://disktree.net/ii/project">
+<link rel="prerender" href="https://disktree.net/ii/project/">
 {{ end }}
