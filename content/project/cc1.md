@@ -5,5 +5,6 @@ tags: [core,music,mixtape]
 links: [
 	mixcloud.com/disktree/cc1/
 ]
+#mixcloud: cc1
 ---
 {{< mixcloud src=cc1 >}}

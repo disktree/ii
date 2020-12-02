@@ -6,7 +6,7 @@ tags: [vector,icon,graphics]
 keywords: [vector,icon,graphics]
 description: "Additions to the [material iconset](https://material.io/resources/icons/)."
 links: [material.io/resources/icons/]
-#theme: "bw"
+theme: "bw"
 ---
 {{< html >}}
 <style>
@@ -20,6 +20,7 @@ links: [material.io/resources/icons/]
 		width: 100%;
 		display: block;
 		margin: 0 !important;
+		background: white;
 		/* background-size: 16px 16px; */
 	}
 	.icon-preview > img:hover {

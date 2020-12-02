@@ -2,7 +2,7 @@
 title: "GAMMA 2017"
 date: 2017-05-26T12:54:57+02:00
 tags: ["gamma","game","haxe","threejs"]
-links: [http://gamma.disktree.net]
+links: [https://gamma.disktree.net]
 description: "No one knows enough to worry."
 ---
 {{< image src="gamma-screenshot2.webp" >}}
