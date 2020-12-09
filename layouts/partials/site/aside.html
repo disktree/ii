@@ -1,16 +1,8 @@
-<ul class="gitinfo">
+<div class="gitinfo">
 	{{ if .GitInfo }}
-	<li title="{{ .GitInfo.Subject }}">MOD</li>
-	<li title="{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</li>
-	<li title="{{ .GitInfo.AuthorDate }}">{{ .Params.lastmod.Format "060102" }}</li>
-	<li title="{{ .GitInfo.AuthorEmail }}">{{ .GitInfo.AuthorName }}</li>
+	<span title="{{ .GitInfo.Subject }}">MOD</span>
+	<span title="{{ .GitInfo.Hash }}"><a href="https://github.com/disktree/ii/commit/{{ .GitInfo.Hash }}" rel="external" tabindex="-1">{{ .GitInfo.AbbreviatedHash }}</a></span>
+	<span title="{{ .GitInfo.AuthorDate }}">{{ .Params.lastmod.Format "060102" }}</span>
+	<span title="{{ .GitInfo.AuthorEmail }}"><a href="https://github.com/{{ .GitInfo.AuthorName }}" rel="external" tabindex="-1">{{ .GitInfo.AuthorName }}</a></span>
 	{{ end }}
-</ul>
-{{/*
-<ul class="social">
-	<li><a href="https://vimeo.com/" class="ic-vimeo" title="vimeo/disktree"></a></li>
-	<li><a href="https://twitter.com/disktree" class="ic-twitter" title="twitter/disktree"></a></li>
-	<li><a href="https://gitlab.com/disktree" class="ic-gitlab" title="gitlab/disktree"></a></li>
-	<li><a href="https://github.com/tong" class="ic-github-alt" title="github/tong"></a></li>
-</ul>
-*/}}
+</div>

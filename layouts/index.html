@@ -1,6 +1,11 @@
+{{ define "header" }}
+	<a href="{{.Site.BaseURL}}/project">
+		<h1 style="display:none">DISKTREE/II</h1>
+	</a>
+{{ end }}
 {{ define "main" }}
-<a href="project" style="max-height:50vh;cursor:vertical-text">
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<a href="{{.Site.BaseURL}}/project" style="cursor:vertical-text;display:grid;place-items:center;height:100%" title="Projects">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50vw" height="50vh">
 		<style>
 			path {
 				fill: var(--f_med);
@@ -17,7 +22,7 @@
 {{ define "scripts" }}
 <script>
 	window.addEventListener('load', e => {
-		setTimeout(() => { window.location = '{{ .Site.BaseURL }}/project'; }, 1000 );
+		setTimeout(() => { window.location = 'project'; }, 2000 );
 	});
 	</script>
 {{ end }}

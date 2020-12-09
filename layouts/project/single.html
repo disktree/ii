@@ -1,7 +1,7 @@
 {{ define "main" }}
 	<div class="project">
-		<h1 class="title">{{- .Title -}}</h1>
-		<div class="meta">
+		<h1 id="title" class="title">{{- .Title -}}</h1>
+		<div id="meta" class="meta">
 			<a href=".." class="ic-circle" title="Projects"></a>
 			{{ partial "prev_next" . }}
 			<time class="time" datetime="{{.Date}}">{{.Date.Format "06/01/02"}}</time>
@@ -9,7 +9,9 @@
 		</div>
 		{{ partial "links" . }}
 		{{ if .Content }}<section class="description">{{ .Params.description | markdownify }}</section>{{ end }}
-		<article class="content">{{- .Content -}}</article>
+		<article id="content" class="content">
+			{{- .Content -}}
+		</article>
 	</div>
 	<script>
 		window.addEventListener( 'keydown', e => {

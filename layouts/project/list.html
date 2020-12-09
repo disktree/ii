@@ -1,15 +1,20 @@
 {{ define "header" }}
-	<div class="raa3" style="display:none;margin:0 auto;width:80%;max-width:600px;padding:8rem 4rem;">{{ partial "raa3" . }}</div>
-	<div class="raa2" style="display:none;width:100%;padding:1rem 2rem 1rem 1rem;">{{ partial "raa2" . }}</div>
-	<script>
-		const animations = ["raa2","raa3"];
-		//var a = animations[1]; // animations[Math.floor( Math.random()*animations.length)];
-		document.querySelector('header .'+animations[1]).style.display = 'block';
-	</script>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" viewBox="0 0 100 100" style="width:100%;height:100%;max-height:50vh;padding:4rem;">
+	<circle fill="var(--f_med)" cx="0" cy="0" r="50" transform="translate(50 50)">
+		<animateTransform attributeName="transform"
+		attributeType="XML"
+		type="scale"
+		additive="sum"
+		from="1 1"
+		to="0 0"
+		dur="1s"
+		repeatCount="indefinite"/>
+	</circle>
+</svg>
 {{ end }}
 
 {{ define "main" }}
-	{{ if .Title }}<h1>{{- .Title -}}</h1>{{ end }}
+	<h1 style="display:none">{{- .Title -}}</h1>
 	{{ if .Content }}<article class="content">{{- .Content -}}</article>{{ end }}
 	<ol class="projects">
 		{{ $paginator := .Paginate .Data.Pages }}

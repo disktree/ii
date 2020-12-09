@@ -34,7 +34,7 @@
 
 	<li class="link">
 		<a href="{{ $urlstr }}" class="ic-link-{{ $type }}" title="{{ $urlstr }}" {{ with $is_download }}
-			download{{ end }}>{{ trim (print $url.Host $url.Path) "/" }}</a>
+			download{{ end }} rel="external">{{ trim (print $url.Host $url.Path) "/" }}</a>
 	</li>
 
 	{{ end }}
