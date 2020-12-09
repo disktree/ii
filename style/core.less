@@ -31,19 +31,20 @@ a {
 		color: var(--f_high);
 	}
 	&:focus {
-		color: var(--f_high);
+		color: var(--b_med);
+		background: var(--f_med);
 		outline: none;
 	}
 	&:active {
 		color: var(--f_high);
 	}
-	&[href][class^="ic-"] {
+	/* &[href][class^="ic-"] {
 		&:hover, &:focus {
 			//transition: transform 0.1s ease-in-out;
 			transform: scale(1.05);
 			transform-origin: center;
 		}
-	}
+	} */
 }
 
 audio[controls] {
@@ -93,15 +94,15 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: var(--h1-size);
 	letter-spacing: -3px;
-    //line-height: 1em;
 	font-variation-settings: 'wght' 700;
 	@media screen and (min-width: @vp-medium) {
-		letter-spacing: -3.5px;
+		//letter-spacing: -3.5px;
 	}
 }
 h2 {
 	font-size: var(--h2-size);
-	//letter-spacing: -1px;
+	letter-spacing: -2px;
+	font-variation-settings: 'wght' 700;
 	//line-height: 1.0em;
 	//font-variation-settings: 'wght' 670;
 }
