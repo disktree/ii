@@ -1,20 +1,27 @@
-baseURL = "https://disktree.net/ii/"
+baseURL = "http://disktree.ftl/"
 title = "DISKTREE™"
 defaultContentLanguage = "en"
 languageCode = "en"
 description = "Serious Fucking Business"
 keywords = ["disktree"]
+
 theme = "void"
+
 # disablePathToLower = true
 enableGitInfo = true
 # enableInlineShortcodes = true
-Paginate = 100
+enableRobotsTXT = true
+
+paginate = 100
 paginatePath = "list"
 RSSUri = "rss.xml"
 #rssLimit = 100
+disableHugoGeneratorInject = true
+#googleAnalytics = "UA-8372252-14"
 #footnoteAnchorPrefix
 #footnoteReturnLinkContents
-disableHugoGeneratorInject = true
+
+newcontenteditor = "vscode"
 
 [author]
   name = "disktree"

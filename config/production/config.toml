@@ -1,0 +1,4 @@
+baseURL = "https://disktree.net/ii/"
+cleandestinationdir = true
+[minify]
+  minifyOutput = true
