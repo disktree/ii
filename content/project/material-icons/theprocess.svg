@@ -5,8 +5,8 @@
 			stroke-width: 2;
 		}
 	</style>
-	<path d="M 9,15 H 21"/>
-	<path d="M 3,9 H 15"/>
-	<path d="M 9,9 V 21"/>
-	<path d="M 15,3 V 15"/>
+	<path d="M9,15 H21"/>
+	<path d="M3,9 H15"/>
+	<path d="M9,9 V21"/>
+	<path d="M15,3 V15"/>
 </svg>

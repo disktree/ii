@@ -3,12 +3,8 @@
 		path {
 			stroke: #000;
 			stroke-width: 2;
+			fill:none;
 		}
 	</style>
-	<g transform="rotate(45 12 12)">
-		<path d="M 9,15 H 21"/>
-		<path d="M 3,9 H 15"/>
-		<path d="M 9,9 V 21"/>
-		<path d="M 15,3 V 15"/>
-	</g>
+	<path d="M 6,21 18,9 12,3 6,9 18,21"/>
 </svg>
