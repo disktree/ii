@@ -15,7 +15,8 @@
     "build:css": "lessc style/index.less static/style.css --include-path=$npm_package_config_less_include_paths --source-map --clean-css='--s1 --advanced'",
     "build:js": "haxe app.hxml",
     "build": "npm run build:css && npm run build:js && npm run build:hugo",
-    "serve": "hugo server -D"
+    "start:less": "neko $DEV/tool/lessc-live/lessc-live.n -main style/index.less -css static/style.css --src style:/home/tong/dev/lib/enron/src:/home/tong/dev/lib/void/hugo-void/style --options --source-map",
+    "start:hugo": "hugo server -D"
   },
   "repository": {
     "type": "git",

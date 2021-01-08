@@ -39,7 +39,7 @@ typedef ThemeData = {
 
 class Theme {
 
-	static inline var STORAGE_ID = 'disktree_ii_theme';
+	public static inline var STORAGE_ID = 'disktree_ii_theme';
 
 	public static var current(default,null) : ThemeData;
 
@@ -48,8 +48,14 @@ class Theme {
 		return (_theme == null) ? null : Json.parse( _theme );
 	}
 
+	@:expose
 	public static function saveLocal( theme : ThemeData ) {
 		window.localStorage.setItem( STORAGE_ID, Json.stringify(theme) );
+	}
+
+	@:expose
+	public static function clearLocal() {
+		window.localStorage.removeItem( STORAGE_ID );
 	}
 
 	@:expose

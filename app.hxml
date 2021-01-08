@@ -2,6 +2,7 @@
 -main App
 Audioplayer
 -cp sources
+#-lib om.web
 -dce full
 -debug
 -D source-header=
