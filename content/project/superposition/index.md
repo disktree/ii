@@ -2,7 +2,7 @@
 title: "Superposition"
 #linkTitle: "ꙄUꟼƎЯPOϟI7IOͶ"
 date: 2020-09-21
-tags: [game,ldjam,armory]
+tags: [game,ldjam,armory,blender]
 description: "Ludum Dare 47 game jam submission."
 github: tong/ld47
 links: [

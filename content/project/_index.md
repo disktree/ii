@@ -1,4 +1,5 @@
 ---
-description: "Projects developed at the disktree laboratory"
+title: "Projects"
+description: "Projects developed at the disktree lab"
 keywords: [projects,list,index]
 ---
