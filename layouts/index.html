@@ -4,8 +4,8 @@
 	</a>
 {{ end }}
 {{ define "main" }}
-<a href="{{.Site.BaseURL}}/project" style="cursor:vertical-text;display:grid;place-items:center;height:100%" title="Projects">
-	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50vw" height="50vh">
+<a href="{{.Site.BaseURL}}project" class="site-intro" title="Projects" tabindex="1">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50vw" height="50vh" focusable="false">
 		<style>
 			path {
 				fill: var(--f_med);
@@ -22,7 +22,7 @@
 {{ define "scripts" }}
 <script>
 	window.addEventListener('load', e => {
-		setTimeout(() => { window.location = 'project'; }, 2000 );
+		//setTimeout(() => { window.location = 'project'; }, 2000 );
 	});
 	</script>
 {{ end }}
