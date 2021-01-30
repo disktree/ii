@@ -37,6 +37,7 @@ theme: "bw"
 	<img src="ftl.svg" class="debug-grid" title="FTL">
 	<img src="mercury.svg" class="debug-grid" title="Mercury">
 	<img src="necromanteion.svg" class="debug-grid" title="Necromanteion">
+	<img src="odal.svg" class="debug-grid" title="Odal">
 	<img src="pentagram.svg" class="debug-grid" title="Pentagram">
 	<img src="salt.svg" class="debug-grid" title="Salt">
 	<img src="secret13.svg" class="debug-grid" title="Secret13">
