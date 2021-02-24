@@ -1,10 +1,9 @@
 ---
 title: "Laerm"
 date: 2021-02-09
-tags: [web, noise]
+tags: [web, noise, music, radio]
 links: [
-	laerm.org,
-	lauter.laerm.org,
+	https://lauter.laerm.org,
 	github.com/disktree/laerm
 ]
 theme: 'laerm'

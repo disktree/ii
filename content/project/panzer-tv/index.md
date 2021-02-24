@@ -10,9 +10,3 @@ links: [
 theme: 'panzer'
 ---
 {{< background-iframe src="https://panzerschokolade.disktree.net/tv/" >}}
-{{< html >}}
-	<style>
-		:root { --f_high: #D7C902; --f_med:#FB0F94; }
-		main { cursor: help; }
-	</style>
-{{< /html >}}
