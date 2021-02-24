@@ -33,8 +33,11 @@ theme: "bw"
 {{< html >}}
 <p class="icon-preview">
 	<img src="archillect.svg" class="debug-grid" title="Archillect">
-	<img src="magick.svg" class="debug-grid" title="Magick">
+	<img src="christ.svg" class="debug-grid" title="Christ">
 	<img src="ftl.svg" class="debug-grid" title="FTL">
+	<!-- <img src="ss.svg" class="debug-grid" title="Mercury"> -->
+	<!-- <img src="black-sun.svg" class="debug-grid" title="Mercury"> -->
+	<img src="magick.svg" class="debug-grid" title="Magick">
 	<img src="mercury.svg" class="debug-grid" title="Mercury">
 	<img src="necromanteion.svg" class="debug-grid" title="Necromanteion">
 	<img src="odal.svg" class="debug-grid" title="Odal">
