@@ -14,10 +14,12 @@
     "test": "npm run test-css",
     "build:hugo": "hugo --environment production",
     "build:css": "lessc style/index.less static/style.css --include-path=$npm_package_config_less_include_paths --source-map --clean-css='--s1 --advanced'",
+    "build:css:scss": "sass style/index.scss static/style.css",
     "build:js": "haxe app.hxml",
     "build": "npm run build:css && npm run build:js && npm run build:hugo",
-    "start:less": "neko $DEV/tool/lessc-live/lessc-live.n -main style/index.less -css static/style.css --src style:/home/tong/dev/lib/enron/src:/home/tong/dev/lib/void/hugo-void/style --options --source-map",
-    "start:hugo": "hugo server -D"
+    "dev:style": "neko $DEV/tool/lessc-live/lessc-live.n -main style/index.less -css static/style.css --src style:/home/tong/dev/lib/enron/src:/home/tong/dev/lib/void/hugo-void/style --options --source-map",
+    "dev:style:scss": "sass style/index.scss static/style.css --watch",
+    "dev:serve": "hugo server -D"
   },
   "repository": {
     "type": "git",
@@ -26,9 +28,10 @@
   "author": "tong@disktree.net",
   "license": "ISC",
   "devDependencies": {
+    "html-validate": "^4.3.0",
     "less": "^4.1.0",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1",
-    "html-validate": "^4.3.0"
+    "sass": "^1.32.6"
   }
 }
