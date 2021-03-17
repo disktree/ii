@@ -7,10 +7,10 @@ description: "Ludum Dare 47 game jam submission."
 github: tong/ld47
 links: [
 	ldjam.com/events/ludum-dare/47/superposition,
-	disktree.net/app/games/ld47,
+	disktree.net/game/ld47,
 	disktree.itch.io/superposition,
 	github.com/tong/ld47,
 ]
 ---
-[{{< picture src=superposition-1 >}}](https://disktree.net/app/games/superposition/)
-[{{< picture src=superposition-2 >}}](https://disktree.net/app/games/superposition/)
+[{{< picture src=superposition-1 >}}](https://disktree.net/game/superposition/)
+[{{< picture src=superposition-2 >}}](https://disktree.net/game/superposition/)
