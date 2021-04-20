@@ -1,0 +1,7 @@
+<svg width="30cm" height="30cm" version="1.1" viewBox="0 0 30 30"
+	xmlns="http://www.w3.org/2000/svg">
+	<g fill-rule="evenodd">
+		<path id="vinyl" d="m15 15m-15 0a15 15 0 1 0 30 0 15 15 0 1 0-30 0m15 0m-0.35 0a0.35 0.35 0 1 0 0.7 0 0.35 0.35 0 1 0-0.7 0" fill="black"/>
+		<path id="label" d="m15 15m-5 0a5 5 0 1 0 10 0 5 5 0 1 0-10 0m5 0m-0.35 0a0.35 0.35 0 1 0 0.7 0 0.35 0.35 0 1 0-0.7 0" fill="white"/>
+	</g>
+</svg>
