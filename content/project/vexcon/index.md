@@ -2,7 +2,9 @@
 title: "Vexcon"
 date: 2005-06-26
 tags: [font,graphics,typography]
-links: []
+links: [
+	VEXCON.ttf
+]
 ---
 {{< link-download vexcon.ttf VEXCON.ttf >}}
 

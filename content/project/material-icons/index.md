@@ -1,8 +1,8 @@
 ---
-title: "Material Icons"
+title: "Mortal Icons"
 date: 2020-10-10
 lastmod: 2020-12-10
-tags: [vector,icon,graphics]
+tags: [vector,icon,graphics,wip]
 keywords: [vector,icon,graphics]
 description: "Additions to the [material iconset](https://material.io/resources/icons/)."
 links: [material.io/resources/icons/]
@@ -33,9 +33,10 @@ theme: "bw"
 {{< html >}}
 <p class="icon-preview">
 	<img src="archillect.svg" class="debug-grid" title="Archillect">
-	<!-- <img src="black-sun.svg" class="debug-grid" title="Mercury"> -->
+	<!-- <img src="black-sun.svg" class="debug-grid" title="Black Sun"> -->
 	<img src="christ.svg" class="debug-grid" title="Christ">
-	<img src="fff.svg" class="debug-grid" title="FTL">
+	<img src="diamond.svg" class="debug-grid" title="Christ">
+	<img src="fff.svg" class="debug-grid" title="FFF">
 	<img src="ftl.svg" class="debug-grid" title="FTL">
 	<!-- <img src="haxe.svg" class="debug-grid" title="Haxe"> -->
 	<!-- <img src="ss.svg" class="debug-grid" title="Mercury"> -->
