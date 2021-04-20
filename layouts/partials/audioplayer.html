@@ -1,10 +1,4 @@
-<!-- {{ $mp3s := .Resources.Match "*.mp3" }}
-{{ $oggs := .Resources.Match "*.ogg" }}
-{{ $mp3s }}
-{{ $oggs }} -->
-
 <div class="audioplayer" class="paused">
-	<!-- <audio src="{{ index $mp3s 0 }}"></audio> -->
 	<audio controls></audio>
 	<time></time>
 	<div class="controls">
@@ -16,4 +10,3 @@
 	</div>
 	<canvas class="spectrum"></canvas>
 </div>
-<!-- <script>Audioplayer.init()</script> -->

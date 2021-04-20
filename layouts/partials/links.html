@@ -12,28 +12,35 @@
 
 	{{ $url := urls.Parse $urlstr }}
 
-	{{ if eq $url.Host "github.com" }}{{ $type = "github" }}
-	{{ else if eq $url.Host "disktree.net" }}{{ $type = "circle" }}
-	{{ else if eq $url.Host "disktree.bandcamp.com" }}{{ $type = "circle" }}
-	{{ else if eq $url.Host "disktree.itch.io" }}{{ $type = "circle" }}
-	{{ else if eq $url.Host "gist.github.com" }}{{ $type = "github" }}
-	{{ else if eq $url.Host "gitlab.com" }}{{ $type = "gitlab" }}
-	{{ else if eq $url.Host "bandcamp.com" }}{{ $type = "bandcamp" }}
-	{{ else if eq $url.Host "twitter.com" }}{{ $type = "twitter" }}
-	{{ else if eq $url.Host "vimeo.com" }}{{ $type = "vimeo" }}
-	{{ else if eq $url.Host "youtube.com" }}{{ $type = "youtube" }}
-	{{ else if eq $url.Host "wikipedia.org" }}{{ $type = "wikipedia" }}
-	{{ else if eq $url.Host "steampowered.com" }}{{ $type = "steam" }}
+	{{ if eq $url.Host "github.com" }}{{ $type = "link-github" }}
+	{{ else if eq $url.Host "disktree.net" }}{{ $type = "link-circle" }}
+	{{ else if eq $url.Host "disktree.bandcamp.com" }}{{ $type = "link-circle" }}
+	{{ else if eq $url.Host "disktree.itch.io" }}{{ $type = "link-circle" }}
+	{{ else if eq $url.Host "gist.github.com" }}{{ $type = "link-github" }}
+	{{ else if eq $url.Host "gitlab.com" }}{{ $type = "link-gitlab" }}
+	{{ else if eq $url.Host "bandcamp.com" }}{{ $type = "link-bandcamp" }}
+	{{ else if eq $url.Host "twitter.com" }}{{ $type = "link-twitter" }}
+	{{ else if eq $url.Host "vimeo.com" }}{{ $type = "link-vimeo" }}
+	{{ else if eq $url.Host "youtube.com" }}{{ $type = "link-youtube" }}
+	{{ else if eq $url.Host "wikipedia.org" }}{{ $type = "link-wikipedia" }}
+	{{ else if eq $url.Host "steampowered.com" }}{{ $type = "link-steam" }}
 	{{ end }}
 
 	{{ $is_download := false }}
 	{{ $ext := path.Ext $urlstr }}
-	{{ if eq $ext ".ogg" }}{{ $is_download = true }}
-	{{ else if (eq $ext ".mp3") }}{{ $is_download = true }}
+	{{ if eq $ext ".ogg" }}
+		{{ $is_download = true }}
+		{{ $type = "download" }}
+	{{ else if (eq $ext ".mp3") }}
+		{{ $is_download = true }}
+		{{ $type = "download" }}
+	{{ else if (eq $ext ".ttf") }}
+		{{ $is_download = true }}
+		{{ $type = "download" }}
 	{{ end }}
 
 	<li class="link">
-		<a href="{{ $urlstr }}" class="ic-link-{{ $type }}" title="{{ $urlstr }}" {{ with $is_download }}
+		<a href="{{ $urlstr }}" class="ic-{{ $type }}" title="{{ $urlstr }}" {{ with $is_download }}
 			download{{ end }} rel="external">{{ trim (print $url.Host $url.Path) "/" }}</a>
 	</li>
 
