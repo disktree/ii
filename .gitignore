@@ -1,0 +1,5 @@
+public/
+static/style.css*
+.hugo_build.lock
+__*
+*.[0-9]/
