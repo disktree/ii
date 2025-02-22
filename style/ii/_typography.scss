@@ -9,7 +9,7 @@ $font-heading: "Inter" !default;
 :root {
   --font-regular: #{$font-regular};
   --font-heading: #{$font-heading};
-  --text-size: 13px;
+  --text-size: 14px;
 
   @media screen and (min-width: breakpoint.$laptop) {
     // --text-size: 15px;

@@ -1,2 +1,4 @@
 {{ $sep := .Scratch.Get "seperator" | default "/" }}
-<time datetime="{{ .Date }}">{{ .Date.Format (print "2006" $sep "01" $sep "02") }}</time>
+{{ with .Date }}
+<time datetime="{{.}}">{{ .Format (print "2006" $sep "01" $sep "02") }}</time>
+{{ end }}

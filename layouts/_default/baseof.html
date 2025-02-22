@@ -17,6 +17,9 @@
 
   <link rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}syntax.css">
+  <link rel="stylesheet" href="{{ (resources.Get (print "theme/" .Site.Params.theme ".css")).RelPermalink }}">
+  {{ block "style" . }}{{ end }}
+
   <link rel="canonical" href="{{ .Permalink }}">
 
   {{ with .PrevInSection }}
@@ -24,16 +27,8 @@
   {{ with .NextInSection }}
   <link rel="next" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
 
-  {{/*{{ $theme_res := resources.Get "theme.css" }}*/}}
-  {{/* {{ $theme_res | resources.ExecuteAsTemplate "theme.css" . }} */}}
-  {{ block "style" . }}{{ end }}
-
-  {{/* {{ with .Site.Params.theme }} */}}
-  {{/* {{ partial (print "theme/" .) .Site }} */}}
-  {{/* {{ end }} */}}
 
   {{ block "schema" . }}{{ end }}
-
   <script src='{{(resources.Get "js/app.js").RelPermalink}}' async></script>
 
 </head>

@@ -1,7 +1,7 @@
 description: "Serious Fucking Index"
 name: "disktree"
 keywords: ["disktree"]
-theme_color: "#000000"
+theme: "default"
 repository: "https://github.com/disktree/ii"
 
 contact:
@@ -11,6 +11,10 @@ contact:
 
 git:
   branch: main
+
+github:
+  user: "disktree"
+  repo: "ii"
 
 social:
   bandcamp: "disktree"

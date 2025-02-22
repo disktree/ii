@@ -1,7 +1,13 @@
-<menu>
+{{ $type := .Type }}
+<menu class="nav">
   {{ range .Site.Menus.main }}
+  {{ $active := eq .Name $type }}
   <li>
-    <a href="{{.URL}}">|{{.Name}}</a>
+    {{ if $active }}
+    <span>{{- .Name -}}</span>
+    {{ else }}
+    <a href="{{.URL}}" class="active">{{- .Name -}}</a>
+    {{ end }}
   </li>
-  {{ end}}
+  {{ end }}
 </menu>
