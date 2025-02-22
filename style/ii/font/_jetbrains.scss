@@ -1,0 +1,10 @@
+$family: "JetBrainsMono" !default;
+$path: "font" !default;
+
+@font-face {
+  font-family: "JetBrainsMono";
+  font-display: block;
+  font-style: normal;
+  font-weight: 400;
+  src: url("#{$path}/JetBrainsMono-Regular.ttf") format("truetype");
+}

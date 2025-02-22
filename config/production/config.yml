@@ -1,0 +1,7 @@
+baseURL: "https://ii.disktree.net"
+cleandestinationdir: true
+
+minify:
+  minifyOutput: true
+  keepComments: false
+  keepConditionalComments: false

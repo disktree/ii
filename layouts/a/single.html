@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article>
+  {{/*<header>*/}}
+    {{/* <h1>{{- .Title -}}</h1>*/}}
+    {{/*</header>*/}}
+  <section class="content">{{- .Content -}}</section>
+</article>
+{{ end }}
+
+{{ define "footer-left" }}
+{{ partial "prev_next" . }}
+{{ end }}

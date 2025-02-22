@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default " en" }}">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="title" content="{{- .Site.Title -}}">
+  <meta name="url" content="{{ .Site.Params.url }}">
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/schema.html" . }}
+
+  <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}}/{{.}}{{end}}</title>
+
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}syntax.css">
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  {{ with .PrevInSection }}
+  <link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
+  {{ with .NextInSection }}
+  <link rel="next" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
+
+  {{/*{{ $theme_res := resources.Get "theme.css" }}*/}}
+  {{/* {{ $theme_res | resources.ExecuteAsTemplate "theme.css" . }} */}}
+  {{ block "style" . }}{{ end }}
+
+  {{/* {{ with .Site.Params.theme }} */}}
+  {{/* {{ partial (print "theme/" .) .Site }} */}}
+  {{/* {{ end }} */}}
+
+  {{ block "schema" . }}{{ end }}
+
+  <script src='{{(resources.Get "js/app.js").RelPermalink}}' async></script>
+
+</head>
+
+<body>
+  <header>
+    {{ block "header-left" . }}{{- partial "site/header-left" . -}}{{ end }}
+    {{ block "header-right" . }}{{- partial "site/header-right" . -}}{{ end }}
+  </header>
+  <main>
+    {{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}
+  </main>
+  <footer>
+    <div>{{ block "footer-left" . }}{{- partial "site/footer-left" . -}}{{ end }}</div>
+    <div>{{ block "footer-right" . }}{{- partial "site/footer-right" . -}}{{ end }}</div>
+  </footer>
+</body>
+
+</html>

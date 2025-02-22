@@ -1,0 +1,25 @@
+/** ii/scrollbar **/
+
+*::-webkit-scrollbar {
+  border: none;
+
+  &:horizontal {
+    display: none;
+  }
+
+  &:vertical {
+    width: 1px;
+  }
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-corner {
+  display: none !important;
+}
+
+// ::-webkit-scrollbar-track {
+//     //background: var(--bg);
+// }
+::-webkit-scrollbar-thumb {
+  background: var(--f_med);
+}

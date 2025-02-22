@@ -1,5 +1,9 @@
 public/
+resources/
+libs/
 static/style.css*
+\.env
 .hugo_build.lock
+hugo_stats.json
 __*
 *.[0-9]/

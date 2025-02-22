@@ -1,0 +1,13 @@
+<nav class="prev_next">
+  {{with .PrevInSection}}
+  <a rel="prev" href="{{.Permalink}}" title="{{- .Title -}}">
+    <i class="ic-arrow_back"></i><span class="nodisplay">&#60;-</span><span class="title">{{- .Title -}}</span>
+  </a>
+  {{end}}
+  <a rel="up" href="{{ .Parent.Permalink }}"><i class="ic-arrow_upward"></i></a>
+  {{with .NextInSection}}
+  <a rel="next" href="{{.Permalink}}" title="{{- .Title -}}">
+    <span class="title">{{- .Title -}}</span><span class="nodisplay">-&#62;</span><i class="ic-arrow_forward"></i>
+  </a>
+  {{end}}
+</nav>

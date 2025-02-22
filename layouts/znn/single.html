@@ -1,0 +1,26 @@
+{{ define "style" }}
+{{ $style := resources.Get "css/znn_single.css" }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ end }}
+
+{{ define "main" }}
+{{ $url := print "https://music.disktree.net/ZNN/" .Title ".mp3" }}
+<article class="znn">
+  <h1>
+    <a href="{{ $url }}">{{.Title}}</a>
+  </h1>
+  {{ $src := print .Params.znn ".png" }}
+  {{ $res := .Resources.Get $src }}
+  {{ $res_400 := $res.Resize "400x" }}
+  {{ $res_1000 := $res.Resize "1000x" }}
+  <a href="{{ $url }}">
+    <img srcset="{{ $res_400.RelPermalink }} 400w,
+      {{ $res_1000.RelPermalink }} 1000w,
+      {{ $res.RelPermalink }} 3000w" src="{{ $res.Permalink }}" alt="{{ .Params.title }}">
+  </a>
+</article>
+{{ end }}
+
+{{ define "subnav"}}
+{{ partial "prev_next" . }}
+{{ end }}

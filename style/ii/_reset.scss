@@ -1,0 +1,50 @@
+/** ii/reset **/
+
+* {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+// :focus:not(:focus-visible) {
+//   //outline: none;
+// }
+
+html {
+  font-optical-sizing: auto;
+  text-rendering: optimizelegibility;
+  text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  text-size-adjust: none;
+}
+
+a {
+  text-underline-position: under;
+  //text-decoration-thickness:8;
+}
+
+label,
+button,
+select,
+summary,
+[type=radio],
+[type=submit],
+[type=checkbox] {
+  cursor: pointer;
+}

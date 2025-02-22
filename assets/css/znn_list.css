@@ -1,0 +1,23 @@
+article.znn>ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 6rem;
+  grid-row-gap: 6rem;
+  padding: 4rem;
+  list-style: none;
+}
+
+article.znn>ol>li {
+  position: relative;
+}
+
+article.znn ol>li figure img {
+  width: 100%;
+}
+
+article.znn ol>li figure>figcaption {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

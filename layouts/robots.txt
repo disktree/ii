@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /font/
+Disallow: /styleguide/
+Disallow: /test/
+
+Sitemap: {{ .Site.BaseURL }}sitemap.xml
+

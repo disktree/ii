@@ -1,0 +1,70 @@
+baseURL: ""
+title: "DISKTREE"
+languageCode: "en"
+defaultContentLanguage: "en"
+description: "Serious Fucking Business"
+
+buildDrafts: false
+disableHugoGeneratorInject: true
+disablePathToLower: true
+enableGitInfo: true
+enableRobotsTXT: true
+newcontenteditor: "nvim"
+#RSSUri: "rss.xml"
+#footnoteAnchorPrefix
+#footnoteReturnLinkContents
+#paginate: 100
+#paginatePath: "list"
+#rssLimit: 100
+
+build:
+  writeStats: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    #style: solarized-dark
+
+minify:
+  minifyOutput: false
+  keepComments: true
+  keepConditionalComments: true
+
+# module:
+#   imports:
+#     - path: github.com/tong/gonzo
+#       ##disable: false
+#   replacements:
+#     github.com/tong/gonzo -> /home/tong/dev/gonzo/
+#   mounts:
+#     - source: static
+#       target: static
+
+outputs:
+  home:
+    - html
+    - rss
+  section:
+    - html
+    # - rss
+
+sitemap:
+  changefreq: "monthly"
+  filename: "sitemap.xml"
+  priority: 0.5
+
+taxonomies:
+  tag: "tags"
+  # category: "categories"
+# disableKinds:
+# - taxonomy
+# - term
+
+permalinks:
+  #update: "/:filename/"
+  #project: "/p/:slug"
+  project: "/:year/:month/:filename/"
+  #project: "/p/:slug"

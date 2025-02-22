@@ -1,0 +1,13 @@
+<!-- <div> -->
+<!--   <a href="{{ .Site.BaseURL }}/index.xml" rel="alternate" aria-label="feed">RSS</a> -->
+<!-- </div> -->
+<!-- <img src="/assets/webring.svg" alt="webring"> -->
+
+<div class="footer-left">
+  {{ block "footer-left" . }}{{ end }}
+</div>
+<div class="footer-right">
+  <a href="{{ .Site.BaseURL }}index.xml" rel="alternate" aria-label="feed">
+    <i class="ic-rss_feed"></i>
+  </a>
+</div>

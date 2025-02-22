@@ -1,0 +1,144 @@
+/** ii/site **/
+
+@use 'breakpoint';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  margin: 0 auto;
+  padding: 0;
+  //white-space: nowrap;
+  // overflow-x: hidden;
+  // white-space: nowrap;
+  // overflow: hidden;
+  // gap: 0.5rem;
+
+  >header {
+    // font-size: 3rem;
+    // line-height: 0;
+    // margin: 0 0.5rem;
+    // padding: 1rem 0 0 0;
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    // white-space: nowrap;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // width: 100%;
+    margin: 0 1rem;
+    padding: 1rem 0 2rem 0;
+    text-transform: uppercase;
+    //word-break: break-all;
+    // white-space: nowrap;
+    // overflow-x: hidden;
+    //text-overflow: ellipsis;
+    z-index: 1000;
+
+    i {
+      position: relative;
+      top: 1px;
+      margin-right: 0.32rem;
+      background: yello;
+    }
+
+    dl.tags {
+      margin-left: 0.25rem;
+      // text-overflow: ellipsis;
+    }
+
+    time {
+      margin-left: 0.25rem;
+      color: var(--f_low);
+    }
+
+    // //&:not(:first-child, :nth-child(2)) {
+    // *:not(:first-child) {
+    //   // margin-left: 0.5rem;
+    // }
+
+
+    // background: darkblue;
+    // svg {
+    //   width: 50%;
+    //   height: 100%;
+    // }
+    /*
+    h1 {
+      all: unset;
+    }
+
+    a {
+      text-decoration: none;
+
+      // >i {
+      //   // margin-right: 0.25rem;
+      // }
+    }
+
+    >* {
+      white-space: nowrap;
+
+      &:not(:first-child) {
+        margin-right: 0.5rem;
+      }
+
+      &:not(:first-child, :nth-child(2)) {
+        margin-left: 0.5rem;
+      }
+    }
+    */
+  }
+
+  // >menu {
+  // display: none;
+  // background: var(--b_low);
+  // display: flex;
+  // list-style: none;
+  // text-transform: uppercase;
+  // }
+
+  >main {
+    height: 100%;
+    z-index: 100;
+  }
+
+  >footer {
+    display: flex;
+    justify-content: space-between;
+    //justify-content: flex-end;
+    margin: 0 1rem;
+    padding: 1rem 0 2rem 0;
+    z-index: 1000;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: breakpoint.$tablet) {
+  body {
+    >header {
+      font-size: 1rem;
+      margin: 0 2rem;
+      padding: 2rem 0 2rem 0;
+    }
+
+    >main {
+      padding: 4rem 0 3rem 0;
+      margin: 0 6rem;
+    }
+
+    >footer {
+      margin: 0 2rem;
+      padding: 4rem 0 3rem 0;
+    }
+  }
+}

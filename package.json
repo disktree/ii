@@ -1,0 +1,30 @@
+{
+  "name": "ii",
+  "version": "2.0.0",
+  "description": "Serious Fucking Index",
+  "author": "tong@disktree.net",
+  "license": "ISC",
+  "private": true,
+  "homepage": "https://ii.disktre.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/disktree/ii.git"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "hugo-bin": "^0.140.1",
+    "sass": "^1.84.0"
+  },
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "clean": "rm -rf public && rm -f static/style.css*",
+    "dev:style": "sass style/main.scss static/style.css -w",
+    "build:style": "sass style/main.scss static/style.css --style compressed",
+    "build:hugo": "hugo -e production",
+    "build": "npm run build:style && npm run build:hugo",
+    "start": "hugo server"
+  }
+}

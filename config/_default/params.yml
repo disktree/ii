@@ -1,0 +1,21 @@
+description: "Serious Fucking Index"
+name: "disktree"
+keywords: ["disktree"]
+theme_color: "#000000"
+repository: "https://github.com/disktree/ii"
+
+contact:
+  organization: "disktree"
+  email: admin@disktree.net
+  web: https://disktree.net
+
+git:
+  branch: main
+
+social:
+  bandcamp: "disktree"
+  github: "tong"
+  mixcloud: "disktree"
+  soundcloud: "disktree"
+  twitter: "disktree"
+  vimeo: "disktree"
