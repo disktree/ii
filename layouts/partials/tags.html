@@ -2,7 +2,6 @@
   <!-- <dt class="visuallyhidden">Tags</dt> -->
   {{ range .Params.tags }}
   <dd class="tag">
-    {{/*<a href="{{ " tags/" | relURL }}{{ . | urlize }}" rel="tag" tabindex="-1">#{{ . | safeHTML }}</a>*/}}
     <a href="{{ "tags/" | relURL }}{{ . | urlize }}" rel="tag">#{{ . | safeHTML }}</a>
   </dd>
   {{ end }}

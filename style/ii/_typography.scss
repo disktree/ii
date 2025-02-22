@@ -9,7 +9,7 @@ $font-heading: "Inter" !default;
 :root {
   --font-regular: #{$font-regular};
   --font-heading: #{$font-heading};
-  --text-size: 14px;
+  --text-size: 13px;
 
   @media screen and (min-width: breakpoint.$laptop) {
     // --text-size: 15px;
@@ -81,6 +81,10 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 1px;
   // margin: 1.25rem 0;
+}
+
+menu {
+  list-style: none;
 }
 
 ol,
@@ -217,15 +221,15 @@ nav.prev_next {
   display: flex;
   // justify-content: space-between;
   // justify-content: flex-end;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-transform: uppercase;
-  user-select: none;
+  // width: 100%;
+  // white-space: nowrap;
+  // overflow: hidden;
+  // text-transform: uppercase;
+  // user-select: none;
 
   a {
-    text-overflow: ellipsis;
 
+    // text-overflow: ellipsis;
     &[rel="up"],
     &[rel="next"] {
       margin-left: 0.75rem;
@@ -239,6 +243,15 @@ nav.prev_next {
   @media screen and (min-width: breakpoint.$tablet) {
     span.title {
       display: inline-block;
+    }
+
+    a {
+
+      &[rel="up"],
+      &[rel="next"] {
+        // margin-left: 0.75rem;
+        margin-left: 0.1rem;
+      }
     }
   }
 }

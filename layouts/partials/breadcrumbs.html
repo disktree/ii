@@ -1,0 +1,41 @@
+<menu class="breadcrumb">
+  {{ $urlSegments := split .RelPermalink "/" }}
+  {{ $curUrl := "" }}
+  {{ range $index, $seg := $urlSegments }}
+  {{/*{{ $curUrl = print "/" (trim .RelPermalink "/") }}*/}}
+
+  {{ if ne $seg "" }}
+  {{/*{{ site.GetPage (printf "%s/%s" "" $seg)}}*/}}
+  {{ $curUrl = printf "%s/%s" $curUrl $seg }}
+  {{ with site.GetPage $curUrl }}
+
+  {{ $prefix := "/" }}
+  {{ if eq .Kind "term" }}
+  {{ $prefix = "#" }}
+  {{ end }}
+
+  {{ $title := replace .Title " " "-" }}
+
+  {{/*{{ debug.Dump .Kind }}*/}}
+  {{/*{{ warnf .Kind }}*/}}
+
+  <li class="{{ .Kind }}">
+
+    {{ if eq .Kind "taxonomy"  }}
+    <span>{{ $prefix }}</span>
+    <a href="{{ .RelPermalink }}">{{ $title }}</a>
+    {{ else if eq .Kind "section"  }}
+    <span>{{ $prefix }}</span>
+    <a href="{{ .RelPermalink }}">{{ $title }}</a>
+
+
+    {{ else }}
+    <span>{{ $prefix }}</span>
+    <span>{{ $title }}</span>
+    {{ end }}
+  </li>
+
+  {{ end }}
+  {{ end }}
+  {{ end }}
+</menu>

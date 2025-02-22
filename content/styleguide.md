@@ -1,6 +1,6 @@
 ---
 title: Styleguide
-# date: 2024-02-23
+date: 2024-02-23
 type: styleguide
 title_text: "disktree"
 rss_ignore: true

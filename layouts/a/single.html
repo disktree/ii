@@ -3,10 +3,17 @@
   {{/*<header>*/}}
     {{/* <h1>{{- .Title -}}</h1>*/}}
     {{/*</header>*/}}
+  {{/*<div class="meta">*/}}
+    {{/* <ul>*/}}
+      {{/* {{ range .Params.links }}*/}}
+      {{/* <li>{{.}}</li>*/}}
+      {{/* {{ end }}*/}}
+      {{/* </ul>*/}}
+    {{/*</div>*/}}
   <section class="content">{{- .Content -}}</section>
 </article>
 {{ end }}
 
-{{ define "footer-left" }}
+{{ define "header-right" }}
 {{ partial "prev_next" . }}
 {{ end }}
