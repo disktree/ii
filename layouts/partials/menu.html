@@ -4,7 +4,7 @@
   {{ $active := eq .Name $type }}
   <li>
     {{ if $active }}
-    <span>{{- .Name -}}</span>
+    <b>{{- .Name -}}</b>
     {{ else }}
     <a href="{{.URL}}" class="active">{{- .Name -}}</a>
     {{ end }}

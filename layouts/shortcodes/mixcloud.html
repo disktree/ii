@@ -1,5 +1,6 @@
 {{ $src := .Get "src"}}
 {{ if $src }}
+    {{/*{{ $url := print "https://www.mixcloud.com/widget/iframe/?&amp;feed=%2F" .Site.Params.social.mixcloud "%2F" $src "%2F"}}*/}}
 	{{ $width := .Get "width" }}
 	{{ $height := .Get "height" }}
 	<iframe

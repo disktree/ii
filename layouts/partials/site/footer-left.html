@@ -1,1 +1,7 @@
-{{/*{{ partial "prev_next" . }}*/}}
+{{/*{{ partial "tags" . }}*/}}
+
+{{ $github := .Site.Params.github }}
+{{ with .GitInfo }}
+<a href="https://github.com/{{ $github.user }}/{{ $github.repo}}/commit/{{.Hash}}">{{ .AbbreviatedHash}}</a>
+{{ end }}
+{{ partial "prev_next" . }}

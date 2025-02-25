@@ -9,105 +9,97 @@ body {
 }
 
 body {
+
+  --site-margin: 1rem;
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  margin: 0 auto;
-  padding: 0;
   // gap: 0.5rem;
+  height: 100%;
 
   >header {
     display: flex;
-    margin: 0 1rem;
-    padding: 1rem 0 0 0;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 var(--site-margin);
+    padding: 1rem 0;
     text-transform: uppercase;
-    //word-break: break-all;
-    // white-space: nowrap;
-    // overflow-x: hidden;
-    //text-overflow: ellipsis;
     z-index: 1000;
 
-    i {
-      position: relative;
-      top: 1px;
-      margin-right: 0.32rem;
-      background: yello;
-    }
+    >a.home {
 
-    dl.tags {
-      margin-left: 0.25rem;
-      // text-overflow: ellipsis;
-    }
-
-    time {
-      margin-left: 0.25rem;
-      color: var(--f_low);
-    }
-
-    nav.prev_next {
-      margin-left: 0.25rem;
-    }
-
-    menu.nav {
-      display: flex;
-
-      &::before {
-        content: "[";
+      // margin-right: 0.5rem;
+      i {
+        position: relative;
+        top: 1px;
+        margin-right: 3px;
       }
+    }
 
-      &::after {
-        content: "]";
-      }
+    >menu.breadcrumb {
+      margin-right: 0.25rem;
+    }
 
-      >li {
+    >time {
+      margin-right: 0.25rem;
+    }
 
-        // &:not(:first-child):before {
-        //   display: inline;
-        //   content: "|";
-        // }
-        &.active {
-          background: red;
-        }
-      }
+    >dl.tags {
+      // white-space: nowrap;
     }
   }
 
   >main {
-    margin: 0 1rem;
+    margin: 0 var(--site-margin);
+    // padding: 1rem 0;
+    // padding-bottom: 4rem;
+    // background: darkslategrey;
     height: 100%;
     z-index: 100;
   }
 
   >footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    //justify-content: flex-end;
-    margin: 0 1rem;
-    padding: 1rem 0 2rem 0;
+    // justify-content: flex-end;
+    margin: 0 var(--site-margin);
+    padding: 1rem 0 1.5rem 0;
     z-index: 1000;
 
     a {
       text-decoration: none;
+    }
+
+    >*:not(:last-child) {
+      margin-right: 0.5rem;
     }
   }
 }
 
 @media screen and (min-width: breakpoint.$tablet) {
   body {
+    --site-margin: 2rem;
+
     >header {
-      font-size: 1rem;
-      margin: 0 2rem;
-      padding: 2rem 0 2rem 0;
+      // font-size: 1rem;
+      // margin: 0 2rem;
+      // padding: 2rem 0 0rem 0;
+      // padding: 2rem 0;
+      padding-top: 2rem;
     }
 
     >main {
-      // padding: 4rem 0 3rem 0;
-      margin: 0 2rem;
+      // margin: 0 2rem;
+      // padding: 2rem 0;
+      // margin: 0 2rem;
     }
 
     >footer {
-      margin: 0 2rem;
-      padding: 4rem 0 3rem 0;
+      // margin: 0 2rem;
+      // padding: 2rem 0 3rem 0;
+      padding-bottom: 2rem;
     }
   }
 }

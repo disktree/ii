@@ -2,7 +2,6 @@
   {{ $urlSegments := split .RelPermalink "/" }}
   {{ $curUrl := "" }}
   {{ range $index, $seg := $urlSegments }}
-  {{/*{{ $curUrl = print "/" (trim .RelPermalink "/") }}*/}}
 
   {{ if ne $seg "" }}
   {{/*{{ site.GetPage (printf "%s/%s" "" $seg)}}*/}}
@@ -10,8 +9,12 @@
   {{ with site.GetPage $curUrl }}
 
   {{ $prefix := "/" }}
+  {{ $postfix := "" }}
+
   {{ if eq .Kind "term" }}
   {{ $prefix = "#" }}
+  {{ else if eq .Kind "section" }}
+  {{ $postfix = "/" }}
   {{ end }}
 
   {{ $title := replace .Title " " "-" }}
@@ -21,18 +24,19 @@
 
   <li class="{{ .Kind }}">
 
-    {{ if eq .Kind "taxonomy"  }}
+    {{ if eq .Kind "taxonomy" }}
     <span>{{ $prefix }}</span>
     <a href="{{ .RelPermalink }}">{{ $title }}</a>
-    {{ else if eq .Kind "section"  }}
+    {{ else if eq .Kind "section" }}
     <span>{{ $prefix }}</span>
     <a href="{{ .RelPermalink }}">{{ $title }}</a>
-
-
+    {{/*<span>{{ $postfix }}</span>*/}}
     {{ else }}
-    <span>{{ $prefix }}</span>
-    <span>{{ $title }}</span>
+    {{/*<span>{{ $prefix }}</span>*/}}
+    {{/*<span>{{ $title }}</span>*/}}
     {{ end }}
+
+    {{/*<span>{{ .Kind }}</span>*/}}
   </li>
 
   {{ end }}

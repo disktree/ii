@@ -84,6 +84,7 @@ h6 {
 }
 
 menu {
+  // display: flex;
   list-style: none;
 }
 
@@ -148,21 +149,10 @@ table {
 dl.tags {
   display: flex;
   flex-wrap: wrap;
-  // white-space: nowrap;
   text-transform: uppercase;
-  // overflow-x: scroll;
-  // text-overflow: ellipsis;
-  // white-space: nowrap;
-  // overflow: hidden;
-  // text-overflow: ellipsis;
 
   a {
-    color: var(--f_low);
     text-decoration: none;
-
-    &:hover {
-      color: var(--f_med);
-    }
   }
 
   >dd.tag {
@@ -177,7 +167,7 @@ menu.breadcrumb {
   // flex-wrap: wrap;
   list-style: none;
   text-transform: uppercase;
-  white-space: nowrap;
+  // white-space: nowrap;
   // background: red;
 
   >li {
@@ -226,32 +216,40 @@ nav.prev_next {
   // overflow: hidden;
   // text-transform: uppercase;
   // user-select: none;
+  // background: red;
+  text-transform: uppercase;
+
+  >:first-child {
+    // margin-right: 0.25rem;
+  }
+
+  >:last-child {
+    // margin-left: 0.25rem;
+  }
 
   a {
 
     // text-overflow: ellipsis;
-    &[rel="up"],
-    &[rel="next"] {
-      margin-left: 0.75rem;
-    }
+    // &[rel="up"],
+    // &[rel="next"] {
+    //   margin-left: 0.75rem;
+    // }
   }
 
   span.title {
-    display: none;
+    // display: none;
   }
 
-  @media screen and (min-width: breakpoint.$tablet) {
-    span.title {
-      display: inline-block;
-    }
-
-    a {
-
-      &[rel="up"],
-      &[rel="next"] {
-        // margin-left: 0.75rem;
-        margin-left: 0.1rem;
-      }
-    }
-  }
+  // @media screen and (min-width: breakpoint.$tablet) {
+  //   span.title {
+  //     display: inline-block;
+  //   }
+  //   a {
+  //     // &[rel="up"],
+  //     // &[rel="next"] {
+  //     //   // margin-left: 0.75rem;
+  //     //   margin-left: 0.1rem;
+  //     // }
+  //   }
+  // }
 }

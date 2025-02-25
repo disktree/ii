@@ -1,11 +1,12 @@
-<a href="{{ .Site.BaseURL }}">
+<a href="{{ .Site.BaseURL }}" class="home">
   <i class="ic-circle1"></i><span>disktree</span>
 </a>
-{{ partial "menu" .}}
 {{ partial "breadcrumbs" . }}
 {{ partial "datetime" . }}
 {{ partial "tags" . }}
 {{/*{{ partial "prev_next" . }}*/}}
-{{ with .GitInfo }}
-<a href="https://github.com/disktree/ii/commit/{{.Hash}}">{{ .AbbreviatedHash}}</a>
-{{ end }}
+{{/*{{ partial "menu" . }}*/}}
+
+{{/*{{ with .GitInfo }}*/}}
+{{/*<a href="https://github.com/disktree/ii/commit/{{.Hash}}">{{ .AbbreviatedHash}}</a>*/}}
+{{/*{{ end }}*/}}

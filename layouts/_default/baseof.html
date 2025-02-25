@@ -17,7 +17,12 @@
 
   <link rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}syntax.css">
-  <link rel="stylesheet" href="{{ (resources.Get (print "theme/" .Site.Params.theme ".css")).RelPermalink }}">
+  {{/*
+  {{/*{{ $theme := .Params.theme_name | default .Site.Params.theme }}*/}}
+  {{/*{{ $theme := .Site.Params.theme }}*/}}
+  {{/*
+  <link rel="stylesheet" href="{{ (resources.Get (print " theme/" $theme ".css" )).RelPermalink }}">*/}}
+
   {{ block "style" . }}{{ end }}
 
   <link rel="canonical" href="{{ .Permalink }}">
@@ -38,12 +43,12 @@
     {{ block "header-left" . }}{{- partial "site/header-left" . -}}{{ end }}
     {{ block "header-right" . }}{{- partial "site/header-right" . -}}{{ end }}
   </header>
-  <main>
-    {{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}
-  </main>
+  <main>{{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}</main>
   <footer>
-    <div>{{ block "footer-left" . }}{{- partial "site/footer-left" . -}}{{ end }}</div>
-    <div>{{ block "footer-right" . }}{{- partial "site/footer-right" . -}}{{ end }}</div>
+    {{ block "footer-left" . }}{{- partial "site/footer-left" . -}}{{ end }}
+    {{ block "footer-rigth" . }}{{- partial "site/footer-right" . -}}{{ end }}
+    {{/*<div>{{ block "footer-left" . }}{{- partial "site/footer-left" . -}}{{ end }}</div>*/}}
+    {{/*<div>{{ block "footer-right" . }}{{- partial "site/footer-right" . -}}{{ end }}</div>*/}}
   </footer>
 </body>
 

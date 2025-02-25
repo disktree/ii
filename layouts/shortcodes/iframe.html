@@ -2,7 +2,7 @@
 {{ $width := .Get "width" | default "100%" }}
 {{ $height := .Get "height" | default "100%" }}
 {{ if $src }}
-<div class="iframe">
+{{/*<div class="iframe">*/}}
   <iframe
       src="{{ $src }}"
       frameborder="0"
@@ -12,6 +12,6 @@
       allowusermedia
       allow="camera;microphone"
   ></iframe>
-  <a href="{{$src}}" title="{{ $src }}" rel="external" target="_blank"><i class="ic-link2"></i></a>
-</div>
+  {{/*<a href="{{$src}}" title="{{ $src }}" rel="external" target="_blank"><i class="ic-link2"></i></a>*/}}
+{{/*</div>*/}}
 {{ end }}
