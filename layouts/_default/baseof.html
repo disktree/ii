@@ -16,7 +16,8 @@
   <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}}/{{.}}{{end}}</title>
 
   <link rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}syntax.css">
+  <link rel="stylesheet" href="{{(resources.Get "css/syntax.css" | minify).RelPermalink}}">
+
   {{/*
   {{/*{{ $theme := .Params.theme_name | default .Site.Params.theme }}*/}}
   {{/*{{ $theme := .Site.Params.theme }}*/}}
@@ -25,13 +26,10 @@
 
   {{ block "style" . }}{{ end }}
 
-  <link rel="canonical" href="{{ .Permalink }}">
-
   {{ with .PrevInSection }}
   <link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
   {{ with .NextInSection }}
   <link rel="next" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
-
 
   {{ block "schema" . }}{{ end }}
   <script src='{{(resources.Get "js/app.js").RelPermalink}}' async></script>

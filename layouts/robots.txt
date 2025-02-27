@@ -5,5 +5,8 @@ Disallow: /font/
 Disallow: /styleguide/
 Disallow: /test/
 
+User-agent: GPTBot
+Disallow: /
+
 Sitemap: {{ .Site.BaseURL }}sitemap.xml
 

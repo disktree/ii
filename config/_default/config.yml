@@ -49,7 +49,7 @@ outputs:
     - rss
   section:
     - html
-    # - rss
+    - rss
 
 sitemap:
   changefreq: "monthly"

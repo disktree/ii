@@ -3,15 +3,15 @@
   <header>
     <h1>{{- .Title -}}</h1>
   </header>
+  <div class="meta">
+    <ul>
+      {{ range .Params.links }}
+      <li>
+        <a href="{{ . }}" rel="external">{{.}}</a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
   <section class="content">{{- .Content -}}</section>
-  {{/*<div class="meta">*/}}
-    {{/* <ul>*/}}
-      {{/* {{ range .Params.links }}*/}}
-      {{/* <li>*/}}
-        {{/* <a href="{{ . }}" rel="external">{{.}}</a>*/}}
-        {{/* </li>*/}}
-      {{/* {{ end }}*/}}
-      {{/* </ul>*/}}
-    {{/*</div>*/}}
 </article>
 {{ end }}
