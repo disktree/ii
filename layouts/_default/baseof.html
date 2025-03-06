@@ -8,21 +8,45 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="title" content="{{- .Site.Title -}}">
-  <meta name="url" content="{{ .Site.Params.url }}">
+  <meta name="url" content="{{ .Site.Params.contact.web }}">
+  <meta name="description" content="{{ with .Params.description }}{{- . -}}{{ else }}{{- .Site.Params.description -}}{{ end }}">
+  <meta name="keywords" content="{{ delimit (.Params.keywords | default .Site.Params.keywords) "," }}">
+  {{ if .Params.sitemap.exclude }}
+  <meta name="robots" content="noindex,nofollow">
+  {{ end }}
   {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/schema.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
 
   <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}}/{{.}}{{end}}</title>
 
   <link rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
   <link rel="stylesheet" href="{{(resources.Get "css/syntax.css" | minify).RelPermalink}}">
 
-  {{/*
-  {{/*{{ $theme := .Params.theme_name | default .Site.Params.theme }}*/}}
-  {{/*{{ $theme := .Site.Params.theme }}*/}}
-  {{/*
-  <link rel="stylesheet" href="{{ (resources.Get (print " theme/" $theme ".css" )).RelPermalink }}">*/}}
+  {{ $theme := .Params.theme_name | default .Site.Params.theme }}
+  {{ $theme_path := (print "theme/" $theme ".css") }}
+  {{ $theme_res := resources.Get $theme_path }}
+  {{ if $theme_res }}
+  <link rel="stylesheet" href="{{ $theme_res.RelPermalink }}">
+  {{ else }}
+  {{ warnf "theme %s not found" $theme_path }}
+  {{ end }}
+
+  {{ with .Params.theme }}
+  <style>
+    :root {
+      {{ with .background }}--background: {{ . }};{{ end }}
+      {{ with .f_high }}--f_high: {{ . }};{{ end }}
+      {{ with .f_med }}--f_med: {{ . }};{{ end }}
+      {{ with .f_low }}--f_low: {{ . }};{{ end }}
+      {{ with .f_inv }}--f_inv: {{ . }};{{ end }}
+      {{ with .b_high }}--b_high: {{ . }};{{ end }}
+      {{ with .b_med }}--b_med: {{ . }};{{ end }}
+      {{ with .b_low }}--b_low: {{ . }};{{ end }}
+      {{ with .b_inv }}--b_inv: {{ . }};{{ end }}
+    }
+  </style>
+  {{ end }}
 
   {{ block "style" . }}{{ end }}
 
@@ -32,7 +56,7 @@
   <link rel="next" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
 
   {{ block "schema" . }}{{ end }}
-  <script src='{{(resources.Get "js/app.js").RelPermalink}}' async></script>
+  <script src='{{(resources.Get "js/app.js" | minify).RelPermalink}}' async></script>
 
 </head>
 
@@ -41,7 +65,7 @@
     {{ block "header-left" . }}{{- partial "site/header-left" . -}}{{ end }}
     {{ block "header-right" . }}{{- partial "site/header-right" . -}}{{ end }}
   </header>
-  <main>{{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}</main>
+  <main data-kind="{{ .Kind }}">{{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}</main>
   <footer>
     {{ block "footer-left" . }}{{- partial "site/footer-left" . -}}{{ end }}
     {{ block "footer-rigth" . }}{{- partial "site/footer-right" . -}}{{ end }}
