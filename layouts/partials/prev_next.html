@@ -4,9 +4,9 @@
     <i class="ic-arrow_back"></i><span class="nodisplay">&#60;-</span><span class="title">{{- .Title -}}</span>
   </a>
   {{end}}
-  {{ with .Parent }}
-  <a rel="up" href="{{ .Permalink }}"><i class="ic-arrow_upward"></i></a>
-  {{ end }}
+  {{/*{{ with .Parent }}*/}}
+  {{/*<a rel="up" href="{{ .Permalink }}"><i class="ic-arrow_upward"></i></a>*/}}
+  {{/*{{ end }}*/}}
   {{with .NextInSection}}
   <a rel="next" href="{{.Permalink}}" title="{{- .Title -}}">
     <span class="title">{{- .Title -}}</span><span class="nodisplay">-&#62;</span><i class="ic-arrow_forward"></i>

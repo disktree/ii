@@ -1,13 +1,14 @@
-{{ $type := .Type }}
+{{ with site.Menus.main }}
 <menu class="nav">
-  {{ range .Site.Menus.main }}
-  {{ $active := eq .Name $type }}
-  <li>
-    {{ if $active }}
-    <b>{{- .Name -}}</b>
-    {{ else }}
-    <a href="{{.URL}}" class="active">{{- .Name -}}</a>
-    {{ end }}
-  </li>
+  {{ range $index, $item := . }}
+  {{ if ne $index 0 }}
+  <span>|</span>
+  {{ end }}
+  {{ if $.IsMenuCurrent .Menu . }}
+  <b aria-current="page">{{ .Name }}</b>
+  {{ else }}
+  <a href="{{ .URL }}" title="{{ .Identifier }}">{{ .Name }}</a>
+  {{ end }}
   {{ end }}
 </menu>
+{{ end }}
