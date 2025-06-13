@@ -98,6 +98,13 @@ p {
   margin-bottom: 1rem;
 }
 
+blockquote {
+  margin: 2rem 0;
+  padding: 0 0 0 1rem;
+  border-left: 0.25rem solid var(--f_low);
+  font-style: italic;
+}
+
 sup {
   vertical-align: super;
   font-size: 0.5rem;
@@ -133,6 +140,7 @@ table {
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .nodisplay {
@@ -148,8 +156,10 @@ table {
 
 dl.tags {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   text-transform: uppercase;
+  //overflow: hidden;
+  // white-space: no-wrap;
 
   a {
     text-decoration: none;
@@ -169,6 +179,9 @@ menu.breadcrumb {
   text-transform: uppercase;
   // white-space: nowrap;
   // background: red;
+  // overflow: hidden;
+  // white-space: nowrap;
+  text-overflow: ellipsis;
 
   >li {
     display: flex;
@@ -207,37 +220,37 @@ menu.breadcrumb {
   }
 }
 
+menu.nav {
+  display: flex;
+  text-transform: uppercase;
+
+  // &:before {
+  //   content: "[";
+  // }
+  //
+  // &:after {
+  //   content: "]";
+  // }
+
+  >li {
+    display: inline-flex;
+  }
+}
+
 nav.prev_next {
   display: flex;
-  // justify-content: space-between;
-  // justify-content: flex-end;
-  // width: 100%;
-  // white-space: nowrap;
-  // overflow: hidden;
-  // text-transform: uppercase;
-  // user-select: none;
-  // background: red;
   text-transform: uppercase;
 
   >:first-child {
-    // margin-right: 0.25rem;
+    margin-right: 0.25rem;
   }
 
   >:last-child {
-    // margin-left: 0.25rem;
+    margin-left: 0.25rem;
   }
 
   a {
-
-    // text-overflow: ellipsis;
-    // &[rel="up"],
-    // &[rel="next"] {
-    //   margin-left: 0.75rem;
-    // }
-  }
-
-  span.title {
-    // display: none;
+    word-spacing: -0.2em;
   }
 
   // @media screen and (min-width: breakpoint.$tablet) {
