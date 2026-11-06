@@ -10,9 +10,9 @@ sitemap:
 
 The rule: at first glance this should look like a page without a stylesheet. On a second look it should not. The body face is a single token (`--font`), currently monospace; set it to `var(--serif)` for the serif version.
 
-Defaults kept as they are: the reader's `serif`, the system colors `Canvas`, `CanvasText`, `LinkText`, `VisitedText` and `GrayText` (so light and dark follow the OS), underlined links, bold headings, bullets, italic `<address>`, the inset `<hr>`.
+Defaults kept as they are: the system colors `Canvas`, `CanvasText` and `GrayText` (so light and dark follow the OS), underlined links, bold headings, bullets, the inset `<hr>`. Links have the color of the text, only the underline marks them.
 
-Things that are not default: the grid, the measure, one line of rhythm (`1.5rem`), the monospaced metadata, the size of the logo, and one accent color.
+Things that are not default: the grid, the measure, one line of rhythm, one font size for everything, the circle, and one accent color.
 
 ## Headings
 
@@ -38,7 +38,7 @@ Many non-authoritarian organizations have foundered on the dubious principle of 
 
 ## Links
 
-This [link](https://disktree.net) is a link, this one [has been visited](/styleguide/), hover them to see the underline change. Bare: <https://velak.klingt.org/>, <https://disktree.net>.
+This [link](https://disktree.net) is a link, this one [has been visited](/styleguide/), hover them to see the underline thicken. Bare: <https://velak.klingt.org/>, <https://disktree.net>.
 
 ## Lists
 
@@ -113,8 +113,6 @@ Embeds and figures step out of the measure into the aside column.
 <tbody>
 <tr><td><code>--bg</code></td><td><code>Canvas</code></td><td><span class="swatch" style="background:Canvas"></span></td></tr>
 <tr><td><code>--fg</code></td><td><code>CanvasText</code></td><td><span class="swatch" style="background:CanvasText"></span></td></tr>
-<tr><td><code>--link</code></td><td><code>LinkText</code></td><td><span class="swatch" style="background:LinkText"></span></td></tr>
-<tr><td><code>--visited</code></td><td><code>VisitedText</code></td><td><span class="swatch" style="background:VisitedText"></span></td></tr>
 <tr><td><code>--muted</code></td><td><code>GrayText</code></td><td><span class="swatch" style="background:GrayText"></span></td></tr>
 <tr><td><code>--accent</code></td><td><code>oklch(…)</code></td><td><span class="swatch" style="background:var(--accent)"></span></td></tr>
 </tbody>

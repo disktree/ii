@@ -1,9 +1,11 @@
 <footer class="site">
-  <p class="colophon">
-    <a href="{{ "tags/" | relURL }}">tags</a>
-    · <a href="{{ "index.xml" | relURL }}">rss</a>
-    {{- with .GitInfo }}
-    · <a href="{{ site.Params.repository }}/commit/{{ .Hash }}" title="{{ .Subject }}"><code>{{ .AbbreviatedHash }}</code></a>
-    {{- end }}
-  </p>
+  {{- if and .IsPage .Section }}
+  {{- with .PrevInSection }}<a rel="prev" href="{{ .RelPermalink }}" title="{{ partial "label" . }}">prev</a> · {{ end }}
+  {{- with .NextInSection }}<a rel="next" href="{{ .RelPermalink }}" title="{{ partial "label" . }}">next</a> · {{ end }}
+  {{- end }}
+  <a href="{{ "tags/" | relURL }}">tags</a>
+  · <a href="{{ "index.xml" | relURL }}">rss</a>
+  {{- with .GitInfo }}
+  · <a href="{{ site.Params.repository }}/commit/{{ .Hash }}" title="{{ .Subject }}"><code>{{ .AbbreviatedHash }}</code></a>
+  {{- end }}
 </footer>

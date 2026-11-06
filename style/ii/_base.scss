@@ -23,16 +23,16 @@ body {
 
 // Links: default colors, default underline, but set with care.
 a {
-    color: var(--link);
+    color: var(--fg);
     text-decoration-line: underline;
     text-decoration-thickness: 0.06em;
     text-underline-offset: 0.18em;
     text-decoration-skip-ink: auto;
     transition: text-decoration-color 0.15s, text-underline-offset 0.15s;
 
-    &:visited { color: var(--visited); }
+    &:visited { color: var(--fg); }
     &:hover {
-        text-decoration-color: var(--accent);
+        text-decoration-color: currentColor;
         text-decoration-thickness: 0.12em;
         text-underline-offset: 0.12em;
     }

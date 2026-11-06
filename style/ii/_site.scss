@@ -88,41 +88,18 @@ header.page {
 
 // Footer: a real <address>, italic by default, left exactly so.
 
+// Footer: one line, bottom right. prev/next live here too.
 footer.site {
+    @extend %mono;
     grid-column: meta-start / full-end;
     display: block;
-    padding: calc(var(--line) * 2) var(--edge) calc(var(--line) * 2) 0;
+    padding: calc(var(--line) / 2) var(--edge) calc(var(--line) / 2) 0;
     border-top: 1px solid color-mix(in srgb, var(--fg) 15%, transparent);
     text-align: right;
-
-    .colophon {
-        @extend %mono;
-        margin: 0;
-        color: var(--muted);
-        a { color: inherit; }
-    }
-}
-
-.pager {
-    grid-column: text-start / aside-end;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: var(--line) var(--gap);
-    margin-top: calc(var(--line) * 3);
-
-    a { max-width: 45%; }
-    a[rel='next'] { margin-left: auto; text-align: right; }
-
-    span {
-        @extend %mono;
-        display: block;
-        color: var(--muted);
-    }
-
-    @include break.max(sm) {
-        a { max-width: none; }
-    }
+    white-space: nowrap;
+    overflow: hidden;
+    color: var(--muted);
+    a, a:visited { color: inherit; }
 }
 
 .terms, .index {

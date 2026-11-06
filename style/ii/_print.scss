@@ -1,6 +1,6 @@
 @media print {
     :root { color-scheme: light; }
-    header.site nav, .pager, .skip, .bg-media, .background { display: none; }
+    header.site nav, .skip, .bg-media, .background { display: none; }
     .year > h2, dl.meta { position: static; }
     .text a[href^='http']::after {
         content: ' <' attr(href) '>';
