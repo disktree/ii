@@ -2,45 +2,19 @@
 @use 'base';
 @use 'enron/a11y';
 
-// Header: a circle, three links.
+// Header: one menu line. The circle is the first item, it links home.
 
 header.site {
-    align-items: center;
     padding-block: var(--edge) calc(var(--line) * 1.5);
-    // Desktop: one line, no padding; the menu follows the circle at one character.
-    @include break.min(md) {
-        display: flex;
-        align-items: baseline;
-        gap: 1ch;
-        padding-block: var(--edge) 0.75rem;
-    }
-
-    .logo {
-        grid-column: meta;
-        margin: 0;
-
-        a {
-            color: var(--fg);
-            &:visited { color: var(--fg); }
-        }
-
-        // A glyph, not an image: as high as the capitals of the menu,
-        // sitting on the baseline.
-        svg {
-            display: inline-block;
-            width: 1cap;
-            height: 1cap;
-            vertical-align: baseline;
-            fill: currentColor;
-        }
-    }
+    @include break.min(md) { padding-block: var(--edge) 0.75rem; }
 
     nav {
-        grid-column: text-start / aside-end;
+        grid-column: meta-start / aside-end;
 
         ul {
             display: flex;
             flex-wrap: wrap;
+            align-items: baseline;
             gap: 0;
             margin: 0;
             padding: 0;
@@ -49,8 +23,19 @@ header.site {
 
         li + li::before { content: '|'; }
 
-        [aria-current] {
-            color: var(--fg);
+        // A glyph, not an image: as high as the capitals, on the baseline.
+        svg {
+            display: inline-block;
+            width: 1cap;
+            height: 1cap;
+            vertical-align: baseline;
+            fill: currentColor;
+        }
+
+        a { color: var(--fg); }
+
+        // Current section on a content page: a small dot.
+        [aria-current='true'] {
             text-decoration: none;
 
             &::before {
@@ -64,21 +49,15 @@ header.site {
                 background: var(--accent);
             }
         }
-    }
 
-    // On a section's own list page the menu item is the heading:
-    // highlighted, no dot.
-    body.section & nav [aria-current] {
-        padding-inline: 0.5ch;
-        border-radius: 0.2rem; // same as the section keys
-        background: var(--fg);
-        color: var(--bg);
-        &::before { content: none; }
-    }
-
-    @include break.max(sm) {
-        padding-block: var(--edge) calc(var(--line) * 1.5);
-        row-gap: var(--line);
+        // The list you are looking at (home or a section): highlighted.
+        [aria-current='page'] {
+            padding-inline: 0.5ch;
+            border-radius: 0.2rem; // same as the section keys
+            background: var(--fg);
+            color: var(--bg);
+            text-decoration: none;
+        }
     }
 }
 
