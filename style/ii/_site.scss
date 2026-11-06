@@ -21,9 +21,8 @@ header.site {
             list-style: none;
         }
 
-        // Separators as in the footer: " · ". The circle is followed by a plain space.
-        li + li::before { content: '\00a0·\00a0'; color: var(--muted); }
-        li.home + li::before { content: '\00a0'; }
+        // Separator: one space, the width of one character, like everywhere else.
+        li + li::before { content: '\00a0'; }
 
         // A glyph, not an image: as high as the capitals, on the baseline.
         svg {
