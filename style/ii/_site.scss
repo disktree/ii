@@ -8,6 +8,7 @@
 header.site {
     align-items: center;
     padding-block: var(--edge) calc(var(--line) * 1.5);
+    @include break.min(md) { padding-block: var(--edge) var(--line); }
 
     .logo {
         grid-column: meta;
@@ -25,6 +26,13 @@ header.site {
             width: fluid.value(1.75rem, 2.25rem);
             height: auto;
             fill: currentColor;
+        }
+
+        // Desktop: the circle is exactly one line of text high.
+        @include break.min(md) {
+            line-height: var(--leading);
+            a { display: block; height: calc(1em * var(--leading)); }
+            svg { width: calc(1em * var(--leading)); }
         }
     }
 
