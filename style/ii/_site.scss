@@ -70,6 +70,7 @@ header.site {
     // highlighted, no dot.
     body.section & nav [aria-current] {
         padding-inline: 0.5ch;
+        border-radius: 0.2rem; // same as the section keys
         background: var(--fg);
         color: var(--bg);
         &::before { content: none; }
