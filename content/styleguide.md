@@ -128,24 +128,6 @@ JetBrains Mono, variable, `wght` 100–800.
 <p><i><span style="font-weight:100">100</span> <span style="font-weight:200">200</span> <span style="font-weight:300">300</span> <span style="font-weight:400">400</span> <span style="font-weight:500">500</span> <span style="font-weight:600">600</span> <span style="font-weight:700">700</span> <span style="font-weight:800">800</span></i></p>
 {{< /html >}}
 
-## Menu separators
-
-Candidates for the main menu, the active item highlighted as on a list page.
-
-{{< html >}}
-<table class="menu-demos"><tbody>
-<tr><td><code>hairline</code></td><td><nav class="menu-demo sep-hairline"><ul><li class="home"><a href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/></svg></a></li><li><a href="/a/" aria-current="page">ARCHIVE</a></li><li><a href="/c/">CODE</a></li></ul></nav></td><td>cap-height hairline (current)</td></tr>
-<tr><td><code>slash</code></td><td><nav class="menu-demo sep-slash"><ul><li class="home"><a href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/></svg></a></li><li><a href="/a/" aria-current="page">ARCHIVE</a></li><li><a href="/c/">CODE</a></li></ul></nav></td><td>grey /</td></tr>
-<tr><td><code>slash-fg</code></td><td><nav class="menu-demo sep-slash-fg"><ul><li class="home"><a href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/></svg></a></li><li><a href="/a/" aria-current="page">ARCHIVE</a></li><li><a href="/c/">CODE</a></li></ul></nav></td><td>/ in text color</td></tr>
-<tr><td><code>dot</code></td><td><nav class="menu-demo sep-dot"><ul><li class="home"><a href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/></svg></a></li><li><a href="/a/" aria-current="page">ARCHIVE</a></li><li><a href="/c/">CODE</a></li></ul></nav></td><td>grey ·</td></tr>
-<tr><td><code>pipe</code></td><td><nav class="menu-demo sep-pipe"><ul><li class="home"><a href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/></svg></a></li><li><a href="/a/" aria-current="page">ARCHIVE</a></li><li><a href="/c/">CODE</a></li></ul></nav></td><td>grey |</td></tr>
-<tr><td><code>space</code></td><td><nav class="menu-demo sep-space"><ul><li class="home"><a href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/></svg></a></li><li><a href="/a/" aria-current="page">ARCHIVE</a></li><li><a href="/c/">CODE</a></li></ul></nav></td><td>one space, nothing else</td></tr>
-<tr><td><code>wide</code></td><td><nav class="menu-demo sep-wide"><ul><li class="home"><a href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/></svg></a></li><li><a href="/a/" aria-current="page">ARCHIVE</a></li><li><a href="/c/">CODE</a></li></ul></nav></td><td>two spaces</td></tr>
-<tr><td><code>square</code></td><td><nav class="menu-demo sep-square"><ul><li class="home"><a href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/></svg></a></li><li><a href="/a/" aria-current="page">ARCHIVE</a></li><li><a href="/c/">CODE</a></li></ul></nav></td><td>small grey square</td></tr>
-<tr><td><code>brackets</code></td><td><nav class="menu-demo sep-brackets"><ul><li class="home"><a href="/"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/></svg></a></li><li><a href="/a/" aria-current="page">ARCHIVE</a></li><li><a href="/c/">CODE</a></li></ul></nav></td><td>[ ] around items, no separator</td></tr>
-</tbody></table>
-{{< /html >}}
-
 ## Metadata
 
 <p class="mono-sample"><time>2026-11-06</time> <a class="key" href="/a/">a</a> <a class="key" href="/c/">c</a> <a class="key" href="/s/">s</a></p>

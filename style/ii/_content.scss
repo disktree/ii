@@ -103,34 +103,3 @@
 }
 .mono-sample { display: flex; gap: 1ch; align-items: baseline; }
 
-// Styleguide: main menu separator candidates
-.menu-demo {
-    ul { display: flex; align-items: baseline; margin: 0; padding: 0; list-style: none; }
-    a { color: var(--fg); text-decoration: none; }
-    svg { display: inline-block; width: 1cap; height: 1cap; vertical-align: baseline; fill: currentColor; }
-    [aria-current='page'] { padding-inline: 0.5ch; background: var(--fg); color: var(--bg); }
-
-    li + li::before { color: var(--muted); }
-    &.sep-hairline li + li::before {
-        content: ''; display: inline-block; width: 1px; height: 1cap;
-        margin-inline: calc((1ch - 1px) / 2); vertical-align: baseline; background: var(--muted);
-    }
-    &.sep-slash li + li::before { content: '/'; }
-    &.sep-slash-fg li + li::before { content: '/'; color: var(--fg); }
-    &.sep-dot li + li::before { content: '·'; }
-    &.sep-pipe li + li::before { content: '|'; }
-    &.sep-space li + li::before { content: '\00a0'; }
-    &.sep-wide li + li::before { content: '\00a0\00a0'; }
-    &.sep-square li + li::before {
-        content: ''; display: inline-block; width: 0.3em; height: 0.3em;
-        margin-inline: calc((1ch - 0.3em) / 2); vertical-align: 0.25em; background: var(--muted);
-    }
-    &.sep-brackets {
-        li + li { margin-left: 1ch; }
-        a::before { content: '['; color: var(--muted); }
-        a::after { content: ']'; color: var(--muted); }
-        [aria-current='page'] { padding-inline: 0; }
-        .home a::before, .home a::after { content: none; }
-    }
-}
-.menu-demos td { vertical-align: baseline; border: 0; padding-block: 0.4rem; }

@@ -21,17 +21,8 @@ header.site {
             list-style: none;
         }
 
-        // Separator: a hairline exactly as high as the capitals (and the circle),
-        // taking the width of one character.
-        li + li::before {
-            content: '';
-            display: inline-block;
-            width: 1px;
-            height: 1cap;
-            margin-inline: calc((1ch - 1px) / 2);
-            vertical-align: baseline;
-            background: var(--muted);
-        }
+        // Separator: one space, the width of one character, like everywhere else.
+        li + li::before { content: '\00a0'; }
 
         // A glyph, not an image: as high as the capitals, on the baseline.
         svg {
