@@ -10,7 +10,7 @@
 body {
     display: grid;
     grid-template-columns:
-        [full-start] minmax(var(--edge), 1fr)
+        [full-start] var(--edge)
         [meta-start] var(--meta)
         [meta-end text-start] minmax(0, var(--measure))
         [text-end aside-start] var(--aside)
@@ -23,7 +23,7 @@ body {
 
     @include break.max(md) {
         grid-template-columns:
-            [full-start] minmax(var(--edge), 1fr)
+            [full-start] var(--edge)
             [meta-start] var(--meta)
             [meta-end text-start aside-start] minmax(0, var(--measure))
             [text-end aside-end] minmax(var(--edge), 1fr)
