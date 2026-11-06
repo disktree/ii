@@ -72,37 +72,25 @@
     }
 }
 
-// Home: one line per thing, titles only. The text follows the key at
-// one character distance instead of waiting for the text column.
+// Home: one line per thing, never wrapped. Everything flows inline,
+// date, key, title, tags, one character apart; overflow is cut off.
 .stream.compact {
     .item {
+        display: block;
         padding-block: 0.125rem;
-        grid-template-columns: max-content minmax(0, 1fr) var(--aside);
-        column-gap: 1ch;
-
-        > .when { grid-column: 1; }
-        > .what { grid-column: 2; }
-        > .tags { grid-column: 3; }
-
-        @include break.max(md) {
-            grid-template-columns: max-content minmax(0, 1fr);
-            > .tags { grid-column: 2; }
-        }
-        @include break.max(sm) {
-            grid-template-columns: minmax(0, 1fr);
-            > .when, > .what, > .tags { grid-column: 1; }
-        }
-    }
-    .item > .what h3 { font-weight: normal; }
-    .item.i-a > .what h3 { font-weight: bold; }
-    .item > .tags {
-        overflow: hidden;
         white-space: nowrap;
+        overflow: hidden;
         text-overflow: ellipsis;
-    }
-    @include break.max(sm) {
-        .item { padding-block: calc(var(--line) / 3); }
-        .item > .tags { white-space: normal; }
+
+        > .when, > .what, > .what > *, > .tags {
+            display: inline;
+        }
+        // one character between date, key, title, details and tags
+        > .what > *, > .what .repo { margin: 0; }
+        > .what, > .tags { margin-left: 1ch; }
+        > .what h3 { font-weight: normal; }
+        &.i-a > .what h3 { font-weight: bold; }
+        > .what .about { display: none; }
     }
 }
 

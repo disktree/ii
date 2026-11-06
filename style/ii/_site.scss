@@ -25,10 +25,7 @@ header.site {
             width: fluid.value(1.75rem, 2.25rem);
             height: auto;
             fill: currentColor;
-            transition: transform 0.3s;
         }
-        a:hover svg { transform: scale(0.85); }
-        @include a11y.reduced-motion { svg { transition: none; } }
     }
 
     nav {
