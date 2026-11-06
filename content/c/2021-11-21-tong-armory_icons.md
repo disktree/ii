@@ -8,11 +8,18 @@
       "id": "repo-430402530",
       "created": "2021-11-21T15:19:38Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/armory_icons"
+      "url": "https://github.com/tong/armory_icons",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2021-11-21T15:19:38Z",
-  "description": "created repository",
-  "language": "HTML"
+  "description": "new repository",
+  "language": "HTML",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/armory_icons"
+    }
+  ]
 }

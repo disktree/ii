@@ -8,12 +8,19 @@
       "id": "repo-472858639",
       "created": "2022-03-22T17:03:26Z",
       "summary": "created repository",
-      "url": "https://github.com/disktree/stritter.audio"
+      "url": "https://github.com/disktree/stritter.audio",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2022-03-22T17:03:26Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "https://stritter.audio",
-  "language": "SCSS"
+  "language": "SCSS",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/disktree/stritter.audio"
+    }
+  ]
 }

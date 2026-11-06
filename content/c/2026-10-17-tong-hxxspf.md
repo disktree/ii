@@ -5,10 +5,20 @@
   "repo_url": "https://github.com/tong/hxxspf",
   "events": [
     {
+      "id": "tag-tong/hxxspf-v1.1.5",
+      "created": "2026-10-17T10:02:23Z",
+      "kind": "tag",
+      "tag": "v1.1.5",
+      "summary": "created tag v1.1.5",
+      "url": "https://github.com/tong/hxxspf/releases/tag/v1.1.5"
+    },
+    {
       "id": "24374707016",
       "created": "2026-10-17T10:02:30Z",
       "summary": "pushed 2 commits to master",
-      "url": "https://github.com/tong/hxxspf/tree/master"
+      "url": "https://github.com/tong/hxxspf/tree/master",
+      "kind": "push",
+      "branch": "master"
     }
   ],
   "commits": [
@@ -24,5 +34,15 @@
     }
   ],
   "date": "2026-10-17T10:02:30Z",
-  "description": "2 commits"
+  "description": "tag v1.1.5, 2 commits",
+  "parts": [
+    {
+      "text": "tag v1.1.5",
+      "url": "https://github.com/tong/hxxspf/releases/tag/v1.1.5"
+    },
+    {
+      "text": "2 commits",
+      "url": "https://github.com/tong/hxxspf/commits/master?since=2026-10-17&until=2026-10-17"
+    }
+  ]
 }

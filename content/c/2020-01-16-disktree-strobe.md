@@ -8,11 +8,18 @@
       "id": "repo-234322734",
       "created": "2020-01-16T13:11:09Z",
       "summary": "created repository",
-      "url": "https://github.com/disktree/strobe"
+      "url": "https://github.com/disktree/strobe",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2020-01-16T13:11:09Z",
-  "description": "created repository",
-  "language": "Haxe"
+  "description": "new repository",
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/disktree/strobe"
+    }
+  ]
 }

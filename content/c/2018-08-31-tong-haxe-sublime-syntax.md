@@ -8,10 +8,17 @@
       "id": "repo-146857122",
       "created": "2018-08-31T07:23:59Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/haxe-sublime-syntax"
+      "url": "https://github.com/tong/haxe-sublime-syntax",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2018-08-31T07:23:59Z",
-  "description": "created repository"
+  "description": "new repository",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/haxe-sublime-syntax"
+    }
+  ]
 }

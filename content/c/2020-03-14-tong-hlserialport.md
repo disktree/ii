@@ -8,11 +8,18 @@
       "id": "repo-247283500",
       "created": "2020-03-14T13:38:49Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/hlserialport"
+      "url": "https://github.com/tong/hlserialport",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2020-03-14T13:38:49Z",
-  "description": "created repository",
-  "language": "Haxe"
+  "description": "new repository",
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/hlserialport"
+    }
+  ]
 }

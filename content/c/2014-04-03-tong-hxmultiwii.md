@@ -8,12 +8,19 @@
       "id": "repo-18398354",
       "created": "2014-04-03T09:52:39Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/hxmultiwii"
+      "url": "https://github.com/tong/hxmultiwii",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2014-04-03T09:52:39Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Haxe/Sys multiwii serial communication library",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/hxmultiwii"
+    }
+  ]
 }

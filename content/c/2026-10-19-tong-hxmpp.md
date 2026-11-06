@@ -8,13 +8,17 @@
       "id": "24510945222",
       "created": "2026-10-19T08:38:12Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxmpp/tree/master"
+      "url": "https://github.com/tong/hxmpp/tree/master",
+      "kind": "push",
+      "branch": "master"
     },
     {
       "id": "24559285553",
       "created": "2026-10-19T09:07:50Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxmpp/tree/master"
+      "url": "https://github.com/tong/hxmpp/tree/master",
+      "kind": "push",
+      "branch": "master"
     }
   ],
   "commits": [
@@ -30,5 +34,11 @@
     }
   ],
   "date": "2026-10-19T09:07:50Z",
-  "description": "2 commits"
+  "description": "2 commits",
+  "parts": [
+    {
+      "text": "2 commits",
+      "url": "https://github.com/tong/hxmpp/commits/master?since=2026-10-19&until=2026-10-19"
+    }
+  ]
 }

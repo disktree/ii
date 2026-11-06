@@ -1,26 +1,34 @@
 @use 'enron/break';
 @use 'enron/fluid';
 @use 'base';
+@use 'enron/a11y';
 
 // Header: the default h1 serif, just much too large.
 
 header.site {
-    align-items: last baseline;
-    padding-block: calc(var(--line) * 2) calc(var(--line) * 2);
+    align-items: center;
+    padding-block: calc(var(--line) * 1.5);
 
     .logo {
         grid-column: meta;
         margin: 0;
-        font-size: fluid.value(4rem, 7rem);
-        font-weight: bold;
-        line-height: 0.75;
-        letter-spacing: -0.06em;
+        line-height: 0;
 
         a {
-            color: inherit;
-            text-decoration: none;
-            &:hover { color: var(--accent); }
+            display: inline-block;
+            color: var(--fg);
+            &:visited { color: var(--fg); }
         }
+
+        svg {
+            display: block;
+            width: fluid.value(1.75rem, 2.25rem);
+            height: auto;
+            fill: currentColor;
+            transition: transform 0.3s;
+        }
+        a:hover svg { transform: scale(0.85); }
+        @include a11y.reduced-motion { svg { transition: none; } }
     }
 
     nav {

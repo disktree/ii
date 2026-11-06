@@ -8,12 +8,19 @@
       "id": "repo-41856868",
       "created": "2015-09-03T11:45:36Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/google-games-services"
+      "url": "https://github.com/tong/google-games-services",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2015-09-03T11:45:36Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Haxe/Javascript type definitions for google-games-services",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/google-games-services"
+    }
+  ]
 }

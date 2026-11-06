@@ -8,43 +8,73 @@
       "id": "23750508560",
       "created": "2026-10-12T06:47:48Z",
       "summary": "pushed 10 commits to master",
-      "url": "https://github.com/tong/hxinotify/tree/master"
+      "url": "https://github.com/tong/hxinotify/tree/master",
+      "kind": "push",
+      "branch": "master"
     },
     {
       "id": "23750749922",
       "created": "2026-10-12T06:51:31Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxinotify/tree/master"
+      "url": "https://github.com/tong/hxinotify/tree/master",
+      "kind": "push",
+      "branch": "master"
     },
     {
       "id": "23750959286",
       "created": "2026-10-12T06:54:52Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxinotify/tree/master"
+      "url": "https://github.com/tong/hxinotify/tree/master",
+      "kind": "push",
+      "branch": "master"
     },
     {
       "id": "23914658347",
       "created": "2026-10-12T07:16:44Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxinotify/tree/master"
+      "url": "https://github.com/tong/hxinotify/tree/master",
+      "kind": "push",
+      "branch": "master"
+    },
+    {
+      "id": "tag-tong/hxinotify-v2.1.0",
+      "created": "2026-10-12T07:18:58Z",
+      "kind": "tag",
+      "tag": "v2.1.0",
+      "summary": "created tag v2.1.0",
+      "url": "https://github.com/tong/hxinotify/releases/tag/v2.1.0"
     },
     {
       "id": "23873757378",
       "created": "2026-10-12T07:19:04Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxinotify/tree/master"
+      "url": "https://github.com/tong/hxinotify/tree/master",
+      "kind": "push",
+      "branch": "master"
     },
     {
       "id": "23810435636",
       "created": "2026-10-12T07:35:41Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxinotify/tree/master"
+      "url": "https://github.com/tong/hxinotify/tree/master",
+      "kind": "push",
+      "branch": "master"
+    },
+    {
+      "id": "tag-tong/hxinotify-v2.1.1",
+      "created": "2026-10-12T07:39:57Z",
+      "kind": "tag",
+      "tag": "v2.1.1",
+      "summary": "created tag v2.1.1",
+      "url": "https://github.com/tong/hxinotify/releases/tag/v2.1.1"
     },
     {
       "id": "23754026696",
       "created": "2026-10-12T07:40:14Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxinotify/tree/master"
+      "url": "https://github.com/tong/hxinotify/tree/master",
+      "kind": "push",
+      "branch": "master"
     }
   ],
   "commits": [
@@ -130,5 +160,19 @@
     }
   ],
   "date": "2026-10-12T07:40:14Z",
-  "description": "16 commits"
+  "description": "tag v2.1.0, tag v2.1.1, 16 commits",
+  "parts": [
+    {
+      "text": "tag v2.1.0",
+      "url": "https://github.com/tong/hxinotify/releases/tag/v2.1.0"
+    },
+    {
+      "text": "tag v2.1.1",
+      "url": "https://github.com/tong/hxinotify/releases/tag/v2.1.1"
+    },
+    {
+      "text": "16 commits",
+      "url": "https://github.com/tong/hxinotify/commits/master?since=2026-10-12&until=2026-10-12"
+    }
+  ]
 }

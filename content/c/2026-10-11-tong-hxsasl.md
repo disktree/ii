@@ -8,37 +8,57 @@
       "id": "23705571887",
       "created": "2026-10-11T18:06:30Z",
       "summary": "pushed 2 commits to master",
-      "url": "https://github.com/tong/hxsasl/tree/master"
+      "url": "https://github.com/tong/hxsasl/tree/master",
+      "kind": "push",
+      "branch": "master"
     },
     {
       "id": "23747014373",
       "created": "2026-10-11T19:29:47Z",
       "summary": "pushed 8 commits to master",
-      "url": "https://github.com/tong/hxsasl/tree/master"
+      "url": "https://github.com/tong/hxsasl/tree/master",
+      "kind": "push",
+      "branch": "master"
     },
     {
       "id": "23710817767",
       "created": "2026-10-11T19:31:34Z",
       "summary": "pushed 3 commits to master",
-      "url": "https://github.com/tong/hxsasl/tree/master"
+      "url": "https://github.com/tong/hxsasl/tree/master",
+      "kind": "push",
+      "branch": "master"
     },
     {
       "id": "23710944629",
       "created": "2026-10-11T19:33:36Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxsasl/tree/master"
+      "url": "https://github.com/tong/hxsasl/tree/master",
+      "kind": "push",
+      "branch": "master"
     },
     {
       "id": "23747361249",
       "created": "2026-10-11T19:37:47Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxsasl/tree/master"
+      "url": "https://github.com/tong/hxsasl/tree/master",
+      "kind": "push",
+      "branch": "master"
+    },
+    {
+      "id": "tag-tong/hxsasl-v0.2.0",
+      "created": "2026-10-11T19:54:39Z",
+      "kind": "tag",
+      "tag": "v0.2.0",
+      "summary": "created tag v0.2.0",
+      "url": "https://github.com/tong/hxsasl/releases/tag/v0.2.0"
     },
     {
       "id": "23712239285",
       "created": "2026-10-11T19:54:48Z",
       "summary": "pushed 1 commit to master",
-      "url": "https://github.com/tong/hxsasl/tree/master"
+      "url": "https://github.com/tong/hxsasl/tree/master",
+      "kind": "push",
+      "branch": "master"
     }
   ],
   "commits": [
@@ -124,5 +144,15 @@
     }
   ],
   "date": "2026-10-11T19:54:48Z",
-  "description": "16 commits"
+  "description": "tag v0.2.0, 16 commits",
+  "parts": [
+    {
+      "text": "tag v0.2.0",
+      "url": "https://github.com/tong/hxsasl/releases/tag/v0.2.0"
+    },
+    {
+      "text": "16 commits",
+      "url": "https://github.com/tong/hxsasl/commits/master?since=2026-10-11&until=2026-10-11"
+    }
+  ]
 }

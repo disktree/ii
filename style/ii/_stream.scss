@@ -1,26 +1,7 @@
 @use 'enron/break';
 @use 'base';
 
-// The stream: one <ol> per year, one row per thing.
-
-.year {
-    margin-bottom: calc(var(--line) * 2);
-
-    > h2 {
-        grid-column: meta-start / aside-end;
-        position: sticky;
-        top: 0;
-        z-index: 1;
-        margin: 0 0 calc(var(--line) / 2);
-        padding-block: calc(var(--line) / 2);
-        background: var(--bg);
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-    }
-}
+// The stream: one row per thing, newest first.
 
 .stream {
     margin: 0;
@@ -30,7 +11,7 @@
 
 .item {
     align-items: first baseline;
-    padding-block: calc(var(--line) / 2);
+    padding-block: calc(var(--line) / 3);
 
     > .when {
         @extend %mono;
@@ -39,12 +20,8 @@
         display: flex;
         justify-content: space-between;
         gap: 1ch;
-
-        > a:first-child {
-            color: var(--muted);
-            text-decoration: none;
-            &:hover { color: var(--fg); }
-        }
+        color: var(--muted);
+        white-space: nowrap;
     }
 
     > .what {
@@ -75,14 +52,12 @@
     // Microblog posts are body text, not headlines.
     &.i-u > .what > h3 { margin-bottom: calc(var(--line) / 4); }
 
-    // Code activity is the background noise of the stream: one quiet line.
-    &.i-c {
-        padding-block: calc(var(--line) / 4);
-        > .what {
-            h3, p { display: inline; }
-            h3 { font-weight: normal; }
-            h3::after { content: ' '; }
-        }
+    // Code activity: repo, then what happened, all links go to github.
+    &.i-c > .what {
+        .repo { margin-right: 0.5ch; }
+        .parts { color: var(--muted); }
+        .parts a, .parts a:visited { color: inherit; }
+        .about { display: block; color: var(--muted); font-style: italic; }
     }
 
     // Screenshots get the full width to the right.
@@ -95,9 +70,27 @@
     }
 
     @include break.max(sm) {
-        padding-block: calc(var(--line) / 2);
-        > .when { justify-content: flex-start; margin-bottom: 0.25rem; }
-        > .tags { margin-top: 0.25rem; }
+        > .when { justify-content: flex-start; margin-bottom: 0.125rem; }
+        > .tags { margin-top: 0.125rem; }
+    }
+}
+
+// Home: one line per thing, titles only.
+.stream.compact {
+    .item {
+        padding-block: 0.125rem;
+    }
+    .item > .what h3 { font-weight: normal; }
+    .item.i-a > .what h3,
+    .item.i-u > .what h3 { font-weight: bold; }
+    .item > .tags {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    @include break.max(sm) {
+        .item { padding-block: calc(var(--line) / 3); }
+        .item > .tags { white-space: normal; }
     }
 }
 

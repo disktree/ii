@@ -8,12 +8,19 @@
       "id": "repo-1069114499",
       "created": "2025-10-03T12:29:51Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/tree-sitter-haxe"
+      "url": "https://github.com/tong/tree-sitter-haxe",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2025-10-03T12:29:51Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Haxe tree-sitter grammar",
-  "language": "JavaScript"
+  "language": "JavaScript",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/tree-sitter-haxe"
+    }
+  ]
 }

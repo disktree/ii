@@ -1,5 +1,5 @@
 <header class="site">
-  <p class="logo"><a href="{{ "/" | relURL }}" rel="home"{{ if .IsHome }} aria-current="page"{{ end }}>ii</a></p>
+  <p class="logo"><a href="{{ "/" | relURL }}" rel="home" aria-label="{{ site.Title }}"{{ if .IsHome }} aria-current="page"{{ end }}><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50"/></svg></a></p>
   <nav aria-label="sections">
     <ul>
       {{- $current := . }}

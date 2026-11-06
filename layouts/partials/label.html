@@ -2,5 +2,9 @@
 {{- with .Title -}}
   {{ . }}
 {{- else -}}
-  {{ .Section }}/{{ .Date.Format "2006-01-02 15:04" }}
+  {{- with .Plain | strings.TrimSpace -}}
+    {{ . | truncate 80 }}
+  {{- else -}}
+    {{ $.Section }}/{{ $.Date.Format "2006-01-02 15:04" }}
+  {{- end -}}
 {{- end -}}

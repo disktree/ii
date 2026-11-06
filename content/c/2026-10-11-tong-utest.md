@@ -8,7 +8,9 @@
       "id": "23705329897",
       "created": "2026-10-11T18:02:40Z",
       "summary": "pushed 5 commits to master",
-      "url": "https://github.com/tong/utest/tree/master"
+      "url": "https://github.com/tong/utest/tree/master",
+      "kind": "push",
+      "branch": "master"
     }
   ],
   "commits": [
@@ -39,5 +41,11 @@
     }
   ],
   "date": "2026-10-11T18:02:40Z",
-  "description": "5 commits"
+  "description": "5 commits",
+  "parts": [
+    {
+      "text": "5 commits",
+      "url": "https://github.com/tong/utest/commits/master?since=2026-10-11&until=2026-10-11"
+    }
+  ]
 }

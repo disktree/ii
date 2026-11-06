@@ -8,12 +8,19 @@
       "id": "repo-23458488",
       "created": "2014-08-29T08:56:59Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/three.hx"
+      "url": "https://github.com/tong/three.hx",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2014-08-29T08:56:59Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Haxe→Three.js type definitions",
-  "language": "JavaScript"
+  "language": "JavaScript",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/three.hx"
+    }
+  ]
 }

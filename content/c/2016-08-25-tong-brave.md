@@ -8,12 +8,19 @@
       "id": "repo-66587442",
       "created": "2016-08-25T19:37:23Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/brave"
+      "url": "https://github.com/tong/brave",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2016-08-25T19:37:23Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Electroencephalograph (EEG) tools",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/brave"
+    }
+  ]
 }

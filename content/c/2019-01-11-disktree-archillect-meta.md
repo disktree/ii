@@ -8,11 +8,18 @@
       "id": "repo-165201816",
       "created": "2019-01-11T07:48:25Z",
       "summary": "created repository",
-      "url": "https://github.com/disktree/archillect-meta"
+      "url": "https://github.com/disktree/archillect-meta",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2019-01-11T07:48:25Z",
-  "description": "created repository",
-  "language": "Haxe"
+  "description": "new repository",
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/disktree/archillect-meta"
+    }
+  ]
 }

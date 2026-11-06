@@ -8,12 +8,19 @@
       "id": "repo-2681702",
       "created": "2011-10-31T15:55:06Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/hxlibnotify"
+      "url": "https://github.com/tong/hxlibnotify",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2011-10-31T15:55:06Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Haxe/Cpp/Neko bindings to libnotify",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/hxlibnotify"
+    }
+  ]
 }

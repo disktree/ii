@@ -8,11 +8,18 @@
       "id": "repo-577081890",
       "created": "2022-12-11T22:47:19Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/xmpp-action"
+      "url": "https://github.com/tong/xmpp-action",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2022-12-11T22:47:19Z",
-  "description": "created repository",
-  "language": "Haxe"
+  "description": "new repository",
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/xmpp-action"
+    }
+  ]
 }

@@ -8,12 +8,19 @@
       "id": "repo-864906",
       "created": "2010-08-26T20:42:15Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/hxmpp"
+      "url": "https://github.com/tong/hxmpp",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2010-08-26T20:42:15Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Haxe XMPP library",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/hxmpp"
+    }
+  ]
 }

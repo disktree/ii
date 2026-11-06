@@ -8,12 +8,19 @@
       "id": "repo-137073993",
       "created": "2018-06-12T13:14:39Z",
       "summary": "created repository",
-      "url": "https://github.com/disktree/archillect-search"
+      "url": "https://github.com/disktree/archillect-search",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2018-06-12T13:14:39Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Archillect image search web service",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/disktree/archillect-search"
+    }
+  ]
 }

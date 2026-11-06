@@ -8,7 +8,9 @@
       "id": "24273057152",
       "created": "2026-10-15T19:46:52Z",
       "summary": "pushed 3 commits to main",
-      "url": "https://github.com/tong/tree-sitter-haxe/tree/main"
+      "url": "https://github.com/tong/tree-sitter-haxe/tree/main",
+      "kind": "push",
+      "branch": "main"
     }
   ],
   "commits": [
@@ -29,5 +31,11 @@
     }
   ],
   "date": "2026-10-15T19:46:52Z",
-  "description": "3 commits"
+  "description": "3 commits",
+  "parts": [
+    {
+      "text": "3 commits",
+      "url": "https://github.com/tong/tree-sitter-haxe/commits/main?since=2026-10-15&until=2026-10-15"
+    }
+  ]
 }

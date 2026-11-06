@@ -8,11 +8,18 @@
       "id": "repo-577861180",
       "created": "2022-12-13T17:35:56Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/armory_electron_runtime"
+      "url": "https://github.com/tong/armory_electron_runtime",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2022-12-13T17:35:56Z",
-  "description": "created repository",
-  "language": "Haxe"
+  "description": "new repository",
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/armory_electron_runtime"
+    }
+  ]
 }

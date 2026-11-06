@@ -8,11 +8,18 @@
       "id": "repo-113796744",
       "created": "2017-12-11T01:06:50Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/darkside-arduino"
+      "url": "https://github.com/tong/darkside-arduino",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2017-12-11T01:06:50Z",
-  "description": "created repository",
-  "language": "C++"
+  "description": "new repository",
+  "language": "C++",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/darkside-arduino"
+    }
+  ]
 }

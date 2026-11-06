@@ -8,12 +8,19 @@
       "id": "repo-6307546",
       "created": "2012-10-20T09:59:03Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/unity-web.hx"
+      "url": "https://github.com/tong/unity-web.hx",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2012-10-20T09:59:03Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Haxe/Javascript type definitions for unity web-apps to integrate with the ubuntu desktop",
-  "language": "HaXe"
+  "language": "HaXe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/unity-web.hx"
+    }
+  ]
 }

@@ -8,10 +8,17 @@
       "id": "repo-320550847",
       "created": "2020-12-11T11:09:49Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/void-zsh-theme"
+      "url": "https://github.com/tong/void-zsh-theme",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2020-12-11T11:09:49Z",
-  "description": "created repository"
+  "description": "new repository",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/void-zsh-theme"
+    }
+  ]
 }

@@ -8,11 +8,18 @@
       "id": "repo-52108383",
       "created": "2016-02-19T18:39:37Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/atom-background-pane"
+      "url": "https://github.com/tong/atom-background-pane",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2016-02-19T18:39:37Z",
-  "description": "created repository",
-  "language": "Haxe"
+  "description": "new repository",
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/atom-background-pane"
+    }
+  ]
 }

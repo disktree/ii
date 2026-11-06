@@ -8,12 +8,19 @@
       "id": "repo-157099481",
       "created": "2018-11-11T16:42:21Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/crazyflie-web-client"
+      "url": "https://github.com/tong/crazyflie-web-client",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2018-11-11T16:42:21Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Crazyflie web client",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/crazyflie-web-client"
+    }
+  ]
 }

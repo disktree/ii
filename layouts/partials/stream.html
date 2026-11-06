@@ -1,13 +1,8 @@
-{{- /* Chronological list of pages grouped by year. Context: Pages */ -}}
-{{- range .GroupByDate "2006" }}
-{{- if ne .Key "1970" }}
-<section class="year" aria-labelledby="y{{ .Key }}">
-  <h2 id="y{{ .Key }}"><a href="#y{{ .Key }}">{{ .Key }}</a></h2>
-  <ol class="stream">
-    {{- range .Pages }}
-    {{ partial "item" . }}
-    {{- end }}
-  </ol>
-</section>
-{{- end }}
-{{- end }}
+{{- /* Chronological list of pages. Context: dict "pages" Pages "compact" bool */ -}}
+<ol class="stream{{ if .compact }} compact{{ end }}">
+  {{- range .pages.ByDate.Reverse }}
+  {{- if gt .Date.Year 1970 }}
+  {{ partial "item" (dict "page" . "compact" $.compact) }}
+  {{- end }}
+  {{- end }}
+</ol>

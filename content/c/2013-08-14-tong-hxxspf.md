@@ -8,12 +8,19 @@
       "id": "repo-12113520",
       "created": "2013-08-14T16:18:40Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/hxxspf"
+      "url": "https://github.com/tong/hxxspf",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2013-08-14T16:18:40Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Haxe implementation of XSPF, the XML format for sharing playlists",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/hxxspf"
+    }
+  ]
 }

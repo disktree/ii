@@ -8,13 +8,17 @@
       "id": "25867500481",
       "created": "2026-10-31T08:27:32Z",
       "summary": "pushed 1 commit to main",
-      "url": "https://github.com/tong/hxlit/tree/main"
+      "url": "https://github.com/tong/hxlit/tree/main",
+      "kind": "push",
+      "branch": "main"
     },
     {
       "id": "25896206081",
       "created": "2026-10-31T08:37:48Z",
       "summary": "pushed 1 commit to main",
-      "url": "https://github.com/tong/hxlit/tree/main"
+      "url": "https://github.com/tong/hxlit/tree/main",
+      "kind": "push",
+      "branch": "main"
     }
   ],
   "commits": [
@@ -30,5 +34,11 @@
     }
   ],
   "date": "2026-10-31T08:37:48Z",
-  "description": "2 commits"
+  "description": "2 commits",
+  "parts": [
+    {
+      "text": "2 commits",
+      "url": "https://github.com/tong/hxlit/commits/main?since=2026-10-31&until=2026-10-31"
+    }
+  ]
 }

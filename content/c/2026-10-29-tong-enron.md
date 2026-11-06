@@ -8,7 +8,9 @@
       "id": "25629760385",
       "created": "2026-10-29T10:16:11Z",
       "summary": "pushed 9 commits to master",
-      "url": "https://github.com/tong/enron/tree/master"
+      "url": "https://github.com/tong/enron/tree/master",
+      "kind": "push",
+      "branch": "master"
     }
   ],
   "commits": [
@@ -59,5 +61,11 @@
     }
   ],
   "date": "2026-10-29T10:16:11Z",
-  "description": "9 commits"
+  "description": "9 commits",
+  "parts": [
+    {
+      "text": "9 commits",
+      "url": "https://github.com/tong/enron/commits/master?since=2026-10-29&until=2026-10-29"
+    }
+  ]
 }

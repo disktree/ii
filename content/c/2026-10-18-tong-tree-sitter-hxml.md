@@ -8,13 +8,25 @@
       "id": "24475823246",
       "created": "2026-10-18T07:29:56Z",
       "summary": "pushed 5 commits to main",
-      "url": "https://github.com/tong/tree-sitter-hxml/tree/main"
+      "url": "https://github.com/tong/tree-sitter-hxml/tree/main",
+      "kind": "push",
+      "branch": "main"
+    },
+    {
+      "id": "tag-tong/tree-sitter-hxml-v0.3.0",
+      "created": "2026-10-18T07:32:33Z",
+      "kind": "tag",
+      "tag": "v0.3.0",
+      "summary": "created tag v0.3.0",
+      "url": "https://github.com/tong/tree-sitter-hxml/releases/tag/v0.3.0"
     },
     {
       "id": "24457985598",
       "created": "2026-10-18T07:32:35Z",
       "summary": "pushed 1 commit to main",
-      "url": "https://github.com/tong/tree-sitter-hxml/tree/main"
+      "url": "https://github.com/tong/tree-sitter-hxml/tree/main",
+      "kind": "push",
+      "branch": "main"
     }
   ],
   "commits": [
@@ -50,5 +62,15 @@
     }
   ],
   "date": "2026-10-18T07:32:35Z",
-  "description": "6 commits"
+  "description": "tag v0.3.0, 6 commits",
+  "parts": [
+    {
+      "text": "tag v0.3.0",
+      "url": "https://github.com/tong/tree-sitter-hxml/releases/tag/v0.3.0"
+    },
+    {
+      "text": "6 commits",
+      "url": "https://github.com/tong/tree-sitter-hxml/commits/main?since=2026-10-18&until=2026-10-18"
+    }
+  ]
 }

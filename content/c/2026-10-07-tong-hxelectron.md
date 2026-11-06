@@ -5,10 +5,20 @@
   "repo_url": "https://github.com/tong/hxelectron",
   "events": [
     {
+      "id": "tag-tong/hxelectron-v44.6.0",
+      "created": "2026-10-07T05:41:48Z",
+      "kind": "tag",
+      "tag": "v44.6.0",
+      "summary": "created tag v44.6.0",
+      "url": "https://github.com/tong/hxelectron/releases/tag/v44.6.0"
+    },
+    {
       "id": "23300492181",
       "created": "2026-10-07T05:42:00Z",
       "summary": "pushed 2 commits to master",
-      "url": "https://github.com/tong/hxelectron/tree/master"
+      "url": "https://github.com/tong/hxelectron/tree/master",
+      "kind": "push",
+      "branch": "master"
     }
   ],
   "commits": [
@@ -24,5 +34,15 @@
     }
   ],
   "date": "2026-10-07T05:42:00Z",
-  "description": "2 commits"
+  "description": "tag v44.6.0, 2 commits",
+  "parts": [
+    {
+      "text": "tag v44.6.0",
+      "url": "https://github.com/tong/hxelectron/releases/tag/v44.6.0"
+    },
+    {
+      "text": "2 commits",
+      "url": "https://github.com/tong/hxelectron/commits/master?since=2026-10-07&until=2026-10-07"
+    }
+  ]
 }

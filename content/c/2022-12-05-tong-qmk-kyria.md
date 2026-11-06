@@ -8,12 +8,19 @@
       "id": "repo-574287813",
       "created": "2022-12-05T00:59:28Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/qmk-kyria"
+      "url": "https://github.com/tong/qmk-kyria",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2022-12-05T00:59:28Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "QMK firmware for the kyria keyboard",
-  "language": "C"
+  "language": "C",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/qmk-kyria"
+    }
+  ]
 }

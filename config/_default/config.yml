@@ -1,6 +1,6 @@
 baseURL: ""
 title: "ii"
-languageCode: "en"
+locale: "en"
 titleCaseStyle: "none"
 defaultContentLanguage: "en"
 description: "Serious Fucking Business"

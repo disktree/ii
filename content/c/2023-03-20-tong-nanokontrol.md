@@ -8,11 +8,18 @@
       "id": "repo-616405792",
       "created": "2023-03-20T10:25:52Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/nanokontrol"
+      "url": "https://github.com/tong/nanokontrol",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2023-03-20T10:25:52Z",
-  "description": "created repository",
-  "language": "Haxe"
+  "description": "new repository",
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/nanokontrol"
+    }
+  ]
 }

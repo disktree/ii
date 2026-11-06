@@ -8,12 +8,19 @@
       "id": "repo-78025179",
       "created": "2017-01-04T14:58:39Z",
       "summary": "created repository",
-      "url": "https://github.com/disktree/irrlicht"
+      "url": "https://github.com/disktree/irrlicht",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2017-01-04T14:58:39Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Android Flashlight",
-  "language": "Java"
+  "language": "Java",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/disktree/irrlicht"
+    }
+  ]
 }

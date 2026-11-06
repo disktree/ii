@@ -8,12 +8,19 @@
       "id": "repo-10522101",
       "created": "2013-06-06T08:30:56Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/hxsgf"
+      "url": "https://github.com/tong/hxsgf",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2013-06-06T08:30:56Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Haxe smart-game-format library",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/hxsgf"
+    }
+  ]
 }

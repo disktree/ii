@@ -1,8 +1,7 @@
 {{ define "main" }}
 <header class="page">
   <h1>{{ .Title }}</h1>
-  {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
   {{ with .Content }}<div class="text">{{ . }}</div>{{ end }}
 </header>
-{{ partial "stream" .Pages }}
+{{ partial "stream" (dict "pages" .Pages "compact" false) }}
 {{ end }}

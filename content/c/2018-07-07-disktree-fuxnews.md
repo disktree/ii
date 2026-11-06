@@ -8,11 +8,18 @@
       "id": "repo-140082824",
       "created": "2018-07-07T12:34:02Z",
       "summary": "created repository",
-      "url": "https://github.com/disktree/fuxnews"
+      "url": "https://github.com/disktree/fuxnews",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2018-07-07T12:34:02Z",
-  "description": "created repository",
-  "language": "Haxe"
+  "description": "new repository",
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/disktree/fuxnews"
+    }
+  ]
 }

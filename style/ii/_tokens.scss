@@ -26,6 +26,15 @@
     --small: 0.75rem;
 
     @media (prefers-color-scheme: dark) {
+        --bg: #080808; // darker than the user agent's Canvas
         --accent: oklch(70% 0.2 33);
+    }
+
+    // Desktop: denser. Same type size, less air.
+    @media (min-width: 64rem) {
+        --leading: 1.4;
+        --line: 1.25rem;
+        --meta: 9rem;
+        --gap: 1.5rem;
     }
 }

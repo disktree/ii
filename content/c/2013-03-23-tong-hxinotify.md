@@ -8,12 +8,19 @@
       "id": "repo-8977842",
       "created": "2013-03-23T22:13:09Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/hxinotify"
+      "url": "https://github.com/tong/hxinotify",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2013-03-23T22:13:09Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "haxe→cpp/hashlinkl/neko bindings to the inotify linux kernel subsystem",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/hxinotify"
+    }
+  ]
 }

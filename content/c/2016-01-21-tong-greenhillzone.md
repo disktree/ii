@@ -8,11 +8,18 @@
       "id": "repo-50128055",
       "created": "2016-01-21T18:32:00Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/greenhillzone"
+      "url": "https://github.com/tong/greenhillzone",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2016-01-21T18:32:00Z",
-  "description": "created repository",
-  "language": "Java"
+  "description": "new repository",
+  "language": "Java",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/greenhillzone"
+    }
+  ]
 }

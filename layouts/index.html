@@ -1,6 +1,6 @@
 {{ define "main" }}
-{{- $pages := where site.RegularPages "Section" "in" (slice "u" "c" "s") }}
+{{- $pages := where site.RegularPages "Section" "in" (slice "u" "c") }}
 {{- with site.GetPage "/a" }}{{ $pages = $pages | union .Pages }}{{ end }}
 <h1 class="vh">{{ site.Title }}: everything, newest first</h1>
-{{ partial "stream" $pages }}
+{{ partial "stream" (dict "pages" $pages "compact" true) }}
 {{ end }}

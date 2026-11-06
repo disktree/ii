@@ -8,13 +8,17 @@
       "id": "24293946893",
       "created": "2026-10-16T13:10:24Z",
       "summary": "pushed 3 commits to main",
-      "url": "https://github.com/tong/tree-sitter-haxe/tree/main"
+      "url": "https://github.com/tong/tree-sitter-haxe/tree/main",
+      "kind": "push",
+      "branch": "main"
     },
     {
       "id": "24293981568",
       "created": "2026-10-16T13:10:43Z",
       "summary": "pushed 1 commit to main",
-      "url": "https://github.com/tong/tree-sitter-haxe/tree/main"
+      "url": "https://github.com/tong/tree-sitter-haxe/tree/main",
+      "kind": "push",
+      "branch": "main"
     }
   ],
   "commits": [
@@ -40,5 +44,11 @@
     }
   ],
   "date": "2026-10-16T13:10:43Z",
-  "description": "4 commits"
+  "description": "4 commits",
+  "parts": [
+    {
+      "text": "4 commits",
+      "url": "https://github.com/tong/tree-sitter-haxe/commits/main?since=2026-10-16&until=2026-10-16"
+    }
+  ]
 }

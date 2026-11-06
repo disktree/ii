@@ -8,11 +8,18 @@
       "id": "repo-578259212",
       "created": "2022-12-14T16:22:23Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/armory_qna"
+      "url": "https://github.com/tong/armory_qna",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2022-12-14T16:22:23Z",
-  "description": "created repository",
-  "language": "JavaScript"
+  "description": "new repository",
+  "language": "JavaScript",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/armory_qna"
+    }
+  ]
 }

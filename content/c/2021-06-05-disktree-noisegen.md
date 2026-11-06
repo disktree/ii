@@ -8,12 +8,19 @@
       "id": "repo-374196498",
       "created": "2021-06-05T19:27:30Z",
       "summary": "created repository",
-      "url": "https://github.com/disktree/noisegen"
+      "url": "https://github.com/disktree/noisegen",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2021-06-05T19:27:30Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "https://app.disktree.net/noisegen/",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/disktree/noisegen"
+    }
+  ]
 }

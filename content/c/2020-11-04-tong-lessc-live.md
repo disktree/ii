@@ -8,11 +8,18 @@
       "id": "repo-309983923",
       "created": "2020-11-04T11:34:19Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/lessc-live"
+      "url": "https://github.com/tong/lessc-live",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2020-11-04T11:34:19Z",
-  "description": "created repository",
-  "language": "Haxe"
+  "description": "new repository",
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/lessc-live"
+    }
+  ]
 }

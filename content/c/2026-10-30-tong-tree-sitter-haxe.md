@@ -8,13 +8,25 @@
       "id": "25765196266",
       "created": "2026-10-30T11:15:07Z",
       "summary": "pushed 1 commit to main",
-      "url": "https://github.com/tong/tree-sitter-haxe/tree/main"
+      "url": "https://github.com/tong/tree-sitter-haxe/tree/main",
+      "kind": "push",
+      "branch": "main"
+    },
+    {
+      "id": "tag-tong/tree-sitter-haxe-v0.7.0",
+      "created": "2026-10-30T11:17:43Z",
+      "kind": "tag",
+      "tag": "v0.7.0",
+      "summary": "created tag v0.7.0",
+      "url": "https://github.com/tong/tree-sitter-haxe/releases/tag/v0.7.0"
     },
     {
       "id": "25781848832",
       "created": "2026-10-30T11:18:02Z",
       "summary": "pushed 1 commit to main",
-      "url": "https://github.com/tong/tree-sitter-haxe/tree/main"
+      "url": "https://github.com/tong/tree-sitter-haxe/tree/main",
+      "kind": "push",
+      "branch": "main"
     }
   ],
   "commits": [
@@ -30,5 +42,15 @@
     }
   ],
   "date": "2026-10-30T11:18:02Z",
-  "description": "2 commits"
+  "description": "tag v0.7.0, 2 commits",
+  "parts": [
+    {
+      "text": "tag v0.7.0",
+      "url": "https://github.com/tong/tree-sitter-haxe/releases/tag/v0.7.0"
+    },
+    {
+      "text": "2 commits",
+      "url": "https://github.com/tong/tree-sitter-haxe/commits/main?since=2026-10-30&until=2026-10-30"
+    }
+  ]
 }

@@ -8,11 +8,18 @@
       "id": "repo-336634898",
       "created": "2021-02-06T20:57:05Z",
       "summary": "created repository",
-      "url": "https://github.com/disktree/jenga"
+      "url": "https://github.com/disktree/jenga",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2021-02-06T20:57:05Z",
-  "description": "created repository",
-  "language": "Haxe"
+  "description": "new repository",
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/disktree/jenga"
+    }
+  ]
 }

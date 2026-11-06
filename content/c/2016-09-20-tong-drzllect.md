@@ -8,12 +8,19 @@
       "id": "repo-68751985",
       "created": "2016-09-20T20:46:53Z",
       "summary": "created repository",
-      "url": "https://github.com/tong/drzllect"
+      "url": "https://github.com/tong/drzllect",
+      "kind": "repository"
     }
   ],
   "commits": [],
   "date": "2016-09-20T20:46:53Z",
-  "description": "created repository",
+  "description": "new repository",
   "about": "Memories Of An Automaton",
-  "language": "Haxe"
+  "language": "Haxe",
+  "parts": [
+    {
+      "text": "new repository",
+      "url": "https://github.com/tong/drzllect"
+    }
+  ]
 }

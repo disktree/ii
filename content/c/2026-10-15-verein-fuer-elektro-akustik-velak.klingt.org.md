@@ -8,7 +8,9 @@
       "id": "24182357894",
       "created": "2026-10-15T06:52:00Z",
       "summary": "pushed 2 commits to master",
-      "url": "https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/tree/master"
+      "url": "https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/tree/master",
+      "kind": "push",
+      "branch": "master"
     }
   ],
   "commits": [
@@ -24,5 +26,11 @@
     }
   ],
   "date": "2026-10-15T06:52:00Z",
-  "description": "2 commits"
+  "description": "2 commits",
+  "parts": [
+    {
+      "text": "2 commits",
+      "url": "https://github.com/verein-fuer-elektro-akustik/velak.klingt.org/commits/master?since=2026-10-15&until=2026-10-15"
+    }
+  ]
 }
