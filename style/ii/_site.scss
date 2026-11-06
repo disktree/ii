@@ -64,6 +64,9 @@ header.site {
         }
     }
 
+    // On a section's own list page the heading already says where you are.
+    body.section & nav [aria-current]::before { content: none; }
+
     @include break.max(sm) {
         padding-block: var(--edge) calc(var(--line) * 1.5);
         row-gap: var(--line);
