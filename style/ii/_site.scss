@@ -35,22 +35,6 @@ header.site {
 
         a { color: var(--fg); }
 
-        // Current section on a content page: a small dot.
-        [aria-current='true'] {
-            text-decoration: none;
-
-            &::before {
-                content: '';
-                display: inline-block;
-                width: 0.4em;
-                height: 0.4em;
-                margin-right: 0.35em;
-                vertical-align: 0.15em;
-                border-radius: 50%;
-                background: var(--accent);
-            }
-        }
-
         // The list you are looking at (home or a section): highlighted.
         [aria-current='page'] {
             padding-inline: 0.5ch;
