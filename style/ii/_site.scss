@@ -69,6 +69,7 @@ header.site {
     // On a section's own list page the menu item is the heading:
     // highlighted, no dot.
     body.section & nav [aria-current] {
+        padding-inline: 0.5ch;
         background: var(--fg);
         color: var(--bg);
         &::before { content: none; }
