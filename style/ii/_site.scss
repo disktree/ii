@@ -1,5 +1,4 @@
 @use 'enron/break';
-@use 'enron/fluid';
 @use 'base';
 @use 'enron/a11y';
 
@@ -11,6 +10,7 @@ header.site {
     // Desktop: one line, no padding; the menu follows the circle at one character.
     @include break.min(md) {
         display: flex;
+        align-items: baseline;
         gap: 1ch;
         padding-block: var(--edge) 0.75rem;
     }
@@ -18,26 +18,20 @@ header.site {
     .logo {
         grid-column: meta;
         margin: 0;
-        line-height: 0;
 
         a {
-            display: inline-block;
             color: var(--fg);
             &:visited { color: var(--fg); }
         }
 
+        // A glyph, not an image: as high as the capitals of the menu,
+        // sitting on the baseline.
         svg {
-            display: block;
-            width: fluid.value(1.75rem, 2.25rem);
-            height: auto;
+            display: inline-block;
+            width: 1cap;
+            height: 1cap;
+            vertical-align: baseline;
             fill: currentColor;
-        }
-
-        // Desktop: the circle is exactly one line of text high.
-        @include break.min(md) {
-            line-height: var(--leading);
-            a { display: block; height: calc(1em * var(--leading)); }
-            svg { width: calc(1em * var(--leading)); }
         }
     }
 
