@@ -1,0 +1,11 @@
+{{- if and .Section (ne .Section "theprocess") }}
+<nav class="pager" aria-label="more in {{ .CurrentSection.Title | lower }}">
+  {{- with .PrevInSection }}<a rel="prev" href="{{ .RelPermalink }}"><span>older</span> {{ partial "label" . }}</a>{{ end }}
+  {{- with .NextInSection }}<a rel="next" href="{{ .RelPermalink }}"><span>newer</span> {{ partial "label" . }}</a>{{ end }}
+</nav>
+{{- else }}
+<nav class="pager" aria-label="more">
+  {{- with .PrevInSection }}<a rel="prev" href="{{ .RelPermalink }}"><span>previous</span> {{ partial "label" . }}</a>{{ end }}
+  {{- with .NextInSection }}<a rel="next" href="{{ .RelPermalink }}"><span>next</span> {{ partial "label" . }}</a>{{ end }}
+</nav>
+{{- end }}

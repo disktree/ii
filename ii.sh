@@ -1,63 +1,61 @@
 #!/bin/sh
+# ii — site helper
+set -e
+cd "$(dirname "$0")"
 
 usage() {
-  printf "Usage: ii <cmd> [OPTIONS]\n"
-  printf "  Commands:\n"
-  printf "    build       Build Site\n"
-  printf "    clean       Clean build\n"
-  printf "    publish     Publish site\n"
-  printf "    r           Post to r\n"
-  printf "    l           List entries\n"
+  cat <<USAGE
+Usage: ii <cmd> [args]
+  u [text]        new microblog post (opens \$EDITOR without text)
+  s <image> [title]  new screenshot post
+  code [--backfill]  update content/c from the github api
+  dev             sass watch + hugo server
+  build           build site
+  clean           clean build
+  publish         deploy public/
+USAGE
 }
 
-if [ $# -eq 0 ]; then
-  echo "Missing arguments"
+stamp() { date +%Y-%m-%d-%H%M; }
+now() { date +%Y-%m-%dT%H:%M:%S%:z; }
+
+case "$1" in
+u)
+  shift
+  f="content/u/$(stamp).md"
+  printf -- '---\ndate: %s\n---\n' "$(now)" >"$f"
+  if [ $# -gt 0 ]; then printf '%s\n' "$*" >>"$f"; echo "$f"; else ${EDITOR:-vi} "$f"; fi
+  ;;
+s)
+  [ -f "$2" ] || { echo "image not found: $2"; exit 1; }
+  d="content/s/$(stamp)"
+  mkdir -p "$d"
+  cp "$2" "$d/"
+  printf -- '---\ndate: %s\n' "$(now)" >"$d/index.md"
+  [ -n "$3" ] && printf 'title: "%s"\n' "$3" >>"$d/index.md"
+  printf -- '---\n' >>"$d/index.md"
+  echo "$d"
+  ;;
+code)
+  shift
+  node scripts/update-code.mjs "$@"
+  ;;
+dev)
+  npm run build:style
+  npx sass --load-path=style/lib/enron style/main.scss static/style.css -w &
+  trap 'kill $!' EXIT
+  npx hugo server
+  ;;
+build) npm run build ;;
+clean) npm run clean ;;
+publish)
+  [ -d public ] || { echo "Not built yet"; exit 1; }
+  scripts/deploy.sh
+  ;;
+help | -h | --help | "") usage ;;
+*)
+  echo "Unknown command: $1"
+  usage
   exit 1
-fi
-
-# if [ ! -d public ]; then
-#     echo "Nothing to clean"
-#     exit 1
-# fi
-
-# build() {
-#     npm run build
-#     exit $?
-# }
-
-while true; do
-  case "$1" in
-  build)
-    npm run build
-    exit $?
-    ;;
-  clean)
-    npm run clean
-    exit $?
-    ;;
-  publish)
-    if [ ! -d public ]; then
-      echo "Not build yet"
-      exit 1
-    fi
-    scripts/deploy.sh
-    exit $?
-    ;;
-  r)
-    printf "TODO: post to r\n"
-    exit 0
-    ;;
-  help)
-    usage
-    exit 0
-    ;;
-  # update)
-  #   echo "TODO"
-  #   exit 1
-  #   ;;
-  *)
-    echo "Unknown command: $1"
-    exit 1
-    ;;
-  esac
-done
+  ;;
+esac

@@ -1,0 +1,13 @@
+<header class="site">
+  <p class="logo"><a href="{{ "/" | relURL }}" rel="home"{{ if .IsHome }} aria-current="page"{{ end }}>ii</a></p>
+  <nav aria-label="sections">
+    <ul>
+      {{- $current := . }}
+      {{- range site.Params.mainSections }}
+      {{- with site.GetPage (print "/" .) }}
+      <li><a href="{{ .RelPermalink }}" data-key="{{ .Section }}"{{ if or (eq $current .) (and (eq $current.Section .Section) (not $current.IsHome)) }} aria-current="{{ if eq $current . }}page{{ else }}true{{ end }}"{{ end }}>{{ .Title | lower }}</a></li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </nav>
+</header>

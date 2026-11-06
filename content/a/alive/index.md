@@ -1,7 +1,7 @@
 ---
 title: "Alive"
 date: 2014-05-20
-tag: [web]
+tags: [web]
 description: "Web application telling you if you are alive or not."
 links: [https://art.disktree.net/alive/]
 ---

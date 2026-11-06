@@ -1,6 +1,7 @@
 baseURL: ""
-title: "DISKTREE"
+title: "ii"
 languageCode: "en"
+titleCaseStyle: "none"
 defaultContentLanguage: "en"
 description: "Serious Fucking Business"
 
@@ -9,6 +10,7 @@ disableHugoGeneratorInject: true
 disablePathToLower: true
 enableGitInfo: true
 enableRobotsTXT: true
+ignoreFiles: ["/__"]
 newcontenteditor: "nvim"
 #RSSUri: "rss.xml"
 #footnoteAnchorPrefix
@@ -26,7 +28,6 @@ markup:
       unsafe: true
   highlight:
     noClasses: false
-    #style: solarized-dark
 
 minify:
   minifyOutput: false
@@ -44,12 +45,12 @@ minify:
 #       target: static
 
 outputs:
-  home:
-    - html
-    - rss
-  section:
-    - html
-    - rss
+  home: [html, rss]
+  section: [html]
+  taxonomy: [html]
+  term: [html]
+  page: [html]
+
 
 sitemap:
   changefreq: "monthly"
@@ -63,8 +64,3 @@ taxonomies:
 # - taxonomy
 # - term
 
-permalinks:
-  #update: "/:filename/"
-  #project: "/p/:slug"
-  project: "/:year/:month/:filename/"
-  #project: "/p/:slug"

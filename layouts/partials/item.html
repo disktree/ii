@@ -1,0 +1,30 @@
+{{- $s := .Section }}
+<li class="item i-{{ $s }}{{ if .IsSection }} i-group{{ end }}">
+  <p class="when">
+    <a href="{{ .RelPermalink }}"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "01-02" }}</time></a>
+    <a class="key" href="{{ (site.GetPage (print "/" $s)).RelPermalink }}" title="{{ (site.GetPage (print "/" $s)).Title }}">{{ $s }}</a>
+  </p>
+  <div class="what">
+  {{- if eq $s "u" }}
+    {{- with .Title }}<h3><a href="{{ $.RelPermalink }}">{{ . }}</a></h3>{{ end }}
+    {{ .Content }}
+  {{- else if eq $s "c" }}
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Description }}{{ with .Params.about }}: {{ . }}{{ end }}</p>
+  {{- else if eq $s "s" }}
+    {{- with (.Resources.ByType "image").GetMatch "*" }}
+    {{- $img := .Resize "1200x webp q80" }}
+    <a href="{{ $.RelPermalink }}"><img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $.Title | default "screenshot" }}" loading="lazy"></a>
+    {{- end }}
+    {{ with .Title }}<p>{{ . }}</p>{{ end }}
+  {{- else }}
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ if .IsSection }} <small>{{ len .Pages }}</small>{{ end }}</h3>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  {{- end }}
+  </div>
+  {{- with .GetTerms "tags" }}
+  <ul class="tags">
+    {{- range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+  </ul>
+  {{- end }}
+</li>

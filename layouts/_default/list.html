@@ -1,12 +1,8 @@
 {{ define "main" }}
-<ol>
-  {{ range .Pages }}
-  <li>
-    <h2>
-      <a href="{{ .Permalink }}">{{.Title}}</a>
-    </h2>
-    {{/*<time>{{ .Date.Format "2006/01/02" }}</time>*/}}
-  </li>
-  {{ end }}
-</ol>
+<header class="page">
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
+  {{ with .Content }}<div class="text">{{ . }}</div>{{ end }}
+</header>
+{{ partial "stream" .Pages }}
 {{ end }}

@@ -1,18 +1,13 @@
 {{ define "main" }}
-<article>
-  <header>
-    <h1>{{- .Title -}}</h1>
-    {{/*<div class="meta">*/}}
-      {{/* {{ with .Date }}*/}}
-      {{/* <time datetime="{{ . }}">{{ .Format "2006/01/02" }}</time>*/}}
-      {{/* {{ end }}*/}}
-      {{/* {{ partial "tags" . }}*/}}
-      {{/*</div>*/}}
+<article class="single">
+  <header class="page">
+    <h1>{{ partial "label" . }}</h1>
+    {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
   </header>
-  <section class="content">{{- .Content -}}</section>
+  {{ partial "meta" . }}
+  <div class="text">
+    {{ block "body" . }}{{ .Content }}{{ end }}
+  </div>
 </article>
-{{ end }}
-
-{{ define "footer-left" }}
-{{/*{{ partial "prev_next" . }}*/}}
+{{ partial "pager" . }}
 {{ end }}

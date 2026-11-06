@@ -1,0 +1,96 @@
+@use 'enron/a11y';
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    hanging-punctuation: first allow-end last;
+    scroll-padding-top: calc(var(--line) * 3);
+    accent-color: var(--accent);
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--serif);
+    line-height: var(--leading);
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+}
+
+// Links: default colors, default underline, but set with care.
+a {
+    color: var(--link);
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.18em;
+    text-decoration-skip-ink: auto;
+    transition: text-decoration-color 0.15s, text-underline-offset 0.15s;
+
+    &:visited { color: var(--visited); }
+    &:hover {
+        text-decoration-color: var(--accent);
+        text-decoration-thickness: 0.12em;
+        text-underline-offset: 0.12em;
+    }
+    @include a11y.reduced-motion { transition: none; }
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.15;
+    text-wrap: balance;
+}
+h1 { letter-spacing: -0.015em; }
+
+p, li, dd, figcaption, blockquote { text-wrap: pretty; }
+
+img, video, iframe, svg, canvas {
+    max-width: 100%;
+}
+img, video { height: auto; }
+
+code, pre, kbd, samp {
+    font-family: var(--mono);
+    font-size: 0.875em;
+}
+pre {
+    overflow-x: auto;
+    tab-size: 4;
+}
+
+time, data, code { font-variant-numeric: tabular-nums slashed-zero; }
+
+small { font-size: var(--small); }
+
+.vh { @include a11y.visually-hidden; }
+
+.skip {
+    @include a11y.visually-hidden-focusable;
+    position: fixed;
+    inset: 0 auto auto 0;
+    z-index: 10;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: var(--bg);
+}
+
+// The "small print" voice: everything that is metadata.
+%mono {
+    font-family: var(--mono);
+    font-size: var(--small);
+    line-height: 1rem;
+    letter-spacing: 0.01em;
+    font-variant-numeric: tabular-nums slashed-zero;
+}

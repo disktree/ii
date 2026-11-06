@@ -1,0 +1,26 @@
+<dl class="meta">
+  {{- if gt .Date.Year 1970 }}
+  <dt>date</dt>
+  <dd><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time></dd>
+  {{- end }}
+  {{- with .Params.author }}
+  <dt>author</dt>
+  <dd>{{ . }}</dd>
+  {{- end }}
+  {{- with .CurrentSection }}{{ if not .IsHome }}
+  <dt>in</dt>
+  <dd><a href="{{ .RelPermalink }}">{{ .Title | lower }}</a></dd>
+  {{- end }}{{ end }}
+  {{- with .GetTerms "tags" }}
+  <dt>tags</dt>
+  <dd><ul class="tags">{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}</ul></dd>
+  {{- end }}
+  {{- with .Params.links }}
+  <dt>links</dt>
+  <dd><ul class="links">{{ range . }}<li><a href="{{ . }}" rel="external">{{ . | replaceRE "^https?://(www\\.)?" "" | strings.TrimSuffix "/" }}</a></li>{{ end }}</ul></dd>
+  {{- end }}
+  {{- with .Params.link }}
+  <dt>link</dt>
+  <dd><a href="{{ . }}" rel="external">{{ . | replaceRE "^https?://(www\\.)?" "" | strings.TrimSuffix "/" }}</a></dd>
+  {{- end }}
+</dl>

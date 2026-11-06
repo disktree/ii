@@ -1,0 +1,16 @@
+/* ZNN: the one place that is allowed to be dark, always */
+:root { color-scheme: dark; --accent: #ff2a00; }
+body { background: #090909; color: #707070; }
+a { color: #a0a0a0; }
+a:hover, a:focus-visible { color: #fff; }
+header.site, footer.site { opacity: .5; }
+article.znn { grid-column: full; text-align: center; padding-inline: 4vw; }
+article.znn h1 { font: 700 clamp(2rem, 8vw, 6rem)/1 ui-monospace, monospace; letter-spacing: -.04em; margin: 8vh 0 6vh; }
+article.znn h1 a { text-decoration: none; }
+article.znn > ol { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr)); gap: 4vw; }
+article.znn figure { margin: 0; position: relative; }
+article.znn figure img { display: block; width: 100%; height: auto; transition: filter .4s; }
+article.znn figcaption { position: absolute; inset: 50% auto auto 50%; translate: -50% -50%; font: 700 1.5rem ui-monospace, monospace; color: #fff; mix-blend-mode: difference; }
+article.znn li a:hover img { filter: invert(1); }
+article.znn > a img { display: block; margin: 0 auto; width: 100%; max-width: 1000px; height: auto; }
+article.znn audio { width: min(100%, 1000px); margin: 4vh auto; display: block; }

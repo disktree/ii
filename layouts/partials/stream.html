@@ -1,0 +1,13 @@
+{{- /* Chronological list of pages grouped by year. Context: Pages */ -}}
+{{- range .GroupByDate "2006" }}
+{{- if ne .Key "1970" }}
+<section class="year" aria-labelledby="y{{ .Key }}">
+  <h2 id="y{{ .Key }}"><a href="#y{{ .Key }}">{{ .Key }}</a></h2>
+  <ol class="stream">
+    {{- range .Pages }}
+    {{ partial "item" . }}
+    {{- end }}
+  </ol>
+</section>
+{{- end }}
+{{- end }}

@@ -1,9 +1,17 @@
-@use 'ii/reset';
-@use 'ii/theme';
-@use 'ii/icons';
-@use 'ii/typography';
-@use 'ii/site';
-@use 'ii/page';
-@use 'ii/scrollbar';
+// ii — a stylesheet that pretends not to exist.
+//
+// Everything that is visible at first glance is a browser default:
+// the serif, the system colors (Canvas, CanvasText, LinkText, VisitedText),
+// underlined links, bold headings, bullets, <hr>, <address> in italics.
+// Everything else is there to be noticed only on the second look:
+// the grid, the measure, the rhythm, the mono metadata, the one accent.
 
-@use 'ii/component/gallery';
+
+@use 'ii/tokens';
+@use 'ii/base';
+@use 'ii/layout';
+@use 'ii/site';
+@use 'ii/stream';
+@use 'ii/single';
+@use 'ii/content';
+@use 'ii/print';

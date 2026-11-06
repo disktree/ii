@@ -1,26 +1,21 @@
 {{ define "style" }}
-{{ $style := resources.Get "css/znn_single.css" }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ with resources.Get "css/znn.css" | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
 {{ end }}
 
 {{ define "main" }}
-{{ $url := print "https://music.disktree.net/ZNN/" .Title ".mp3" }}
+{{- $url := print "https://music.disktree.net/ZNN/" .Title ".mp3" }}
+{{- with .Params.links }}{{ $url = index . 0 }}{{ end }}
 <article class="znn">
-  <h1>
-    <a href="{{ $url }}">{{.Title}}</a>
-  </h1>
-  {{ $src := print .Params.znn ".png" }}
-  {{ $res := .Resources.Get $src }}
-  {{ $res_400 := $res.Resize "400x" }}
-  {{ $res_1000 := $res.Resize "1000x" }}
+  <h1><a href="{{ $url }}">{{ .Title }}</a></h1>
+  {{- with .Resources.Get (print .Params.znn ".png") }}
+  {{- $s := .Resize "600x webp" }}
+  {{- $l := .Resize "1400x webp" }}
   <a href="{{ $url }}">
-    <img srcset="{{ $res_400.RelPermalink }} 400w,
-      {{ $res_1000.RelPermalink }} 1000w,
-      {{ $res.RelPermalink }} 3000w" src="{{ $res.Permalink }}" alt="{{ .Params.title }}">
+    <img srcset="{{ $s.RelPermalink }} 600w, {{ $l.RelPermalink }} 1400w, {{ .RelPermalink }} {{ .Width }}w" sizes="min(100vw, 1000px)" src="{{ $l.RelPermalink }}" width="{{ $l.Width }}" height="{{ $l.Height }}" alt="{{ $.Title }}">
   </a>
+  {{- end }}
+  <audio src="{{ $url }}" controls preload="none"></audio>
+  {{ .Content }}
 </article>
-{{ end }}
-
-{{ define "subnav"}}
-{{ partial "prev_next" . }}
+{{ partial "pager" . }}
 {{ end }}

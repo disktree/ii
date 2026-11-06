@@ -2,7 +2,6 @@
 {{ if $url }}
 {{ $text := .Get 1 | default $url }}
 <a href="{{ $url }}" download>
-  {{/* HACK: vertical position offset hack */}}
-  <i class="ic-file_download" style="position:relative;top:2px;"></i>{{ $text }}
+  ↓ {{ $text }}
 </a>
 {{ end }}

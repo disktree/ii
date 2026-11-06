@@ -1,28 +1,26 @@
 {{ define "style" }}
-{{ $style := resources.Get "css/znn_list.css" }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ with resources.Get "css/znn.css" | minify | fingerprint }}<link rel="stylesheet" href="{{ .RelPermalink }}">{{ end }}
 {{ end }}
 
 {{ define "main" }}
-{{ $url := urls.Parse . }}
 <article class="znn">
-  <ol class="znn" reversed>
-    {{ range .Pages }}
-    {{ $res := .Resources.Get (print .Params.znn ".png") }}
-    {{ $res_600 := $res.Resize "600x" }}
-    {{ $res_1000 := $res.Resize "1000x" }}
+  <h1>{{ .Title }}</h1>
+  <ol reversed>
+    {{- range .Pages }}
+    {{- $p := . }}
+    {{- with .Resources.Get (print .Params.znn ".png") }}
+    {{- $s := .Resize "600x webp" }}
+    {{- $l := .Resize "1000x webp" }}
     <li>
-      <a href="{{ .RelPermalink }}">
+      <a href="{{ $p.RelPermalink }}">
         <figure>
-          <picture>
-            <source srcset="{{ $res_600.RelPermalink }}" media="(max-width: 600px)">
-            <img src="{{ $res_1000.Permalink }}" alt="graphic">
-          </picture>
-          <figcaption>{{- .Title -}}</figcaption>
+          <img srcset="{{ $s.RelPermalink }} 600w, {{ $l.RelPermalink }} 1000w" sizes="(max-width: 700px) 100vw, 33vw" src="{{ $l.RelPermalink }}" width="{{ $l.Width }}" height="{{ $l.Height }}" alt="{{ $p.Title }}" loading="lazy">
+          <figcaption>{{ $p.Title }}</figcaption>
         </figure>
       </a>
     </li>
-    {{ end }}
+    {{- end }}
+    {{- end }}
   </ol>
 </article>
 {{ end }}

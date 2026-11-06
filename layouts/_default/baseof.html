@@ -1,75 +1,28 @@
-<!DOCTYPE html>
-<html lang="{{ $.Site.LanguageCode | default " en" }}">
-
+<!doctype html>
+<html lang="{{ site.LanguageCode | default "en" }}">
 <head>
-
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,minimum-scale=1">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="title" content="{{- .Site.Title -}}">
-  <meta name="url" content="{{ .Site.Params.contact.web }}">
-  <meta name="description" content="{{ with .Params.description }}{{- . -}}{{ else }}{{- .Site.Params.description -}}{{ end }}">
-  <meta name="keywords" content="{{ delimit (.Params.keywords | default .Site.Params.keywords) "," }}">
-  {{ if .Params.sitemap.exclude }}
-  <meta name="robots" content="noindex,nofollow">
-  {{ end }}
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>{{ block "title" . }}{{ partial "title" . }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  {{- if or .Params.noindex (in (slice "theprocess") .Section) }}
+  <meta name="robots" content="noindex">
+  {{- end }}
   {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/schema.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
-
-  <title>{{block "title" .}}{{.Site.Title}}{{end}}{{with .Page.Title}}/{{.}}{{end}}</title>
-
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
-  <link rel="stylesheet" href="{{(resources.Get "css/syntax.css" | minify).RelPermalink}}">
-
-  {{ $theme := .Params.theme_name | default .Site.Params.theme }}
-  {{ $theme_path := (print "theme/" $theme ".css") }}
-  {{ $theme_res := resources.Get $theme_path }}
-  {{ if $theme_res }}
-  <link rel="stylesheet" href="{{ $theme_res.RelPermalink }}">
-  {{ else }}
-  {{ warnf "theme %s not found" $theme_path }}
-  {{ end }}
-
-  {{ with .Params.theme }}
-  <style>
-    :root {
-      {{ with .background }}--background: {{ . }};{{ end }}
-      {{ with .f_high }}--f_high: {{ . }};{{ end }}
-      {{ with .f_med }}--f_med: {{ . }};{{ end }}
-      {{ with .f_low }}--f_low: {{ . }};{{ end }}
-      {{ with .f_inv }}--f_inv: {{ . }};{{ end }}
-      {{ with .b_high }}--b_high: {{ . }};{{ end }}
-      {{ with .b_med }}--b_med: {{ . }};{{ end }}
-      {{ with .b_low }}--b_low: {{ . }};{{ end }}
-      {{ with .b_inv }}--b_inv: {{ . }};{{ end }}
-    }
-  </style>
-  {{ end }}
-
-  {{ block "style" . }}{{ end }}
-
-  {{ with .PrevInSection }}
-  <link rel="prev" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
-  {{ with .NextInSection }}
-  <link rel="next" title="{{- .Title | safeHTML -}}" href="{{.Permalink}}">{{ end }}
-
-  {{ block "schema" . }}{{ end }}
-  <script src='{{(resources.Get "js/app.js" | minify).RelPermalink}}' async></script>
-
+  <link rel="stylesheet" href="{{ "style.css" | relURL }}">
+  {{- block "style" . }}{{ end }}
+  {{- with site.Home.OutputFormats.Get "rss" }}
+  <link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">
+  {{- end }}
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 </head>
-
-<body>
-  <header>
-    {{ block "header-left" . }}{{- partial "site/header-left" . -}}{{ end }}
-    {{ block "header-right" . }}{{- partial "site/header-right" . -}}{{ end }}
-  </header>
-  <main data-kind="{{ .Kind }}">{{ block "main" . }}{{- partial "site/main.html" . -}}{{ end }}</main>
-  <footer>
-    {{ block "footer-left" . }}{{- partial "site/footer-left" . -}}{{ end }}
-    {{ block "footer-rigth" . }}{{- partial "site/footer-right" . -}}{{ end }}
-  </footer>
+<body class="{{ .Kind }}{{ with .Section }} s-{{ . }}{{ end }}{{ with .Type }} t-{{ . }}{{ end }}">
+  <a class="skip" href="#main">skip to content</a>
+  {{ partial "header" . }}
+  <main id="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer" . }}
 </body>
-
 </html>

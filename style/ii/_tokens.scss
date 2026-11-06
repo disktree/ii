@@ -1,0 +1,31 @@
+// The palette is the browser's own: CSS system colors.
+// They already follow the OS light/dark preference through `color-scheme`.
+// The only color not taken from the user agent is --accent.
+
+:root {
+    color-scheme: light dark;
+
+    --fg: CanvasText;
+    --bg: Canvas;
+    --link: LinkText;
+    --visited: VisitedText;
+    --muted: GrayText;
+    --accent: oklch(60% 0.25 29);
+
+    --serif: serif; // whatever the reader's browser calls "serif"
+    --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+
+    --measure: 34rem;
+    --meta: 8.5rem;
+    --aside: 11rem;
+    --gap: 2rem;
+    --edge: 1rem;
+
+    --leading: 1.5;
+    --line: 1.5rem; // one line of body text, the vertical unit
+    --small: 0.75rem;
+
+    @media (prefers-color-scheme: dark) {
+        --accent: oklch(70% 0.2 33);
+    }
+}

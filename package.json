@@ -5,7 +5,7 @@
   "author": "tong@disktree.net",
   "license": "ISC",
   "private": true,
-  "homepage": "https://ii.disktre.net",
+  "homepage": "https://ii.disktree.net",
   "repository": {
     "type": "git",
     "url": "https://github.com/disktree/ii.git"
@@ -19,12 +19,13 @@
     "buildTags": "extended"
   },
   "scripts": {
-    "start": "hugo server",
+    "start": "npm run build:style && hugo server",
     "clean": "rm -rf public && rm -f static/style.css*",
-    "dev:style": "sass style/main.scss static/style.css -w",
-    "build:style": "sass style/main.scss static/style.css --style compressed",
+    "dev:style": "sass --load-path=style/lib/enron style/main.scss static/style.css -w",
+    "build:style": "sass --load-path=style/lib/enron style/main.scss static/style.css --style compressed --no-source-map",
     "build:hugo": "hugo -e production",
     "build": "npm run build:style && npm run build:hugo",
+    "update:code": "node scripts/update-code.mjs",
     "deploy": "scripts/deploy.sh"
   }
 }

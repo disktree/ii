@@ -1,0 +1,20 @@
+{{ define "body" }}
+{{- with .Params.about }}<p>{{ . }}</p>{{ end }}
+{{- with .Params.repo_url }}<p><a href="{{ . }}" rel="external">{{ . | replaceRE "^https?://" "" }}</a></p>{{ end }}
+{{- with .Params.events }}
+<ul class="events">
+  {{- range . }}
+  <li><time datetime="{{ .created }}">{{ (time .created).Format "15:04" }}</time> {{ if .url }}<a href="{{ .url }}" rel="external">{{ .summary }}</a>{{ else }}{{ .summary }}{{ end }}</li>
+  {{- end }}
+</ul>
+{{- end }}
+{{- with .Params.commits }}
+<h2>Commits</h2>
+<ol class="commits">
+  {{- range . }}
+  <li><a href="{{ .url }}" rel="external"><code>{{ substr .sha 0 7 }}</code></a> {{ .message }}</li>
+  {{- end }}
+</ol>
+{{- end }}
+{{ .Content }}
+{{ end }}

@@ -1,94 +1,134 @@
-/** ii/site **/
+@use 'enron/break';
+@use 'enron/fluid';
+@use 'base';
 
-@use 'breakpoint';
+// Header: the default h1 serif, just much too large.
 
-html,
-body {
-  width: 100%;
-  height: 100%;
+header.site {
+    align-items: last baseline;
+    padding-block: calc(var(--line) * 2) calc(var(--line) * 2);
+
+    .logo {
+        grid-column: meta;
+        margin: 0;
+        font-size: fluid.value(4rem, 7rem);
+        font-weight: bold;
+        line-height: 0.75;
+        letter-spacing: -0.06em;
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            &:hover { color: var(--accent); }
+        }
+    }
+
+    nav {
+        grid-column: text-start / aside-end;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 1.25em;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        [aria-current] {
+            color: var(--fg);
+            text-decoration: none;
+
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 0.4em;
+                height: 0.4em;
+                margin-right: 0.35em;
+                vertical-align: 0.15em;
+                border-radius: 50%;
+                background: var(--accent);
+            }
+        }
+    }
+
+    @include break.max(sm) {
+        padding-block: var(--line) calc(var(--line) * 1.5);
+        row-gap: var(--line);
+    }
 }
 
-body {
-
-  --site-margin: 1rem;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  // gap: 0.5rem;
-  height: 100%;
-
-  >header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 3rem var(--site-margin);
-    // padding: 1rem 0;
-    text-transform: uppercase;
-    z-index: 1000;
-      
-    // background: var(--b_inv);
-    //   color: var(--f_inv);
-    // filter: invert(100%);
-
-    a.home {
-      i {
-        position: relative;
-        top: 1px;
-        margin-right: 3px;
-      }
-    }
-
-    menu.breadcrumb {
-      margin-right: 0.25rem;
-    }
-
-    time {
-      margin-right: 0.25rem;
-    }
-  }
-
-  >main {
-    margin: 0 var(--site-margin);
-    // padding-bottom: 1rem;
-    height: 100%;
-    z-index: 100;
-  }
-
-  >footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 var(--site-margin);
-    padding: 2rem 0 2rem 0;
-    z-index: 1000;
-
-    a {
-      text-decoration: none;
-    }
-
-    >*:not(:last-child) {
-      margin-right: 0.5rem;
-    }
-  }
+main {
+    padding-bottom: calc(var(--line) * 3);
 }
 
-@media screen and (min-width: breakpoint.$tablet) {
-  body {
-    --site-margin: 2rem;
+// Page headers for lists and singles sit in the text column.
 
-    >header {
-      // padding-top: 2rem;
+header.page {
+    grid-column: text-start / aside-end;
+    margin-bottom: var(--line);
+
+    h1 {
+        margin: 0 0 calc(var(--line) / 2);
+        max-width: var(--measure);
     }
 
-    >main {
-      // margin: 0 2rem;
-      // padding: 2rem 0;
-      // margin: 0 2rem;
+    .lede {
+        margin: 0;
+        max-width: var(--measure);
+        color: var(--muted);
+        font-style: italic;
+    }
+}
+
+// Footer: a real <address>, italic by default, left exactly so.
+
+footer.site {
+    align-items: start;
+    padding-block: calc(var(--line) * 2);
+    border-top: 1px solid color-mix(in srgb, var(--fg) 15%, transparent);
+
+    address { grid-column: text; }
+
+    .colophon {
+        @extend %mono;
+        grid-column: aside;
+        margin: 0;
+        color: var(--muted);
+        a { color: inherit; }
     }
 
-    >footer {
-      padding-bottom: 2rem;
+    @include break.max(md) {
+        .colophon { margin-top: var(--line); }
     }
-  }
+}
+
+.pager {
+    grid-column: text-start / aside-end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--line) var(--gap);
+    margin-top: calc(var(--line) * 3);
+
+    a { max-width: 45%; }
+    a[rel='next'] { margin-left: auto; text-align: right; }
+
+    span {
+        @extend %mono;
+        display: block;
+        color: var(--muted);
+    }
+
+    @include break.max(sm) {
+        a { max-width: none; }
+    }
+}
+
+.terms, .index {
+    grid-column: text;
+    data {
+        @extend %mono;
+        color: var(--muted);
+    }
 }
