@@ -53,7 +53,6 @@ header.site {
         // The list you are looking at (home or a section): highlighted.
         [aria-current='page'] {
             padding-inline: 0.5ch;
-            border-radius: 0.2rem; // same as the section keys
             background: var(--fg);
             color: var(--bg);
             text-decoration: none;
