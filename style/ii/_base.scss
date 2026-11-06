@@ -12,7 +12,8 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--fg);
-    font-family: var(--serif);
+    font-family: var(--font);
+    font-size: var(--size);
     line-height: var(--leading);
     font-kerning: normal;
     font-variant-ligatures: common-ligatures;
@@ -52,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.15;
     text-wrap: balance;
 }
-h1 { letter-spacing: -0.015em; }
+h1 { letter-spacing: -0.03em; }
 
 p, li, dd, figcaption, blockquote { text-wrap: pretty; }
 
@@ -63,7 +64,7 @@ img, video { height: auto; }
 
 code, pre, kbd, samp {
     font-family: var(--mono);
-    font-size: 0.875em;
+    font-size: 1em;
 }
 pre {
     overflow-x: auto;

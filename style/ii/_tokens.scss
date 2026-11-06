@@ -14,8 +14,10 @@
 
     --serif: serif; // whatever the reader's browser calls "serif"
     --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+    --font: var(--mono); // the body face: switch to var(--serif) for the serif version
+    --size: 0.875rem;
 
-    --measure: 34rem;
+    --measure: 70ch;
     --meta: 8.5rem;
     --aside: 11rem;
     --gap: 2rem;

@@ -3,7 +3,7 @@
 @use 'base';
 @use 'enron/a11y';
 
-// Header: the default h1 serif, just much too large.
+// Header: a circle, three links.
 
 header.site {
     align-items: center;
@@ -96,18 +96,12 @@ footer.site {
     padding-block: calc(var(--line) * 2);
     border-top: 1px solid color-mix(in srgb, var(--fg) 15%, transparent);
 
-    address { grid-column: text; }
-
     .colophon {
         @extend %mono;
-        grid-column: aside;
+        grid-column: text;
         margin: 0;
         color: var(--muted);
         a { color: inherit; }
-    }
-
-    @include break.max(md) {
-        .colophon { margin-top: var(--line); }
     }
 }
 

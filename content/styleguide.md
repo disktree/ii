@@ -8,7 +8,7 @@ sitemap:
   disable: true
 ---
 
-The rule: at first glance this should look like a page without a stylesheet. On a second look it should not.
+The rule: at first glance this should look like a page without a stylesheet. On a second look it should not. The body face is a single token (`--font`), currently monospace; set it to `var(--serif)` for the serif version.
 
 Defaults kept as they are: the reader's `serif`, the system colors `Canvas`, `CanvasText`, `LinkText`, `VisitedText` and `GrayText` (so light and dark follow the OS), underlined links, bold headings, bullets, italic `<address>`, the inset `<hr>`.
 
