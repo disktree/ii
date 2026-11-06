@@ -24,29 +24,34 @@ header.site {
         // Separator: one space, the width of one character, like everywhere else.
         li + li { margin-left: 1ch; }
 
-        // A glyph, not an image: as high as the capitals, on the baseline.
-        svg {
+        // Every item is a box of exactly one line, text or circle,
+        // so a highlight has the same height for all of them.
+        a, .current {
             display: inline-block;
-            width: 1cap;
-            height: 1cap;
-            vertical-align: baseline;
-            fill: currentColor;
-        }
-
-        // Every item is a box exactly one line high, text or circle,
-        // so the highlight has the same height for all of them.
-        a {
-            display: inline-block;
+            height: calc(1em * var(--leading));
             line-height: var(--leading);
-            vertical-align: baseline;
+            vertical-align: top;
+            overflow: hidden;
             color: var(--fg);
+        }
+        .current a { vertical-align: top; }
+
+        // The circle: a glyph a little smaller than the capitals,
+        // centered in its line box.
+        .home a {
+            display: inline-flex;
+            align-items: center;
+        }
+        svg {
+            display: block;
+            width: 0.6em;
+            height: 0.6em;
+            fill: currentColor;
         }
 
         // Where you are: highlighted. On a content page that is
         // SECTION/TITLE as one item.
         .current {
-            display: inline-block;
-            line-height: var(--leading);
             padding-inline: 0.5ch;
             background: var(--fg);
             color: var(--bg);
