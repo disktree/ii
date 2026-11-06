@@ -41,6 +41,12 @@ header.site {
         .home a {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
+        }
+        // Highlighted, the circle sits in a square: as wide as the band is high.
+        .home .current {
+            width: var(--band);
+            padding-inline: 0;
         }
         svg {
             display: block;
