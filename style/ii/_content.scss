@@ -46,7 +46,6 @@
 
     // Video players keep their format.
     iframe[src*='youtube'], iframe[src*='vimeo'] { height: auto; min-height: 0; aspect-ratio: 16 / 9; }
-    iframe.mixcloud { aspect-ratio: auto; height: 120px; min-height: 0; }
     iframe[height='600'] { aspect-ratio: auto; height: 600px; min-height: 0; }
     audio { display: block; width: 100%; }
     img { display: block; }
@@ -120,7 +119,7 @@
 // Content pages that show a work in an iframe: the page is exactly one
 // viewport high. Header, metadata, title and footer stay in view, the iframe
 // takes whatever height is left; the page itself does not scroll.
-$work: "iframe:not([src*='youtube']):not([src*='vimeo']):not(.mixcloud):not([height='600'])";
+$work: "iframe:not([src*='youtube']):not([src*='vimeo']):not([height='600'])";
 
 body:has(article.single > .text > #{$work}) {
     height: 100vh;
