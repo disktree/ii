@@ -66,8 +66,13 @@ header.site {
         }
     }
 
-    // On a section's own list page the heading already says where you are.
-    body.section & nav [aria-current]::before { content: none; }
+    // On a section's own list page the menu item is the heading:
+    // highlighted, no dot.
+    body.section & nav [aria-current] {
+        background: var(--fg);
+        color: var(--bg);
+        &::before { content: none; }
+    }
 
     @include break.max(sm) {
         padding-block: var(--edge) calc(var(--line) * 1.5);
@@ -127,3 +132,6 @@ footer.site {
         color: var(--muted);
     }
 }
+
+// Section list pages: the title lives in the menu (see header.site).
+body.section main > header.page { @include a11y.visually-hidden; }
