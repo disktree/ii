@@ -73,7 +73,8 @@ pre {
 
 time, data, code { font-variant-numeric: tabular-nums slashed-zero; }
 
-small { font-size: var(--small); }
+// One size for everything. Hierarchy comes from weight, color and position.
+h1, h2, h3, h4, h5, h6, small, big, figcaption, kbd, samp, code, pre { font-size: 1em; }
 
 .vh { @include a11y.visually-hidden; }
 
@@ -90,8 +91,7 @@ small { font-size: var(--small); }
 // The "small print" voice: everything that is metadata.
 %mono {
     font-family: var(--mono);
-    font-size: var(--small);
-    line-height: 1rem;
+    font-size: inherit;
     letter-spacing: 0.01em;
     font-variant-numeric: tabular-nums slashed-zero;
 }

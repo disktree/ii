@@ -4,7 +4,6 @@
     .year > h2, dl.meta { position: static; }
     .text a[href^='http']::after {
         content: ' <' attr(href) '>';
-        font-size: 0.75em;
         overflow-wrap: anywhere;
     }
 }

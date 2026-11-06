@@ -67,7 +67,7 @@
     li + li { margin-top: 0.25rem; }
     li::marker { color: var(--muted); font-variant-numeric: tabular-nums; }
 
-    .footnotes { font-size: 0.875em; color: var(--muted); }
+    .footnotes { color: var(--muted); }
 
     // Code activity (c/)
     .events, .commits {
