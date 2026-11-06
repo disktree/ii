@@ -7,11 +7,6 @@ article.single {
     > * { grid-column: meta-start / aside-end; }
     > figure.wide { grid-column: meta-start / full-end; }
 
-    // Title first, one line like any other line, metadata right below it.
-    > header.page {
-        margin-bottom: 0;
-        h1 { margin: 0; line-height: var(--leading); text-transform: uppercase; }
-    }
     > .text { grid-column: meta-start / full-end; }
 }
 
@@ -25,6 +20,15 @@ dl.meta {
     overflow-wrap: anywhere;
 
     dd { margin: 0; color: var(--fg); }
+
+    // The title is just the first row of the table.
+    h1 {
+        margin: 0;
+        font-size: 1em;
+        line-height: inherit;
+        text-transform: uppercase;
+    }
+    .lede { font-style: italic; }
     .links li { display: block; }
     .links li::after { content: none; }
 }

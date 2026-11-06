@@ -1,9 +1,5 @@
 {{ define "main" }}
 <article class="single">
-  <header class="page">
-    <h1>{{ if .Title }}{{ .Title }}{{ else }}{{ .Date.Format "2006-01-02 15:04" }}{{ end }}</h1>
-    {{ with .Description }}<p class="lede">{{ . | markdownify }}</p>{{ end }}
-  </header>
   {{ partial "meta" . }}
   <div class="text">
     {{ block "body" . }}{{ .Content }}{{ end }}
