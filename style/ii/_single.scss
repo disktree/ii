@@ -6,6 +6,12 @@ article.single {
     align-items: start;
     > * { grid-column: meta-start / aside-end; }
     > figure.wide { grid-column: meta-start / full-end; }
+
+    // Title first, one line like any other line, metadata right below it.
+    > header.page {
+        margin-bottom: 0;
+        h1 { margin: 0; line-height: var(--leading); }
+    }
     > .text { grid-column: meta-start / full-end; }
 }
 
