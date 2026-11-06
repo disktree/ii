@@ -9,4 +9,3 @@ links: [
 	https://music.disktree.net/ZNN/GLOW.mp3
 ]
 ---
-![GLOW](glow.png)
