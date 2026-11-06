@@ -21,7 +21,7 @@ header.site {
             list-style: none;
         }
 
-        li + li::before { content: '|'; }
+        li + li::before { content: '/'; color: var(--muted); }
 
         // A glyph, not an image: as high as the capitals, on the baseline.
         svg {
