@@ -41,11 +41,13 @@ header.site {
         ul {
             display: flex;
             flex-wrap: wrap;
-            gap: 0 1.25em;
+            gap: 0;
             margin: 0;
             padding: 0;
             list-style: none;
         }
+
+        li + li::before { content: '|'; }
 
         [aria-current] {
             color: var(--fg);
