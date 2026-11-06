@@ -10,6 +10,14 @@ article.single {
     > .text { grid-column: meta-start / full-end; }
 }
 
+// The title: one more line on top of the metadata table, at the left edge.
+h1.title {
+    margin: 0;
+    font-size: 1em;
+    line-height: var(--leading);
+    text-transform: uppercase;
+}
+
 dl.meta {
     @extend %mono;
     display: grid;
@@ -21,13 +29,6 @@ dl.meta {
 
     dd { margin: 0; color: var(--fg); }
 
-    // The title is just the first row of the table.
-    h1 {
-        margin: 0;
-        font-size: 1em;
-        line-height: inherit;
-        text-transform: uppercase;
-    }
     .lede { font-style: italic; }
     .links li { display: block; }
     .links li::after { content: none; }
