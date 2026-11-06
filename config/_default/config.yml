@@ -34,15 +34,13 @@ minify:
   keepComments: true
   keepConditionalComments: true
 
-# module:
-#   imports:
-#     - path: github.com/tong/gonzo
-#       ##disable: false
-#   replacements:
-#     github.com/tong/gonzo -> /home/tong/dev/gonzo/
-#   mounts:
-#     - source: static
-#       target: static
+module:
+  mounts:
+    - source: static
+      target: static
+    # JetBrains Mono variable font from npm (@fontsource-variable/jetbrains-mono)
+    - source: node_modules/@fontsource-variable/jetbrains-mono/files
+      target: static/font/jetbrains-mono
 
 outputs:
   home: [html, rss]

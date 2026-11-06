@@ -119,6 +119,15 @@ Embeds and figures step out of the measure into the aside column.
 </table>
 {{< /html >}}
 
+## Weights
+
+JetBrains Mono, variable, `wght` 100–800.
+
+{{< html >}}
+<p><span style="font-weight:100">100</span> <span style="font-weight:200">200</span> <span style="font-weight:300">300</span> <span style="font-weight:400">400</span> <span style="font-weight:500">500</span> <span style="font-weight:600">600</span> <span style="font-weight:700">700</span> <span style="font-weight:800">800</span></p>
+<p><i><span style="font-weight:100">100</span> <span style="font-weight:200">200</span> <span style="font-weight:300">300</span> <span style="font-weight:400">400</span> <span style="font-weight:500">500</span> <span style="font-weight:600">600</span> <span style="font-weight:700">700</span> <span style="font-weight:800">800</span></i></p>
+{{< /html >}}
+
 ## Metadata
 
 <p class="mono-sample"><time>2026-11-06</time> <a class="key" href="/a/">a</a> <a class="key" href="/c/">c</a> <a class="key" href="/s/">s</a></p>

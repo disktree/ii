@@ -11,7 +11,7 @@
     --accent: oklch(60% 0.25 29);
 
     --serif: serif; // whatever the reader's browser calls "serif"
-    --mono: ui-monospace, 'SF Mono', 'JetBrains Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+    --mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
     --font: var(--mono); // the body face: switch to var(--serif) for the serif version
     --size: 0.875rem;
 
