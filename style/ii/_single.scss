@@ -10,7 +10,7 @@ article.single {
     // Title first, one line like any other line, metadata right below it.
     > header.page {
         margin-bottom: 0;
-        h1 { margin: 0; line-height: var(--leading); }
+        h1 { margin: 0; line-height: var(--leading); text-transform: uppercase; }
     }
     > .text { grid-column: meta-start / full-end; }
 }
