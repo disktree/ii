@@ -11,9 +11,9 @@ article>h1>a {
   text-decoration: none;
 }
 
-article>img {
+article img {
   margin: 0 auto;
   padding: 6vw;
-  max-width: 700px;
+  max-width: 1000px;
   width: 100%;
 }

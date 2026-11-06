@@ -1,0 +1,18 @@
+{{ define "schema" }} {{ partial "schema/organization" . }} {{ end }} {{ define
+"main" }}
+<a href="/a/">
+  <svg
+    width="33%"
+    height="33%"
+    style="
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    "
+    viewBox="0 0 100 100"
+  >
+    <circle r="50" fill="currentColor" transform="translate(50 50)"></circle>
+  </svg>
+</a>
+{{ end }}

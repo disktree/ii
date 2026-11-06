@@ -1,0 +1,11 @@
+{{ $id := .Get 0 }}
+{{ $width := .Get "width" | default "100%" }}
+{{ $height := .Get "height" | default "100%" }}
+<iframe 
+  src="https://player.vimeo.com/video/{{$id}}"
+  style="background:none;"
+  frameborder="0"
+  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+  width="{{ $width }}"
+  height="{{ $height }}"
+ ></iframe>

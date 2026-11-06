@@ -1,0 +1,12 @@
+/** ii/gallery **/
+.gallery {
+
+  ol {
+    background: red;
+
+    >li {
+
+      width: 100%;
+    }
+  }
+}

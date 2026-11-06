@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+              viewBox="0 0 24 24"
+              height="24"
+              width="24"
+              version="1.1"
+              id="svg10"
+              sodipodi:docname="ftl-src.svg"
+              inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+              inkscape:export-filename="/home/tong/dev/game/gamma/Bundled/image/ftl.png"
+              inkscape:export-xdpi="300"
+              inkscape:export-ydpi="300"
+              xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+              xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:svg="http://www.w3.org/2000/svg">
+             <defs
+                           id="defs14" />
+             <sodipodi:namedview
+                           id="namedview12"
+                           pagecolor="#ffffff"
+                           bordercolor="#666666"
+                           borderopacity="1.0"
+                           inkscape:pageshadow="2"
+                           inkscape:pageopacity="0.0"
+                           inkscape:pagecheckerboard="0"
+                           showgrid="true"
+                           inkscape:zoom="64"
+                           inkscape:cx="11.289062"
+                           inkscape:cy="9.140625"
+                           inkscape:window-width="3840"
+                           inkscape:window-height="2127"
+                           inkscape:window-x="0"
+                           inkscape:window-y="33"
+                           inkscape:window-maximized="1"
+                           inkscape:current-layer="svg10">
+                          <inkscape:grid
+                                        type="xygrid"
+                                        id="grid2010"
+                                        empspacing="4" />
+             </sodipodi:namedview>
+             <path
+                           d="m 11,11 h 2 v 11 h -2 z"
+                           id="path2"
+                           style="stroke-width:1" />
+             <path
+                           d="m 6,12 h 12 v 2 H 6 Z"
+                           id="path4" />
+             <path
+                           d="M 2.7949519,7.092689 12,11 11.218538,12.84101 2.0134896,8.9336987 Z"
+                           id="path4-7"
+                           style="stroke-width:1" />
+             <path
+                           d="M 21.205048,7.092689 12,11 12.781462,12.84101 21.98651,8.9336987 Z"
+                           id="path4-7-1"
+                           style="stroke-width:1" />
+             <path
+                           d="m 4.0877853,-14.830694 9.7082037,7.0534226 -1.17557,1.618034 -9.7082043,-7.0534226 z"
+                           id="path6" />
+             <path
+                           d="m 10.204011,-7.7772714 9.708204,-7.0534226 1.17557,1.618034 -9.708204,7.0534226 z"
+                           id="path8" />
+</svg>

@@ -1,0 +1,49 @@
+{{ define "main" }}
+
+<ul class="github-events">
+  {{ range .Site.Data.github.tong }}
+  {{ if .public }}
+  {{ $type := lower (substr .type 0 -5) }}
+  {{ $repo_url := print "https://github.com/" .repo.name }}
+  <li class="{{ $type }}">
+
+    <span class="type">{{ $type }}</span>
+    <time class="meta">{{ (time .created_at).Format "2006-01-02 15:04" }}</time>
+
+    {{/* <a href="{{ .repo.url }}" class="repo">{{ .repo.name }}</a> */}}
+    {{/* <a href="{{ print " https://github.com/" .repo.name }}" class="repo">{{ .repo.name }}</a> */}}
+    {{/* <a href="{{ $repo_url }}" class="repo">{{ .repo.name }}</a> */}}
+    <!-- <span>{{ .actor.login }}</span> -->
+
+    {{ if eq $type "push" }}
+    <a href="{{ $repo_url }}" class="repo">{{ .repo.name }}</a>:<span>{{ substr .payload.ref 11 }}</span>
+    <ul class="commits">
+      {{ range .payload.commits }}
+      <li class="commit">
+        <span title="{{ .author.email }}">{{ .author.name }}</span>
+        <a href="{{ print $repo_url "/commit/" .sha }}" class="message">{{ .message }}</a>
+      </li>
+      {{ end }}
+    </ul>
+
+    {{ else if eq $type "create" }}
+    <a href="{{ print $repo_url }}" class="repo">{{ .repo.name }}</a>:<a href="{{ print $repo_url " /releases/tag/"
+      .payload.ref }}">{{ .payload.ref }}</a>
+    {{/* <a href="{{ $repo_url }}">{{ .repo.name }}</a> */}}
+    {{/* <a href="">{{ .payload.ref }}</a> */}}
+
+    {{ else if eq $type "issuecomment" }}
+    <a href="{{ .payload.comment.html_url }}">{{ .repo.name }}</a>
+
+    {{ else if eq $type "watch" }}
+    <a href="{{ $repo_url }}">{{ .repo.name }}</a>
+
+    {{ else }}
+    <a href="{{ $repo_url }}">{{ .repo.name }}</a>
+    {{ end }}
+
+  </li>
+  {{ end }}
+  {{ end }}
+</ul>
+{{ end }}

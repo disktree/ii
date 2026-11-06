@@ -1,9 +1,9 @@
 ---
-title: "A"
+title: "a"
 #aliases: ["archive"]
 menu:
   main:
     identifier: archive
-    name: A
+    name: a
     weight: 1000
 ---

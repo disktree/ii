@@ -1,0 +1,14 @@
+{{ define "main" }}
+<ol>
+  {{ range $gist := .Site.Data.gist }}
+  {{ if .public }}
+  <li>
+    <a href="{{ .html_url }}">
+      <span>{{ .created_at }}</span>
+      <span>{{ .description }}</span>
+    </a>
+  </li>
+  {{ end }}
+  {{ end }}
+</ol>
+{{ end }}

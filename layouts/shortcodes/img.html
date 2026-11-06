@@ -1,0 +1,9 @@
+{{ $src := .Get 0 }}
+{{ if $src }}
+	<img src="{{ $src | safeURL }}"
+		class="shortcode image{{ with .Get "class" }}{{.}}{{ end }}"
+		{{ with .Get "alt" }} alt="{{ . | plainify }}"{{ end }}
+		{{ with .Get "style" }} style="{{ . | safeCSS }}"{{ end }}
+		{{ with .Get "title" }} title="{{ . }}"{{ end }}
+        >
+{{ end }}

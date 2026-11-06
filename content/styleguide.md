@@ -4,6 +4,8 @@ date: 2024-02-23
 type: styleguide
 title_text: "disktree"
 rss_ignore: true
+sitemap:
+  disable: true
 ---
 
 ###### Typography
@@ -37,6 +39,8 @@ rss_ignore: true
 Many non-authoritarian organizations have foundered on the dubious principle of open membership, which [frequently](frequently.md) leads to a preponderance of assholes, yahoos, spoilers, whining neurotics, & police agents. Some will call this an elitist attitude, but it is not—at least not in the C. Wright Mills sense of the word: that is, a small group which exercises power over non-insiders for its own aggrandizement.
 
 This [link](https://disktree.net) is a link.
+
+HHHH {{< param "title_text">}} HHHHHHHHHHHHHHHHHH
 
 <https://velak.klingt.org/>  
 <https://velak.disktree.net>  

@@ -1,7 +1,10 @@
-{{/*{{ partial "tags" . }}*/}}
-
-{{ $github := .Site.Params.github }}
-{{ with .GitInfo }}
-<a href="https://github.com/{{ $github.user }}/{{ $github.repo}}/commit/{{.Hash}}">{{ .AbbreviatedHash}}</a>
-{{ end }}
-{{ partial "prev_next" . }}
+{{/*{{ $github := .Site.Params.github }}*/}}
+{{/*{{ with .GitInfo }}*/}}
+{{/*<a href="https://github.com/{{ $github.user }}/{{ $github.repo}}/commit/{{ .Hash }}" rel="external" */}} {{/*
+  title="{{ .Subject }}">{{*/}}
+  {{/* .AbbreviatedHash }}</a>*/}}
+{{/*{{ end }}*/}}
+{{/*<div class="flex">*/}}
+  {{/*{{ partial "menu" . }}*/}}
+  {{ partial "prev_next" . }}
+  {{/*</div>*/}}

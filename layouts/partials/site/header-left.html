@@ -1,12 +1,14 @@
-<a href="{{ .Site.BaseURL }}" class="home">
-  <i class="ic-circle1"></i><span>disktree</span>
-</a>
-{{ partial "breadcrumbs" . }}
-{{ partial "datetime" . }}
-{{ partial "tags" . }}
-{{/*{{ partial "prev_next" . }}*/}}
-{{/*{{ partial "menu" . }}*/}}
-
-{{/*{{ with .GitInfo }}*/}}
-{{/*<a href="https://github.com/disktree/ii/commit/{{.Hash}}">{{ .AbbreviatedHash}}</a>*/}}
-{{/*{{ end }}*/}}
+<div class="flex">
+  {{ if ne .Kind "home" }}
+  <a href="{{ .Site.BaseURL }}" class="home">
+    <i class="ic-circle1"></i><span>disktree</span>
+  </a>
+  {{ else }}
+  <span>disktree</span>
+  {{ end }}
+  {{ partial "breadcrumbs" . }}
+  {{ partial "datetime" . }}
+  {{ partial "tags" . }}
+  {{/*{{ partial "prev_next" . }}*/}}
+  {{/*{{ partial "menu" . }}*/}}
+</div>

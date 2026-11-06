@@ -1,5 +1,8 @@
+{{ $curKind := .Kind }}
 <menu class="breadcrumb">
+
   {{ $urlSegments := split .RelPermalink "/" }}
+  {{ $numSegments := len $urlSegments }}
   {{ $curUrl := "" }}
   {{ range $index, $seg := $urlSegments }}
 
@@ -31,12 +34,12 @@
     <span>{{ $prefix }}</span>
     <a href="{{ .RelPermalink }}">{{ $title }}</a>
     {{/*<span>{{ $postfix }}</span>*/}}
-    {{ else }}
-    {{/*<span>{{ $prefix }}</span>*/}}
-    {{/*<span>{{ $title }}</span>*/}}
+    {{ else if eq .Kind "term" }}
+    <span>{{ $prefix }}</span>
+    <span>{{ $title }}</span>
     {{ end }}
 
-    {{/*<span>{{ .Kind }}</span>*/}}
+
   </li>
 
   {{ end }}

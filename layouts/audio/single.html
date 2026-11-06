@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ $audio_file_extensions := slice "flac" "mp3" "ogg" "wav" }}
+{{ $files := slice}}
+{{/*{{ $pages := where .Site.Pages "Section" "a" }}*/}}
+{{ $pages := .Site.Pages }}
+{{ range $pages }}
+{{ range .Params.links }}
+{{ $ext := substr (path.Ext .) 1 }}
+{{ if in $audio_file_extensions $ext }}
+{{ $files = $files | append .}}
+{{ end }}
+{{ end }}
+{{ end }}
+
+
+<ol>
+  {{ range $files }}
+  <li>
+    <a href="{{.}}">{{.}}</a>
+  </li>
+  {{ end }}
+</ol>
+
+
+<script src='{{(resources.Get "js/audioplayer.js" | minify).RelPermalink}}' async></script>
+
+{{ end }}

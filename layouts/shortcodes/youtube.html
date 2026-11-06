@@ -1,8 +1,13 @@
 {{ $id := .Get 0 }}
 {{ if $id }}
-{{ $width := .Get "width" | default "560px" }}
-{{ $height := .Get "height" | default "360px" }}
-<iframe width="{{$width}}" height="{{$height}}" src="https://www.youtube.com/embed/{{$id}}" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  {{ $width := .Get "width" | default "560px" }}
+  {{ $height := .Get "height" | default "360px" }}
+  <iframe 
+    src="https://www.youtube.com/embed/{{$id}}" 
+    width="{{$width}}" 
+    height="{{$height}}" 
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen></iframe>
 {{ end }}

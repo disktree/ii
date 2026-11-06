@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24">
+	<style>
+		path, rect {
+			stroke: #000;
+			stroke-width: 2;
+			fill: none;
+		}
+	</style>
+	<rect width="12.72792" height="12.72792" x="-6.3639588" y="10.606603" transform="rotate(-45)"/>
+	<path d="M 2.921025,5.887864 H 20.951879 L 12,20 Z"/>
+</svg>

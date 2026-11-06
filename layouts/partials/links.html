@@ -1,0 +1,13 @@
+<ul class="links">
+
+	{{ with .Params.links  }}
+	{{ range . }}
+
+    {{ $url := . }}
+
+
+    <li><a href="{{ $url }}" rel="external">{{ $url }}</a></li>
+    {{ end }}
+    {{ end }}
+
+</ul>

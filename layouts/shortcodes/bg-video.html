@@ -1,0 +1,10 @@
+{{ $src := .Get 0 }}
+{{ with $src }}
+<video
+    class="bg-media"
+    src="{{ . | safeURL }}"
+    autoplay
+    loop
+    muted
+></video>
+{{ end }}

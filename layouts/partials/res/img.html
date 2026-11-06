@@ -1,0 +1,14 @@
+{{ $str := . }}
+{{ $url := urls.Parse . }}
+{{ if $url.IsAbs }}
+	{{ $str = $url.String }}
+	<img src="{{ $str }}">
+{{ else }}
+	{{ $str = (print "image/" $url.String) }}
+	{{ $res := resources.Get $str }}
+	<picture>
+		<source media="(max-width: 500px)" srcset="{{ ($res.Resize " 500x").Permalink }}">
+		<source media="(max-width: 1000px)" srcset="{{ ($res.Resize " 1000x").Permalink }}">
+		<img src="{{ $res.Permalink }}">
+	</picture>
+{{ end }}

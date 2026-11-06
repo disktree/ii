@@ -1,0 +1,19 @@
+{{ $path := .Get 0 }}
+{{ $name := path.BaseName $path }}
+{{ $size := .Get 1 | default "4em" }}
+<div class="font-preview" style="font-family: {{ $name }}; font-size: {{ $size }};">
+    abcdefghijklmnopqrstwuvxyz<br>
+    1234567890<br>
+    !%/8)=?_.:,;#'+*
+<style>
+@font-face {
+    font-family : "{{ $name }}";
+    src: url('{{ $path }}') format('truetype');
+}
+.font-preview {
+    word-break: break-all;
+    line-height: 1em;
+    margin-bottom: 1rem;
+}
+</style>
+</div>

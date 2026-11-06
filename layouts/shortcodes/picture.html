@@ -1,0 +1,16 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default (print "image-" $src ) }}
+{{ if $src }}
+	{{ $url := $src | safeURL }}
+	<picture>
+		<source srcset="{{ $url }}.webp" type="image/webp">
+		<img
+			src="{{ $url }}.jpg"
+            alt="{{ $alt }}"
+			class="shortcode image{{ with .Get "class" }} {{ . }}{{ end }}"
+			{{ with .Get "alt" }} alt="{{ . | plainify }}" {{ end }}
+			{{ with .Get "style" }} style="{{ . | safeCSS }}" {{ end }}
+			{{ with .Get "title" }} title="{{ .  }}" {{ end }}
+		>
+	</picture>
+{{ end }}

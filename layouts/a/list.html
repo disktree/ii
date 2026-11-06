@@ -4,9 +4,9 @@
   <li class="{{ .Kind }}">
     <h2>
       <a href="{{ .Permalink }}">{{- .Title -}}</a>
-      {{ if eq .Kind "section" }}
-      <span class="count">{{ len .Pages }}</span>
-      {{ end }}
+      {{/*{{ if eq .Kind "section" }}*/}}
+      {{/*<span class="count">{{ len .Pages }}</span>*/}}
+      {{/*{{ end }}*/}}
     </h2>
   </li>
   {{ end }}

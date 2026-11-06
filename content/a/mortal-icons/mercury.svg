@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24">
+	<style>
+		path {
+			stroke: #000;
+			stroke-width: 2;
+			fill: none;
+		}
+	</style>
+	<g>
+		<path d="m8,2 a4,4 0 0 0 8,0M8,10a4,4 0 0 1 8,0m-8,0a4,4 0 0 0 8,0M12,14v8M8,18H16"/>
+	</g>
+</svg>

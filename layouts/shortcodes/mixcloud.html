@@ -1,14 +1,14 @@
 {{ $src := .Get "src"}}
 {{ if $src }}
     {{/*{{ $url := print "https://www.mixcloud.com/widget/iframe/?&amp;feed=%2F" .Site.Params.social.mixcloud "%2F" $src "%2F"}}*/}}
-	{{ $width := .Get "width" }}
-	{{ $height := .Get "height" }}
+	{{ $width := .Get "width" | default "100%" }}
+	{{ $height := .Get "height" | default "100%" }}
 	<iframe
 		class="mixcloud"
 		src="https://www.mixcloud.com/widget/iframe/?&amp;feed=%2F{{.Site.Params.social.mixcloud}}%2F{{$src}}%2F"
 		frameborder="0"
-		width="{{ if $width }}{{ $width }}{{ else }}100%{{ end }}"
-		height="{{ if $height }}{{ $height }}{{ else }}100%{{ end }}"
+		width="{{ $width }}"
+		height="{{ $height }}"
 	></iframe>
 {{ end }}
 
