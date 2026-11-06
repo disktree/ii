@@ -7,7 +7,7 @@
 
 header.site {
     align-items: center;
-    padding-block: calc(var(--line) * 1.5);
+    padding-block: var(--edge) calc(var(--line) * 1.5);
 
     .logo {
         grid-column: meta;
@@ -58,7 +58,7 @@ header.site {
     }
 
     @include break.max(sm) {
-        padding-block: var(--line) calc(var(--line) * 1.5);
+        padding-block: var(--edge) calc(var(--line) * 1.5);
         row-gap: var(--line);
     }
 }
@@ -92,13 +92,16 @@ header.page {
 footer.site {
     @extend %mono;
     grid-column: meta-start / full-end;
-    display: block;
+    display: flex;
+    gap: 2ch;
     padding: calc(var(--line) / 2) var(--edge) calc(var(--line) / 2) 0;
     border-top: 1px solid color-mix(in srgb, var(--fg) 15%, transparent);
-    text-align: right;
+    font-size: 0.75rem; // the one exception to the one font size
     white-space: nowrap;
     overflow: hidden;
     color: var(--muted);
+
+    .site-links { margin-left: auto; }
     a, a:visited { color: inherit; }
 }
 

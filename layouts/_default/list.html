@@ -3,5 +3,5 @@
   <h1>{{ if .IsSection }}{{ .Title | upper }}{{ else }}{{ .Title }}{{ end }}</h1>
   {{ with .Content }}<div class="text">{{ . }}</div>{{ end }}
 </header>
-{{ partial "stream" (dict "pages" .Pages "compact" false) }}
+{{ partial "stream" (dict "pages" .Pages "compact" true) }}
 {{ end }}

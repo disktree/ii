@@ -2,7 +2,7 @@
 
 // One grid for the whole site, inherited by everything through subgrid.
 //
-//   | edge | meta | text            | aside | edge |
+//   | meta | text            | aside | rest |
 //
 // Smaller screens do not get a different layout, the named lines
 // just collapse onto each other: aside folds into text, then meta does.
@@ -10,30 +10,28 @@
 body {
     display: grid;
     grid-template-columns:
-        [full-start] var(--edge)
-        [meta-start] var(--meta)
+        [full-start meta-start] var(--meta)
         [meta-end text-start] minmax(0, var(--measure))
         [text-end aside-start] var(--aside)
-        [aside-end] minmax(var(--edge), 1fr)
+        [aside-end] minmax(0, 1fr)
         [full-end];
     grid-template-rows: auto 1fr auto;
     column-gap: var(--gap);
+    padding-left: var(--edge); // the page padding, a grid gap would add to an edge track
     min-height: 100vh;
     min-height: 100dvh;
 
     @include break.max(md) {
         grid-template-columns:
-            [full-start] var(--edge)
-            [meta-start] var(--meta)
+            [full-start meta-start] var(--meta)
             [meta-end text-start aside-start] minmax(0, var(--measure))
-            [text-end aside-end] minmax(var(--edge), 1fr)
+            [text-end aside-end] minmax(0, 1fr)
             [full-end];
     }
 
     @include break.max(sm) {
         grid-template-columns:
-            [full-start] var(--edge)
-            [meta-start text-start aside-start] minmax(0, 1fr)
+            [full-start meta-start text-start aside-start] minmax(0, 1fr)
             [meta-end text-end aside-end] var(--edge)
             [full-end];
         column-gap: 0;
