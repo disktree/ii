@@ -32,7 +32,7 @@
         display: block;
         width: 100%;
         height: calc(100dvh - 2 * var(--line));
-        min-height: 20rem;
+        min-height: 12rem;
         border: 0;
     }
     // Video players keep their format.
@@ -107,3 +107,36 @@
 }
 .mono-sample { display: flex; gap: 1ch; align-items: baseline; }
 
+
+// Content pages that show a work in an iframe: the page is exactly one
+// viewport high. Header, metadata, title and footer stay in view, the iframe
+// takes whatever height is left; the page itself does not scroll.
+$work: "iframe:not([src*='youtube']):not([src*='vimeo']):not(.mixcloud):not([height='600'])";
+
+body:has(article.single > .text > #{$work}) {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+
+    > main {
+        min-height: 0;
+        grid-template-rows: minmax(0, 1fr);
+        align-content: stretch;
+    }
+
+    article.single {
+        min-height: 0;
+        grid-template-rows: auto auto minmax(0, 1fr);
+        align-content: stretch;
+    }
+
+    article.single > .text {
+        min-height: 0;
+        align-self: stretch;
+        > #{$work} {
+            flex: 1 1 0;
+            height: auto;
+            min-height: 0;
+        }
+    }
+}
