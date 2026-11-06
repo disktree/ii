@@ -75,6 +75,9 @@ header.site {
 
 main {
     padding-bottom: calc(var(--line) * 3);
+
+    // Lists end with their last line, one line of air is enough.
+    body.home &, body.section &, body.term &, body.taxonomy & { padding-bottom: var(--line); }
 }
 
 // Page headers for lists and singles sit in the text column.
