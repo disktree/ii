@@ -33,7 +33,14 @@ header.site {
             fill: currentColor;
         }
 
-        a { color: var(--fg); }
+        // Every item is a box exactly one line high, text or circle,
+        // so the highlight has the same height for all of them.
+        a {
+            display: inline-block;
+            line-height: var(--leading);
+            vertical-align: baseline;
+            color: var(--fg);
+        }
 
         // The list you are looking at (home or a section): highlighted.
         [aria-current='page'] {
