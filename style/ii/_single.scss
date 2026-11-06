@@ -1,40 +1,25 @@
 @use 'enron/break';
 @use 'base';
 
+// Content pages: one column. Metadata first, then title, then text.
 article.single {
     align-items: start;
-
-    > header.page { grid-row: 1; }
-    > .meta { grid-row: 1 / span 3; }
-    > .text, > figure { grid-row: auto; }
-
-    @include break.max(sm) {
-        > header.page, > .meta { grid-row: auto; }
-    }
+    > * { grid-column: text-start / aside-end; }
+    > figure.wide { grid-column: text-start / full-end; }
 }
 
 dl.meta {
     @extend %mono;
-    grid-column: meta;
-    margin: 0;
-    position: sticky;
-    top: var(--line);
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 0 1ch;
+    margin: 0 0 var(--line);
+    color: var(--muted);
     overflow-wrap: anywhere;
 
-    dt { color: var(--muted); }
-    dd { margin: 0 0 0.75rem; }
-    dd:last-child { margin-bottom: 0; }
+    dd { margin: 0; color: var(--fg); }
     .links li { display: block; }
     .links li::after { content: none; }
-
-    @include break.max(sm) {
-        position: static;
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        gap: 0 1.5ch;
-        margin-bottom: var(--line);
-        dd { margin: 0; }
-    }
 }
 
 // Screenshots: bleed to the right edge of the viewport.
@@ -57,4 +42,3 @@ figure.wide {
     @include break.max(sm) { grid-column: full; }
 }
 
-.shot > figure.wide { grid-row: 2; }

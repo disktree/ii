@@ -1,9 +1,9 @@
 {{ define "main" }}
 <article class="single shot">
+  {{ partial "meta" . }}
   <header class="page">
     <h1>{{ partial "label" . }}</h1>
   </header>
-  {{ partial "meta" . }}
   {{- range .Resources.ByType "image" }}
   {{- $img := .Resize "2000x webp q85" }}
   <figure class="wide">

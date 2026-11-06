@@ -89,13 +89,14 @@ header.page {
 // Footer: a real <address>, italic by default, left exactly so.
 
 footer.site {
-    align-items: start;
-    padding-block: calc(var(--line) * 2);
+    grid-column: meta-start / full-end;
+    display: block;
+    padding: calc(var(--line) * 2) var(--edge) calc(var(--line) * 2) 0;
     border-top: 1px solid color-mix(in srgb, var(--fg) 15%, transparent);
+    text-align: right;
 
     .colophon {
         @extend %mono;
-        grid-column: text;
         margin: 0;
         color: var(--muted);
         a { color: inherit; }
