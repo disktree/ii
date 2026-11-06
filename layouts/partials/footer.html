@@ -7,9 +7,9 @@
   </span>
   {{- end }}
   <span class="site-links">
-    <a href="{{ "index.xml" | relURL }}">RSS</a>
     {{- with .GitInfo }}
-    · <a href="{{ site.Params.repository }}/commit/{{ .Hash }}" title="{{ .Subject }}"><code>{{ .AbbreviatedHash | upper }}</code></a>
+    <a href="{{ site.Params.repository }}/commit/{{ .Hash }}" title="{{ .Subject }}"><code>{{ .AbbreviatedHash | upper }}</code></a> ·
     {{- end }}
+    <a href="{{ "index.xml" | relURL }}">RSS</a>
   </span>
 </footer>
