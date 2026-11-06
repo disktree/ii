@@ -89,7 +89,7 @@
         > .what > *, > .what .repo { margin: 0; }
         > .what, > .tags { margin-left: 1ch; }
         > .what h3 { font-weight: normal; }
-        &.i-a > .what h3 { font-weight: bold; text-transform: uppercase; }
+        &.i-a > .what h3 { text-transform: uppercase; }
         > .what .about { display: none; }
     }
 }
