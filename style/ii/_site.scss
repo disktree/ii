@@ -12,7 +12,7 @@ header.site {
     @include break.min(md) {
         display: flex;
         gap: 1ch;
-        padding-block: 0;
+        padding-block: var(--edge) 0.75rem;
     }
 
     .logo {

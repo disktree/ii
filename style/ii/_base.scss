@@ -21,22 +21,20 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-// Links: default colors, default underline, but set with care.
+// Links: the color of the text, underlined only on hover.
 a {
     color: var(--fg);
-    text-decoration-line: underline;
-    text-decoration-thickness: 0.06em;
+    text-decoration: none;
+    text-decoration-thickness: 0.08em;
     text-underline-offset: 0.18em;
     text-decoration-skip-ink: auto;
-    transition: text-decoration-color 0.15s, text-underline-offset 0.15s;
 
     &:visited { color: var(--fg); }
-    &:hover {
+    &:hover,
+    &:focus-visible {
+        text-decoration-line: underline;
         text-decoration-color: currentColor;
-        text-decoration-thickness: 0.12em;
-        text-underline-offset: 0.12em;
     }
-    @include a11y.reduced-motion { transition: none; }
 }
 
 :focus-visible {

@@ -10,7 +10,7 @@ sitemap:
 
 The rule: at first glance this should look like a page without a stylesheet. On a second look it should not. The body face is a single token (`--font`), currently monospace; set it to `var(--serif)` for the serif version.
 
-Defaults kept as they are: the system colors `Canvas`, `CanvasText` and `GrayText` (so light and dark follow the OS), underlined links, bold headings, bullets, the inset `<hr>`. Links have the color of the text, only the underline marks them.
+Defaults kept as they are: the system colors `Canvas`, `CanvasText` and `GrayText` (so light and dark follow the OS), bold headings, bullets, the inset `<hr>`. Links have the color of the text and show an underline only on hover.
 
 Things that are not default: the grid, the measure, one line of rhythm, one font size for everything, the circle, and one accent color.
 
@@ -38,7 +38,7 @@ Many non-authoritarian organizations have foundered on the dubious principle of 
 
 ## Links
 
-This [link](https://disktree.net) is a link, this one [has been visited](/styleguide/), hover them to see the underline thicken. Bare: <https://velak.klingt.org/>, <https://disktree.net>.
+This [link](https://disktree.net) is a link, this one [has been visited](/styleguide/), hover them to see the underline. Bare: <https://velak.klingt.org/>, <https://disktree.net>.
 
 ## Lists
 
