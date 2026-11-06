@@ -17,6 +17,17 @@
   <link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">
   {{- end }}
   <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  <script>
+    // Iframes are dimmed until focused. Browsers don't reliably match :focus on an
+    // iframe whose content has focus, so mark it: the window blurs, the iframe is active.
+    addEventListener('blur', () => {
+      const f = document.activeElement;
+      if (f && f.tagName === 'IFRAME') f.classList.add('focused');
+    });
+    addEventListener('focus', () => {
+      document.querySelectorAll('iframe.focused').forEach(f => f.classList.remove('focused'));
+    });
+  </script>
 </head>
 <body class="{{ .Kind }}{{ with .Section }} s-{{ . }}{{ end }}{{ with .Type }} t-{{ . }}{{ end }}">
   <a class="skip" href="#main">skip to content</a>

@@ -1,4 +1,5 @@
 @use 'base';
+@use 'enron/a11y';
 
 // Long-form text (content pages). Starts at the page edge like the lists;
 // text keeps its measure, media may use the full content width.
@@ -35,6 +36,14 @@
         min-height: 12rem;
         border: 0;
     }
+    // Dimmed until focused (click into it, or tab to it).
+    iframe {
+        filter: brightness(0.4);
+        transition: filter 0.3s;
+        &:focus, &.focused { filter: none; outline: none; }
+        @include a11y.reduced-motion { transition: none; }
+    }
+
     // Video players keep their format.
     iframe[src*='youtube'], iframe[src*='vimeo'] { height: auto; min-height: 0; aspect-ratio: 16 / 9; }
     iframe.mixcloud { aspect-ratio: auto; height: 120px; min-height: 0; }
