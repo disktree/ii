@@ -4,8 +4,8 @@
 // Content pages: one column. Metadata first, then title, then text.
 article.single {
     align-items: start;
-    > * { grid-column: text-start / aside-end; }
-    > figure.wide { grid-column: text-start / full-end; }
+    > * { grid-column: meta-start / aside-end; }
+    > figure.wide { grid-column: meta-start / full-end; }
 }
 
 dl.meta {
@@ -24,7 +24,7 @@ dl.meta {
 
 // Screenshots: bleed to the right edge of the viewport.
 figure.wide {
-    grid-column: text-start / full-end;
+    grid-column: meta-start / full-end;
     margin: 0 0 var(--line);
 
     img {

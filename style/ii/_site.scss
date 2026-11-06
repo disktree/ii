@@ -46,16 +46,13 @@ header.site {
 }
 
 main {
-    padding-bottom: calc(var(--line) * 3);
-
-    // Lists end with their last line, one line of air is enough.
-    body.home &, body.section &, body.term &, body.taxonomy & { padding-bottom: var(--line); }
+    padding-bottom: var(--edge);
 }
 
-// Page headers for lists and singles sit in the text column.
+// Page headers start at the page edge.
 
 header.page {
-    grid-column: text-start / aside-end;
+    grid-column: meta-start / aside-end;
     margin-bottom: var(--line);
 
     h1 {
@@ -70,8 +67,6 @@ header.page {
         font-style: italic;
     }
 }
-
-// Footer: a real <address>, italic by default, left exactly so.
 
 // Footer: one line, bottom right. prev/next live here too.
 footer.site {
@@ -91,7 +86,8 @@ footer.site {
 }
 
 .terms, .index {
-    grid-column: text;
+    grid-column: meta-start / aside-end;
+    padding-left: 1.5em;
     data {
         @extend %mono;
         color: var(--muted);
