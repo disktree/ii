@@ -51,9 +51,14 @@ header.site {
 
         // Where you are: highlighted. On a content page that is
         // SECTION/TITLE as one item.
+        // The highlight is a band tight around the capitals, not the whole line:
+        // JetBrains Mono caps are 0.73em high, baseline 1.06em below the top
+        // of a 1.4 line; the band adds 0.08em above and below.
         .current {
+            --cap-top: calc((var(--leading) - 1.32) / 2 * 1em + 0.21em);
+            --band: 0.89em;
             padding-inline: 0.5ch;
-            background: var(--fg);
+            background: linear-gradient(var(--fg), var(--fg)) 0 var(--cap-top) / 100% var(--band) no-repeat;
             color: var(--bg);
 
             a, a:visited { color: inherit; }
