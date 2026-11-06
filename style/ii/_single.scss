@@ -1,5 +1,6 @@
 @use 'enron/break';
 @use 'base';
+@use 'enron/a11y';
 
 // Content pages: one column. Metadata first, then title, then text.
 article.single {
@@ -10,13 +11,9 @@ article.single {
     > .text { grid-column: meta-start / full-end; }
 }
 
-// The title: one more line on top of the metadata table, at the left edge.
-h1.title {
-    margin: 0;
-    font-size: 1em;
-    line-height: var(--leading);
-    text-transform: uppercase;
-}
+// The title is shown in the main menu (SECTION/TITLE); the heading stays for
+// screen readers and search engines.
+h1.title { @include a11y.visually-hidden; }
 
 dl.meta {
     @extend %mono;

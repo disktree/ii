@@ -22,7 +22,7 @@ header.site {
         }
 
         // Separator: one space, the width of one character, like everywhere else.
-        li + li::before { content: '\00a0'; }
+        li + li { margin-left: 1ch; }
 
         // A glyph, not an image: as high as the capitals, on the baseline.
         svg {
@@ -42,12 +42,16 @@ header.site {
             color: var(--fg);
         }
 
-        // The list you are looking at (home or a section): highlighted.
-        [aria-current='page'] {
+        // Where you are: highlighted. On a content page that is
+        // SECTION/TITLE as one item.
+        .current {
+            display: inline-block;
+            line-height: var(--leading);
             padding-inline: 0.5ch;
             background: var(--fg);
             color: var(--bg);
-            text-decoration: none;
+
+            a, a:visited { color: inherit; }
         }
     }
 }
