@@ -17,9 +17,6 @@
     </span>
     {{- end }}
     {{- if and (not $compact) $p.Params.about }}<span class="about">{{ $p.Params.about }}</span>{{ end }}
-  {{- else if and (eq $s "u") (not $compact) }}
-    {{- with $p.Title }}<h3><a href="{{ $p.RelPermalink }}">{{ . }}</a></h3>{{ end }}
-    {{ $p.Content }}
   {{- else if and (eq $s "s") (not $compact) }}
     {{- with ($p.Resources.ByType "image").GetMatch "*" }}
     {{- $img := .Resize "1200x webp q80" }}

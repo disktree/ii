@@ -5,7 +5,7 @@
       {{- $current := . }}
       {{- range site.Params.mainSections }}
       {{- with site.GetPage (print "/" .) }}
-      <li><a href="{{ .RelPermalink }}" data-key="{{ .Section }}"{{ if or (eq $current .) (and (eq $current.Section .Section) (not $current.IsHome)) }} aria-current="{{ if eq $current . }}page{{ else }}true{{ end }}"{{ end }}>{{ .Title | lower }}</a></li>
+      <li><a href="{{ .RelPermalink }}" data-key="{{ .Section }}"{{ if or (eq $current .) (and (eq $current.Section .Section) (not $current.IsHome)) }} aria-current="{{ if eq $current . }}page{{ else }}true{{ end }}"{{ end }}>{{ .Title | upper }}</a></li>
       {{- end }}
       {{- end }}
     </ul>

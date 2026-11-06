@@ -9,7 +9,7 @@
   {{- end }}
   {{- with .CurrentSection }}{{ if not .IsHome }}
   <dt>in</dt>
-  <dd><a href="{{ .RelPermalink }}">{{ .Title | lower }}</a></dd>
+  <dd><a href="{{ .RelPermalink }}">{{ .Title | upper }}</a></dd>
   {{- end }}{{ end }}
   {{- with .GetTerms "tags" }}
   <dt>tags</dt>

@@ -1,7 +1,7 @@
 description: "Serious Fucking Index"
 name: "disktree"
 keywords: ["disktree"]
-mainSections: [a, u, c]
+mainSections: [a, c]
 repository: "https://github.com/disktree/ii"
 
 contact:

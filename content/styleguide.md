@@ -123,7 +123,7 @@ Embeds and figures step out of the measure into the aside column.
 
 ## Metadata
 
-<p class="mono-sample"><time>2026-11-06</time> <a class="key" href="/a/">a</a> <a class="key" href="/u/">u</a> <a class="key" href="/c/">c</a> <a class="key" href="/s/">s</a></p>
+<p class="mono-sample"><time>2026-11-06</time> <a class="key" href="/a/">a</a> <a class="key" href="/c/">c</a> <a class="key" href="/s/">s</a></p>
 
 ---
 

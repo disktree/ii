@@ -49,9 +49,6 @@
 
     > .tags { grid-column: aside; }
 
-    // Microblog posts are body text, not headlines.
-    &.i-u > .what > h3 { margin-bottom: calc(var(--line) / 4); }
-
     // Code activity: repo, then what happened, all links go to github.
     &.i-c > .what {
         .repo { margin-right: 0.5ch; }
@@ -81,8 +78,7 @@
         padding-block: 0.125rem;
     }
     .item > .what h3 { font-weight: normal; }
-    .item.i-a > .what h3,
-    .item.i-u > .what h3 { font-weight: bold; }
+    .item.i-a > .what h3 { font-weight: bold; }
     .item > .tags {
         overflow: hidden;
         white-space: nowrap;

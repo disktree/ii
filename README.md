@@ -7,12 +7,11 @@ Personal index of [disktree](https://disktree.net). Hugo, no theme.
 | path | | |
 |---|---|---|
 | `/a/` | archive | projects, one bundle per project. Nested sections (`znn`, `archillect`) list their own children |
-| `/u/` | updates | microblog, one file per post, title optional: `./ii.sh u "text"` |
 | `/c/` | code | **generated** from github activity: `./ii.sh code` (see `scripts/update-code.mjs`) |
 | `/s/` | screenshots | one bundle per image: `./ii.sh s image.png "optional title"` |
 | `/theprocess/` | | built, but excluded from the stream, the feed, the sitemap and search engines |
 
-The home page is the stream of `a`, `u`, `c`, `s`, newest first, grouped by year. One combined RSS feed at `/index.xml`.
+The home page is the stream of `a` and `c`, newest first. Screenshots are built but not listed. One combined RSS feed at `/index.xml`.
 
 ## Code activity
 
