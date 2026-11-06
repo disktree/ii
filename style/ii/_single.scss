@@ -6,6 +6,7 @@ article.single {
     align-items: start;
     > * { grid-column: meta-start / aside-end; }
     > figure.wide { grid-column: meta-start / full-end; }
+    > .text { grid-column: meta-start / full-end; }
 }
 
 dl.meta {

@@ -4,7 +4,8 @@
 // text keeps its measure, media may use the full content width.
 
 .text {
-    grid-column: meta-start / aside-end;
+    grid-column: meta-start / full-end;
+    padding-right: var(--edge);
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -25,15 +26,19 @@
         max-width: none;
     }
 
+    // Iframes (mostly the works themselves) take all the space there is:
+    // the full width to the right edge and the height of the viewport.
     iframe {
         display: block;
         width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
+        height: calc(100dvh - 2 * var(--line));
+        min-height: 20rem;
         border: 0;
     }
-    iframe.mixcloud { aspect-ratio: auto; height: 120px; }
-    iframe[height='600'] { aspect-ratio: auto; height: 600px; }
+    // Video players keep their format.
+    iframe[src*='youtube'], iframe[src*='vimeo'] { height: auto; min-height: 0; aspect-ratio: 16 / 9; }
+    iframe.mixcloud { aspect-ratio: auto; height: 120px; min-height: 0; }
+    iframe[height='600'] { aspect-ratio: auto; height: 600px; min-height: 0; }
     audio { display: block; width: 100%; }
     img { display: block; }
     p > img + img { margin-top: var(--line); }
