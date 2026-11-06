@@ -19,7 +19,7 @@ The home page is the stream of `a` and `c`, newest first. Screenshots are built 
 
 ## Design
 
-The stylesheet pretends not to exist: one monospace face at one size (JetBrains Mono, variable, from `@fontsource-variable/jetbrains-mono`, mounted to `/font/` via `module.mounts`), CSS system colors (`Canvas`, `CanvasText`, `LinkText`, …, light/dark follows the OS), underlined links. Underneath: one CSS grid (`edge | meta | text | aside | edge`) shared through `subgrid`, a fixed rhythm, monospaced metadata, one accent color. See `/styleguide/`.
+The stylesheet pretends not to exist: one monospace face at one size (JetBrains Mono, variable, from `@fontsource-variable/jetbrains-mono`, mounted to `/font/` via `module.mounts`), CSS system colors (`Canvas`, `CanvasText`, `GrayText`, light/dark follows the OS), links in the text color, underlined on hover. Underneath: one CSS grid (`meta | text | aside | rest`) shared through `subgrid`, a fixed rhythm, one accent color. See `/styleguide/`.
 
 SCSS in `style/`, compiled with dart-sass to `static/style.css`. Uses [enron](https://github.com/tong/enron) as a git submodule (`git submodule update --init`).
 
