@@ -1,9 +1,9 @@
 <footer class="site">
   {{- if and .IsPage .Section }}
   <span class="pager">
-    {{- with .PrevInSection }}<a rel="prev" href="{{ .RelPermalink }}" title="{{ partial "label" . }}">prev</a>{{ end }}
+    {{- with .PrevInSection }}<a rel="prev" href="{{ .RelPermalink }}" title="{{ partial "label" . }}">PREV</a>{{ end }}
     {{- if and .PrevInSection .NextInSection }} · {{ end }}
-    {{- with .NextInSection }}<a rel="next" href="{{ .RelPermalink }}" title="{{ partial "label" . }}">next</a>{{ end -}}
+    {{- with .NextInSection }}<a rel="next" href="{{ .RelPermalink }}" title="{{ partial "label" . }}">NEXT</a>{{ end -}}
   </span>
   {{- end }}
   <span class="site-links">
