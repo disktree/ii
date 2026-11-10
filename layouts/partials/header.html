@@ -6,14 +6,14 @@
       {{- range site.Params.mainSections }}
       {{- with site.GetPage (print "/" .) }}
       {{- if eq $current . }}
-      <li><a href="{{ .RelPermalink }}" class="current" aria-current="page">{{ .Title | upper }}</a></li>
+      <li><a href="{{ .RelPermalink }}" class="current" aria-current="page" aria-label="{{ .Title }}">{{ .Section | upper }}</a></li>
       {{- else if and $current.IsPage (eq $current.Section .Section) }}
       {{- /* content page: SECTION/[PARENT/]TITLE, highlighted as one item */}}
-      <li><span class="current"><a href="{{ .RelPermalink }}">{{ .Title | upper }}</a>
+      <li><span class="current"><a href="{{ .RelPermalink }}" aria-label="{{ .Title }}">{{ .Section | upper }}</a>
         {{- range $current.Ancestors.Reverse }}{{ if and (not .IsHome) (ne .RelPermalink (print "/" $current.Section "/")) }}/<a href="{{ .RelPermalink }}">{{ .Title | upper }}</a>{{ end }}{{ end -}}
         /<a href="{{ $current.RelPermalink }}" aria-current="page">{{ partial "label" $current | upper }}</a></span></li>
       {{- else }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title | upper }}</a></li>
+      <li><a href="{{ .RelPermalink }}" aria-label="{{ .Title }}">{{ .Section | upper }}</a></li>
       {{- end }}
       {{- end }}
       {{- end }}
