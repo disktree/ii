@@ -5,8 +5,9 @@
 // Header: one menu line. The circle is the first item, it links home.
 
 header.site {
-    padding-block: var(--edge) calc(var(--line) * 1.5);
-    @include break.min(md) { padding-block: var(--edge) 0.75rem; }
+    // The menu is the first line of the list below it: same height as a
+    // stream item, no gap after it.
+    padding-block: var(--edge) 0;
 
     nav {
         grid-column: meta-start / aside-end;
@@ -17,7 +18,7 @@ header.site {
             align-items: baseline;
             gap: 0;
             margin: 0;
-            padding: 0;
+            padding: 0.125rem 0; // as .stream.compact .item
             list-style: none;
         }
 
