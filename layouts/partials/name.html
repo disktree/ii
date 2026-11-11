@@ -1,0 +1,6 @@
+{{- /* Name of a page in the menu and as heading: untitled notes go by their date */ -}}
+{{- if and .IsPage (eq .Section "u") (not .Title) -}}
+{{ .Date.Format "2006-01-02" }}
+{{- else -}}
+{{ partial "label" . | upper }}
+{{- end -}}

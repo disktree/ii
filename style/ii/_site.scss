@@ -7,28 +7,26 @@ body {
     min-height: 100dvh;
 }
 
-// Menu: the circle, then A and C.
+// Menu: a breadcrumb, dense. ● A/SUPERPOSITION|C|U
 header.site {
     @extend %data;
     padding: 0.625rem var(--edge);
 
-    ul {
+    ol {
         display: flex;
-        align-items: center;
-        gap: 1.5ch;
+        flex-wrap: wrap;
         margin: 0;
         padding: 0;
         list-style: none;
+        overflow-wrap: anywhere;
     }
+    li + li::before { content: '|'; color: var(--muted); }
+    .home { margin-right: 1ch; }
+    .home + li::before { content: none; }
+
     a { color: var(--muted); }
-    a.current, a:hover { color: var(--fg); text-decoration: none; }
-    svg {
-        display: block;
-        width: 0.75em;
-        height: 0.75em;
-        fill: currentColor;
-    }
-    .home a { color: var(--fg); }
+    .home a, .current a, a:hover { color: var(--fg); text-decoration: none; }
+    .sep { color: var(--muted); }
 }
 
 // Heading of a page: the title as large as in the register.

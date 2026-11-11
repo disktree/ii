@@ -1,0 +1,10 @@
+{{- /* Path to a page: NAME/NAME/NAME. Context: dict "page" Page "skipFirst" bool "lead" bool */ -}}
+{{- $p := .page }}
+{{- $chain := slice }}
+{{- range $p.Ancestors.Reverse }}{{ if not .IsHome }}{{ $chain = $chain | append . }}{{ end }}{{ end }}
+{{- $chain = $chain | append $p }}
+{{- if .skipFirst }}{{ $chain = after 1 $chain }}{{ end }}
+{{- range $i, $e := $chain }}
+{{- if or $i $.lead }}<span class="sep">/</span>{{ end -}}
+<a href="{{ .RelPermalink }}"{{ if eq . $p }} aria-current="page"{{ end }}>{{ partial "name" . }}</a>
+{{- end -}}
