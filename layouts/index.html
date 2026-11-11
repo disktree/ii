@@ -5,5 +5,7 @@
 {{- range where site.RegularPages "Section" "c" }}
 {{- if where .Params.events "kind" "in" (slice "release" "repository") }}{{ $code = $code | append . }}{{ end }}
 {{- end }}
-{{- with site.GetPage "/a" }}{{ partial "register" (.Pages | union $code) }}{{ end }}
+{{- $pages := (site.GetPage "/a").Pages | union $code }}
+{{- with site.GetPage "/u" }}{{ $pages = $pages | union .Pages }}{{ end }}
+{{ partial "register" $pages }}
 {{ end }}

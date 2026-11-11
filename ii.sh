@@ -6,6 +6,7 @@ cd "$(dirname "$0")"
 usage() {
   cat <<USAGE
 Usage: ii <cmd> [args]
+  u <text>        new note
   s <image> [title]  new screenshot post
   code [--backfill]  update content/c from the github api
   dev             sass watch + hugo server
@@ -19,6 +20,13 @@ stamp() { date +%Y-%m-%d-%H%M; }
 now() { date +%Y-%m-%dT%H:%M:%S%:z; }
 
 case "$1" in
+u)
+  shift
+  [ -n "$*" ] || { echo "usage: ii u <text>"; exit 1; }
+  f="content/u/$(stamp).md"
+  printf -- '---\ndate: %s\n---\n%s\n' "$(now)" "$*" >"$f"
+  echo "$f"
+  ;;
 s)
   [ -f "$2" ] || { echo "image not found: $2"; exit 1; }
   d="content/s/$(stamp)"

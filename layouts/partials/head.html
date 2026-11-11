@@ -1,5 +1,6 @@
 {{- /* Page heading: the title as large as in the register, the data below. */ -}}
 <header class="head">
-  <h1>{{ partial "label" . | upper }}</h1>
+  {{- /* untitled notes are named by their date */}}
+  <h1>{{ if and (eq .Section "u") (not .Title) }}{{ .Date.Format "2006-01-02" }}{{ else }}{{ partial "label" . | upper }}{{ end }}</h1>
   {{ partial "meta" . }}
 </header>

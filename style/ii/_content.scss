@@ -30,6 +30,7 @@
     iframe {
         display: block;
         width: 100%;
+        height: auto; // the height attribute would win over the ratio
         aspect-ratio: 16 / 9;
         border: 0;
     }

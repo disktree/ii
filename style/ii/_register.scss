@@ -43,6 +43,36 @@
     .register:has(.entries a:hover) .entries a:not(:hover) { opacity: 0.18; }
 }
 
+// Notes (u) on the home page: one line each, between the works and the code.
+.notes {
+    @extend %data;
+    margin: var(--line) 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    time { color: var(--muted); margin-right: 1ch; }
+}
+
+// /u/: every note in full.
+.feed {
+    margin: 0;
+    padding: 0 var(--edge);
+    list-style: none;
+
+    > li {
+        padding: 0.375rem 0 calc(var(--line) * 1.5);
+        border-top: 1px solid var(--rule);
+    }
+    .when { @extend %data; color: var(--muted); }
+    h2 { margin: 0.25rem 0 0; font-size: 1em; font-weight: 650; }
+    .text { padding: 0; margin-top: 0.5rem; }
+}
+
 // /c/: the full activity, one line per repository and day.
 .ledger {
     @extend %data;

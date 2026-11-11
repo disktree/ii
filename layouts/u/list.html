@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1 class="vh">{{ .Title }}</h1>
+{{- /* Microblog: every post in full, newest first. */}}
+<ol class="feed">
+  {{- range .Pages.ByDate.Reverse }}
+  <li>
+    <article>
+      <a class="when" href="{{ .RelPermalink }}"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02 15:04" }}</time></a>
+      {{- with .Title }}<h2>{{ . }}</h2>{{ end }}
+      <div class="text">{{ .Content }}</div>
+    </article>
+  </li>
+  {{- end }}
+</ol>
+{{ end }}

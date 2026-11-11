@@ -1,12 +1,19 @@
 {{- /* The register: all works set large and run in, newest first,
-       the code small below them. Context: Pages */ -}}
+       then the notes (u), then the code, both small. Context: Pages */ -}}
 {{- $pages := slice }}
 {{- range .ByDate.Reverse }}{{ if gt .Date.Year 1970 }}{{ $pages = $pages | append . }}{{ end }}{{ end }}
 <div class="register">
   <div class="entries">
-    {{- range where $pages "Section" "ne" "c" }}
+    {{- range where $pages "Section" "not in" (slice "c" "u") }}
     <a class="work" href="{{ .RelPermalink }}" title="{{ .Date.Format "2006-01-02" }}">{{ partial "label" . | upper }}{{ if .IsSection }}<sup>{{ len .Pages }}</sup>{{ end }}</a>
     {{ end }}
+    {{- with where $pages "Section" "u" }}
+    <ol class="notes">
+      {{- range . }}
+      <li><a href="{{ .RelPermalink }}"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time> {{ partial "label" . }}</a></li>
+      {{- end }}
+    </ol>
+    {{- end }}
     {{- with where $pages "Section" "c" }}
     {{- $seen := slice }}
     <p class="repos">

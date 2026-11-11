@@ -1,4 +1,4 @@
-{{- $pages := where site.RegularPages "Section" "in" (slice "c") }}
+{{- $pages := where site.RegularPages "Section" "in" (slice "c" "u") }}
 {{- with site.GetPage "/a" }}{{ $pages = $pages | union .Pages }}{{ end }}
 {{- $pages = where $pages "Params.rss_ignore" "!=" true }}
 {{- $pages = first 100 $pages.ByDate.Reverse }}
