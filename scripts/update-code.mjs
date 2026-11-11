@@ -11,6 +11,9 @@
 // and adds its creation, all releases and all tags (dated by their commit),
 // back to the beginning.
 //
+// Every run also writes data/archived.json: the archived repositories of all
+// accounts, which the site leaves out of the home page.
+//
 // Auth: $GITHUB_TOKEN, or the token of the `gh` CLI if it is logged in.
 // Without a token the API allows 60 requests/hour, which is not enough.
 
@@ -253,10 +256,18 @@ function write(file, data) {
 
 // --- main
 
+const repoLists = new Map();
+async function reposOf(account, user) {
+    if (!repoLists.has(account)) {
+        const kind = user.type === 'Organization' ? 'orgs' : 'users';
+        repoLists.set(account, await paginate(`/${kind}/${account}/repos?type=owner&sort=created`));
+    }
+    return repoLists.get(account);
+}
+
 async function backfill(account, user) {
     let added = 0;
-    const kind = user.type === 'Organization' ? 'orgs' : 'users';
-    const repos = await paginate(`/${kind}/${account}/repos?type=owner&sort=created`);
+    const repos = await reposOf(account, user);
     for (const r of repos) {
         if (r.fork || r.private) continue;
         if (add(account, r.full_name, r.created_at, `repo-${r.id}`, { kind: 'repository', summary: 'created repository', url: r.html_url })) {
@@ -286,6 +297,7 @@ async function main() {
     mkdirSync(OUT, { recursive: true });
     loadAll();
     let added = 0;
+    const archived = [];
 
     for (const account of accounts) {
         const user = await api(`/users/${account}`);
@@ -303,7 +315,17 @@ async function main() {
             if (info && add(account, e.repo.name, e.created_at, e.id, info)) added++;
         }
 
+        for (const r of await reposOf(account, user)) if (r.archived && !r.private) archived.push(r.full_name);
+
         if (BACKFILL) added += await backfill(account, user);
+    }
+
+    archived.sort();
+    const archivedFile = join(ROOT, 'data/archived.json');
+    if (DRY) console.log(`archived: ${archived.join(', ') || 'none'}`);
+    else {
+        mkdirSync(join(ROOT, 'data'), { recursive: true });
+        writeFileSync(archivedFile, JSON.stringify(archived, null, 2) + '\n');
     }
 
     let written = 0;
