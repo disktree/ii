@@ -130,7 +130,7 @@ JetBrains Mono, variable, `wght` 100–800.
 
 ## Metadata
 
-<p class="mono-sample"><time>2026-11-06</time> <a class="key" href="/a/">a</a> <a class="key" href="/c/">c</a> <a class="key" href="/s/">s</a></p>
+<p class="mono-sample"><time>2026-11-06</time></p>
 
 ---
 

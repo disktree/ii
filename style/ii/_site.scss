@@ -77,6 +77,20 @@ header.site {
     }
 }
 
+// Home: the menu spans both columns, C sits right above the code column.
+body.home header.site { grid-column: meta-start / full-end; }
+body.home header.site nav {
+    grid-column: meta-start / full-end;
+    padding-right: var(--edge);
+
+    @include break.min(md) {
+        li:last-child {
+            margin-left: auto;
+            width: calc(50% - 1ch); // half the width, less half the column gap
+        }
+    }
+}
+
 main {
     padding-bottom: var(--edge);
 }

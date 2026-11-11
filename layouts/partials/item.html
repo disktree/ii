@@ -4,14 +4,13 @@
 <li class="item i-{{ $s }}{{ if $p.IsSection }} i-group{{ end }}">
   <p class="when">
     <time datetime="{{ $p.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $p.Date.Format "2006-01-02" }}</time>
-    {{- with site.GetPage (print "/" $s) }}
-    <a class="key" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ $s }}</a>
-    {{- end }}
   </p>
   <div class="what">
   {{- if eq $s "c" }}
     <a class="repo" href="{{ $p.Params.repo_url }}" rel="external">{{ $p.Title }}</a>
-    {{- with $p.Params.parts }}
+    {{- $parts := $p.Params.parts }}
+    {{- if .highlights }}{{ $keep := slice }}{{ range $parts }}{{ if or (hasPrefix .text "released") (eq .text "new repository") }}{{ $keep = $keep | append . }}{{ end }}{{ end }}{{ $parts = $keep }}{{ end }}
+    {{- with $parts }}
     <span class="parts">
       {{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ with .url }}<a href="{{ . }}" rel="external">{{ $e.text }}</a>{{ else }}{{ $e.text }}{{ end }}{{ end -}}
     </span>

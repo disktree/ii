@@ -72,6 +72,22 @@
     }
 }
 
+// Home: two streams side by side, archive left, code right.
+// One level of contrast: the works in text color, the code grey.
+.columns {
+    grid-column: meta-start / full-end;
+    display: grid;
+    gap: var(--line) 2ch;
+    padding-right: var(--edge);
+
+    @include break.min(md) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    > section { min-width: 0; }
+    .stream { display: block; }
+    .i-c .repo, .i-c .repo:visited { color: var(--muted); }
+    .i-c .when { color: var(--muted); }
+}
+
 // Home: one line per thing, never wrapped. Everything flows inline,
 // date, key, title, tags, one character apart; overflow is cut off.
 .stream.compact {
@@ -91,31 +107,6 @@
         > .what h3 { font-weight: normal; }
         &.i-a > .what h3 { text-transform: uppercase; }
         > .what .about { display: none; }
-    }
-}
-
-// Section keys look like keycaps. The only "component" on the site.
-
-.key {
-    @extend %mono;
-    display: inline-block;
-    min-width: 1.8ch;
-    padding: 0;
-    margin: 0;
-    font-size: 0.75rem;
-    border: 1px solid currentColor;
-    border-radius: 0.2rem;
-    color: var(--muted);
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    &:visited { color: var(--muted); }
-    &:hover {
-        border-color: var(--accent);
-        background: var(--accent);
-        color: var(--bg);
     }
 }
 
