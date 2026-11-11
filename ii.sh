@@ -1,7 +1,7 @@
 #!/bin/sh
 # ii — site helper
 set -e
-cd "$(dirname "$0")"
+cd "$(dirname "$(readlink -f "$0")")" # works through a symlink too (~/.local/bin/ii)
 
 usage() {
   cat <<USAGE
