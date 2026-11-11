@@ -10,6 +10,8 @@
       <div class="text">{{ .Content }}</div>
     </article>
   </li>
+  {{- else }}
+  <li class="empty">NO ENTRIES</li>
   {{- end }}
 </ol>
 {{ end }}

@@ -55,7 +55,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    time { color: var(--muted); margin-right: 1ch; }
+    time { color: var(--muted); }
 }
 
 // /u/: every note in full.
@@ -86,8 +86,8 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    time { color: var(--muted); margin-right: 1ch; }
-    .parts { color: var(--muted); margin-left: 1ch; }
+    time { color: var(--muted); }
+    .parts { color: var(--muted); }
 }
 
 // Everything else that is just a list.
@@ -96,3 +96,11 @@
     padding: 0 var(--edge);
     list-style: none;
 }
+
+// A section without content says so, in the data voice.
+.empty {
+    @extend %data;
+    margin: 0;
+    color: var(--muted);
+}
+.feed > .empty { padding-bottom: 0; }

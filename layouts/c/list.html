@@ -10,6 +10,8 @@
     <span class="parts">{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ with .url }}<a href="{{ . }}" rel="external">{{ $e.text }}</a>{{ else }}{{ $e.text }}{{ end }}{{ end }}</span>
     {{- end }}
   </li>
+  {{- else }}
+  <li class="empty">NO ENTRIES</li>
   {{- end }}
 </ol>
 {{ end }}

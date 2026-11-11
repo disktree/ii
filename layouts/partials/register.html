@@ -3,6 +3,9 @@
 {{- $pages := slice }}
 {{- range .ByDate.Reverse }}{{ if gt .Date.Year 1970 }}{{ $pages = $pages | append . }}{{ end }}{{ end }}
 <div class="register">
+  {{- if not $pages }}
+  <p class="empty">NO ENTRIES</p>
+  {{- end }}
   <div class="entries">
     {{- range where $pages "Section" "not in" (slice "c" "u") }}
     <a class="work" href="{{ .RelPermalink }}" title="{{ .Date.Format "2006-01-02" }}">{{ partial "label" . | upper }}{{ if .IsSection }}<sup>{{ len .Pages }}</sup>{{ end }}</a>
