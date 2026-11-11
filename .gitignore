@@ -8,3 +8,6 @@ hugo_stats.json
 __*
 *.[0-9]/
 public0/
+
+# over GitHub's 100 MB limit, deployed from disk
+content/a/haarp/haarp.mp4
