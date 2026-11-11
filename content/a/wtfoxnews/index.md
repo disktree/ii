@@ -1,5 +1,5 @@
 ---
-title: "WTFoxNews™"
+title: "WTF™"
 date: 2018-03-23
 tags: [web,foxnews,video]
 links: [
