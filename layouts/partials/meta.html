@@ -19,8 +19,4 @@
   <dt>LINK</dt>
   <dd><a href="{{ . }}" rel="external">{{ . | replaceRE "^https?://(www\\.)?" "" | strings.TrimSuffix "/" }}</a></dd>
   {{- end }}
-  {{- with .Description }}
-  <dt>ABOUT</dt>
-  <dd class="lede">{{ . | markdownify }}</dd>
-  {{- end }}
 </dl>

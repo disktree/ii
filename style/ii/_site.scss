@@ -35,6 +35,12 @@ header.site {
     border-top: 1px solid var(--rule);
 
     h1 { @extend %big; margin: 0; }
+
+    // The description: a line of its own below the data.
+    .lede {
+        max-width: var(--measure);
+        margin: 0.625rem 0 0;
+    }
 }
 
 dl.meta {

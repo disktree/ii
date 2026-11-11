@@ -2,4 +2,7 @@
 <header class="head">
   <h1>{{ partial "name" . }}</h1>
   {{ partial "meta" . }}
+  {{- with .Description }}
+  <p class="lede">{{ . | markdownify }}</p>
+  {{- end }}
 </header>
