@@ -7,7 +7,7 @@ links: [
 	https://archillect.com
 ]
 ---
-<!-- {{< bg-video drzllect-face-1.mp4 >}} -->
+<!-- {{< bg-video "../faces/drzllect-face-1.mp4" >}} -->
 {{< iframe src="https://app.disktree.net/archillect/colors/" >}}
 <!---->
 <!-- ## Colors -->

@@ -7,8 +7,8 @@ links: [
 	https://archillect.com
 ]
 ---
-<!-- {{< bg-video drzllect-face-1.mp4 >}} -->
-{{< video drzllect-face-1.mp4 autoplay controls loop >}}
+<!-- {{< bg-video "faces/drzllect-face-1.mp4" >}} -->
+{{< video "faces/drzllect-face-1.mp4" autoplay controls loop >}}
 <!---->
 <!-- ## Colors -->
 <!---->

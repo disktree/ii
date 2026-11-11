@@ -16,7 +16,7 @@ tags: [font,typography]
 ---
 
 {{< font-preview "fma.ttf" >}}
-{{< link-download "fma.tff" >}}
+{{< link-download "fma.ttf" >}}
 
 ---
 
@@ -31,7 +31,7 @@ tags: [font,typography]
 ---
 
 {{< font-preview "towu-mod-66-vier.ttf" >}}
-{{< link-download "towu-mod-66-view.ttf" >}}
+{{< link-download "towu-mod-66-vier.ttf" >}}
 
 ---
 
