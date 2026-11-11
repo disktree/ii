@@ -18,7 +18,7 @@
     </ol>
     {{- end }}
     {{- with where $pages "Section" "c" }}
-    {{- $seen := site.Data.archived | default slice }}{{/* archived repositories stay out */}}
+    {{- $seen := hugo.Data.archived | default slice }}{{/* archived repositories stay out */}}
     <p class="repos">
       {{- range . }}
       {{- if not (in $seen .Params.repo) }}
