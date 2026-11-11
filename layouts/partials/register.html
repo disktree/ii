@@ -18,14 +18,24 @@
     </ol>
     {{- end }}
     {{- with where $pages "Section" "c" }}
-    {{- $seen := hugo.Data.archived | default slice }}{{/* archived repositories stay out */}}
+    {{- /* each repository once, last updated first: the last push on github
+           (data/repos.json), or the latest entry here for repositories of others */}}
+    {{- $info := hugo.Data.repos | default dict }}
+    {{- $seen := slice }}
+    {{- $repos := slice }}
+    {{- range . }}
+    {{- if not (in $seen .Params.repo) }}
+    {{- $seen = $seen | append .Params.repo }}
+    {{- $i := index $info .Params.repo | default dict }}
+    {{- if not $i.archived }}
+    {{- $repos = $repos | append (dict "name" .Params.repo "url" .Params.repo_url "updated" ($i.pushed | default (.Date.UTC.Format "2006-01-02T15:04:05Z"))) }}
+    {{- end }}
+    {{- end }}
+    {{- end }}
     <p class="repos">
-      {{- range . }}
-      {{- if not (in $seen .Params.repo) }}
-      {{- $seen = $seen | append .Params.repo }}
-      <a href="{{ .Params.repo_url }}" rel="external" title="{{ .Params.repo }}">{{ path.Base .Params.repo }}</a>
-      {{ end }}
-      {{- end -}}
+      {{- range sort $repos "updated" "desc" }}
+      <a href="{{ .url }}" rel="external" title="{{ .name }}">{{ path.Base .name }}</a>
+      {{ end -}}
     </p>
     {{- end }}
   </div>
