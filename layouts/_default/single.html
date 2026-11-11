@@ -1,7 +1,6 @@
 {{ define "main" }}
 <article class="single">
   <h1 class="title">{{ if .Title }}{{ .Title }}{{ else }}{{ .Date.Format "2006-01-02 15:04" }}{{ end }}</h1>
-  {{ partial "meta" . }}
   <div class="text">
     {{ block "body" . }}{{ .Content }}{{ end }}
   </div>

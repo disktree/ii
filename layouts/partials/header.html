@@ -17,6 +17,11 @@
       {{- end }}
       {{- end }}
       {{- end }}
+      {{- if and .IsPage (not (in site.Params.mainSections .Section)) }}
+      {{- /* pages outside the menu sections: just the title */}}
+      <li><span class="current"><a href="{{ .RelPermalink }}" aria-current="page">{{ partial "label" . | upper }}</a></span></li>
+      {{- end }}
     </ul>
   </nav>
+  {{- if and .IsPage (ne .Type "znn") }}{{ partial "meta" . }}{{ end }}
 </header>

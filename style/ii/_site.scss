@@ -91,6 +91,33 @@ body.home header.site nav {
     }
 }
 
+// Content pages: the menu line carries the page's data too. On desktop
+// it is one line, cut off at the right edge if it has to be. On small
+// screens the data wraps as a paragraph right below the menu.
+body.page header.site {
+    grid-column: meta-start / full-end;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 1ch;
+    padding-right: var(--edge);
+    padding-bottom: var(--line);
+
+    nav, dl.meta { flex: 1 1 100%; min-width: 0; }
+
+    @include break.min(md) {
+        flex-wrap: nowrap;
+        nav { flex: none; max-width: 100%; }
+        nav ul { flex-wrap: nowrap; }
+        dl.meta {
+            flex: 1 1 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
 main {
     padding-bottom: var(--edge);
 }

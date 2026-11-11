@@ -2,7 +2,7 @@
 @use 'base';
 @use 'enron/a11y';
 
-// Content pages: one column. Metadata first, then title, then text.
+// Content pages: one column.
 article.single {
     align-items: start;
     > * { grid-column: meta-start / aside-end; }
@@ -15,20 +15,22 @@ article.single {
 // screen readers and search engines.
 h1.title { @include a11y.visually-hidden; }
 
+// Metadata: part of the menu line (see header.site), no labels.
 dl.meta {
     @extend %mono;
-    display: grid;
-    grid-template-columns: max-content minmax(0, 1fr);
-    gap: 0 1ch;
-    margin: 0 0 var(--line);
+    margin: 0;
+    padding-block: 0.125rem; // as the menu
     color: var(--muted);
     overflow-wrap: anywhere;
 
-    dd { margin: 0; color: var(--fg); }
-
+    dt { @include a11y.visually-hidden; }
+    dd { display: inline; margin: 0; }
+    dd:not(:first-of-type)::before { content: ' \00b7  '; }
+    a, a:visited { color: inherit; }
+    p { display: inline; margin: 0; } // markdownified description
+    .tags { display: inline; text-transform: uppercase; }
+    .links { display: inline; }
     .lede { font-style: italic; }
-    .links li { display: block; }
-    .links li::after { content: none; }
 }
 
 // Screenshots: bleed to the right edge of the viewport.

@@ -1,8 +1,4 @@
 <dl class="meta">
-  {{- with .Description }}
-  <dt>ABOUT</dt>
-  <dd class="lede">{{ . | markdownify }}</dd>
-  {{- end }}
   {{- if gt .Date.Year 1970 }}
   <dt>DATE</dt>
   <dd><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time></dd>
@@ -11,10 +7,6 @@
   <dt>AUTHOR</dt>
   <dd>{{ . }}</dd>
   {{- end }}
-  {{- with .CurrentSection }}{{ if not .IsHome }}
-  <dt>IN</dt>
-  <dd><a href="{{ .RelPermalink }}">{{ .Title | upper }}</a></dd>
-  {{- end }}{{ end }}
   {{- with .GetTerms "tags" }}
   <dt>TAGS</dt>
   <dd><ul class="tags">{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}</ul></dd>
@@ -26,5 +18,9 @@
   {{- with .Params.link }}
   <dt>LINK</dt>
   <dd><a href="{{ . }}" rel="external">{{ . | replaceRE "^https?://(www\\.)?" "" | strings.TrimSuffix "/" }}</a></dd>
+  {{- end }}
+  {{- with .Description }}
+  <dt>ABOUT</dt>
+  <dd class="lede">{{ . | markdownify }}</dd>
   {{- end }}
 </dl>

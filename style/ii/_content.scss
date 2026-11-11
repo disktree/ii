@@ -1,6 +1,5 @@
 @use 'base';
 @use 'enron/a11y';
-@use 'enron/break';
 
 // Long-form text (content pages). Starts at the page edge like the lists;
 // text keeps its measure, media may use the full content width.
@@ -120,12 +119,14 @@
 // Content pages that show a work in an iframe: the page is exactly one
 // viewport high. Header, metadata, title and footer stay in view, the iframe
 // takes whatever height is left; the page itself does not scroll.
-$work: "iframe:not([src*='youtube']):not([src*='vimeo']):not([height='600'])";
+$work: "iframe:only-child:not([src*='youtube']):not([src*='vimeo']):not([height='600'])";
 
 body:has(article.single > .text > #{$work}) {
     height: 100vh;
     height: 100dvh;
     min-height: 0;
+
+    > header.site { padding-bottom: calc(var(--line) / 2); }
 
     > main {
         min-height: 0;
@@ -135,28 +136,8 @@ body:has(article.single > .text > #{$work}) {
 
     article.single {
         min-height: 0;
-        grid-template-rows: auto minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr);
         align-content: stretch;
-    }
-
-    // The work is the page: all the metadata on one line.
-    dl.meta {
-        display: block;
-        margin: 0 0 calc(var(--line) / 2);
-        padding-block: 0.125rem;
-        dt { @include a11y.visually-hidden; }
-        dd { display: inline; color: inherit; }
-        a, a:visited { color: inherit; }
-        dd:not(:first-of-type)::before { content: ' \00b7  '; }
-        .tags { display: inline; text-transform: uppercase; }
-        .links { display: inline; }
-        .links li { display: inline; }
-        .links li:not(:last-child)::after { content: ', '; }
-        @include break.min(md) {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
     }
 
     article.single > .text {
