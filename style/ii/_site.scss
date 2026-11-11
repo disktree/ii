@@ -7,7 +7,7 @@ body {
     min-height: 100dvh;
 }
 
-// Menu: the circle sits left of the axis, A and C right on it.
+// Menu: the circle, then A and C.
 header.site {
     @extend %data;
     padding: 0.625rem var(--edge);
@@ -20,7 +20,6 @@ header.site {
         padding: 0;
         list-style: none;
     }
-    .home { flex: none; width: calc(var(--axis) - 1.5ch); }
     a { color: var(--muted); }
     a.current, a:hover { color: var(--fg); text-decoration: none; }
     svg {
@@ -32,21 +31,16 @@ header.site {
     .home a { color: var(--fg); }
 }
 
-// Heading of a page: a row of the register.
+// Heading of a page: the title as large as in the register.
 .head {
-    display: grid;
-    grid-template-columns: var(--axis) minmax(0, 1fr);
-    align-items: baseline;
     padding: 0.375rem var(--edge) calc(var(--line) * 1.5);
     border-top: 1px solid var(--rule);
 
-    .y { @extend %data; color: var(--muted); }
     h1 { @extend %big; margin: 0; }
 }
 
 dl.meta {
     @extend %data;
-    grid-column: 2;
     margin: 0.625rem 0 0;
     color: var(--muted);
 

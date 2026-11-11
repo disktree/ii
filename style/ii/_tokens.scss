@@ -1,6 +1,5 @@
-// One axis runs down every page: years to the left of it, everything else
-// to the right. Two voices: Archivo for the works and the text, JetBrains
-// Mono, small, for all the data around them.
+// Three voices: Inter, large, for the titles. Archivo for running text.
+// JetBrains Mono, small, for all the data around them.
 
 :root {
     color-scheme: light dark;
@@ -10,6 +9,7 @@
     --muted: GrayText;
     --rule: color-mix(in srgb, var(--fg) 16%, transparent);
 
+    --title: 'Inter Variable', system-ui, sans-serif;
     --sans: 'Archivo Variable', system-ui, sans-serif;
     --mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
@@ -18,10 +18,8 @@
     --big: clamp(1.75rem, 4.4vw, 4.75rem);
 
     --edge: 1rem;
-    --axis: 3.25rem;
     --measure: 62ch;
     --line: 1.5rem;
 
-    @media (min-width: 48rem) { --axis: 5.5rem; }
     @media (prefers-color-scheme: dark) { --bg: #080808; }
 }

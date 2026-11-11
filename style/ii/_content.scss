@@ -1,10 +1,10 @@
 @use 'base';
 
-// Long-form text, right of the axis. Text keeps its measure,
+// Long-form text. Text keeps its measure,
 // media may use the full width.
 
 .text {
-    padding: 0 var(--edge) 0 calc(var(--edge) + var(--axis));
+    padding: 0 var(--edge);
     display: flex;
     flex-direction: column;
     min-width: 0;

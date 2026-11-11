@@ -1,13 +1,10 @@
 {{ define "main" }}
-<header class="head"><span class="y"></span><h1>{{ .Title | upper }}</h1></header>
+<header class="head"><h1>{{ .Title | upper }}</h1></header>
 <div class="register">
-  <div class="year">
-    <span></span>
-    <div class="entries">
-      {{- range .Data.Terms.Alphabetical }}
-      <a class="work" href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle | upper }}<sup>{{ .Count }}</sup></a>
-      {{ end -}}
-    </div>
+  <div class="entries">
+    {{- range .Data.Terms.Alphabetical }}
+    <a class="work" href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle | upper }}<sup>{{ .Count }}</sup></a>
+    {{ end -}}
   </div>
 </div>
 {{ end }}

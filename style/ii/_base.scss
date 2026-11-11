@@ -60,11 +60,12 @@ pre { overflow-x: auto; tab-size: 4; }
 
 // The display voice.
 %big {
+    font-family: var(--title);
     font-size: var(--big);
     font-weight: 500;
-    font-stretch: 85%;
-    line-height: 1.04;
-    letter-spacing: -0.012em;
+    font-optical-sizing: auto;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
 }
 
 .vh { @include a11y.visually-hidden; }

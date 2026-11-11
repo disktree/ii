@@ -1,6 +1,5 @@
-{{- /* Page heading: reads like one row of the register. */ -}}
+{{- /* Page heading: the title as large as in the register, the data below. */ -}}
 <header class="head">
-  {{ if gt .Date.Year 1970 }}<time class="y" datetime="{{ .Date.Format "2006" }}">{{ .Date.Format "2006" }}</time>{{ else }}<span class="y"></span>{{ end }}
   <h1>{{ partial "label" . | upper }}</h1>
   {{ partial "meta" . }}
 </header>

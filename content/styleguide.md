@@ -8,7 +8,7 @@ sitemap:
   disable: true
 ---
 
-One axis runs down every page: years to the left of it, everything else to the right. Two voices: Archivo for the works and the text, JetBrains Mono, small, for all the data around them. No color but the text and its background, which follow the OS.
+Three voices: Inter, large, for the titles. Archivo for running text. JetBrains Mono, small, for all the data around them. No color but the text and its background, which follow the OS.
 
 ## Headings
 
