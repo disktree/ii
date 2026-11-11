@@ -8,7 +8,7 @@ sitemap:
   disable: true
 ---
 
-Three voices: Inter, large, for the titles. Archivo for running text. JetBrains Mono, small, for all the data around them. No color but the text and its background, which follow the OS.
+Two voices: Inter for the titles, set large, and for the text. JetBrains Mono, small, for all the data around them. No color but the text and its background, which follow the OS.
 
 ## Headings
 

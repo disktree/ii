@@ -1,5 +1,5 @@
-// Three voices: Inter, large, for the titles. Archivo for running text.
-// JetBrains Mono, small, for all the data around them.
+// Two voices: Inter for the titles (large) and the text. JetBrains Mono,
+// small, for all the data around them.
 
 :root {
     color-scheme: light dark;
@@ -10,7 +10,7 @@
     --rule: color-mix(in srgb, var(--fg) 16%, transparent);
 
     --title: 'Inter Variable', system-ui, sans-serif;
-    --sans: 'Archivo Variable', system-ui, sans-serif;
+    --sans: var(--title);
     --mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
     --text: 1.0625rem;

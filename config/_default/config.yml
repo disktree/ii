@@ -44,9 +44,6 @@ module:
     # Inter variable font from npm (@fontsource-variable/inter), wght and opsz axes
     - source: node_modules/@fontsource-variable/inter/files
       target: static/font/inter
-    # Archivo variable font from npm (@fontsource-variable/archivo), wght and wdth axes
-    - source: node_modules/@fontsource-variable/archivo/files
-      target: static/font/archivo
 
 outputs:
   home: [html, rss]
