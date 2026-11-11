@@ -1,20 +1,20 @@
 @use 'enron/break';
 
 // A page that is one work (an iframe, nothing else): the work takes the whole
-// window, everything else shares one line below it.
+// window between the menu line on top and the footer.
 $work: 'article.single > .text > iframe:only-child';
 
 body:has(#{$work}) {
     height: 100dvh;
     min-height: 0;
     overflow: hidden;
-    grid-template-columns: auto minmax(0, 1fr) auto;
-    grid-template-rows: minmax(0, 1fr) auto;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
 
     > main, article.single { display: contents; }
 
     article.single > .text {
-        grid-area: 1 / 1 / 2 / -1;
+        grid-area: 2 / 1 / 3 / -1;
         display: block;
         min-height: 0;
         padding: 0;
@@ -30,15 +30,15 @@ body:has(#{$work}) {
         }
     }
 
-    > header.site { grid-area: 2 / 1; padding-block: 0.5rem; }
+    > header.site { grid-area: 1 / 1; }
 
     article.single > .head {
-        grid-area: 2 / 2;
+        grid-area: 1 / 2;
         display: flex;
         align-items: baseline;
         gap: 1.5ch;
         min-width: 0;
-        padding: 0.5rem 0;
+        padding: 0.625rem var(--edge) 0.625rem 0;
         border: 0;
 
         h1 {
@@ -59,18 +59,17 @@ body:has(#{$work}) {
         }
     }
 
-    > footer.site {
-        grid-area: 2 / 3;
-        margin: 0;
-        border: 0;
-        .site-links { display: none; }
-    }
+    > footer.site { grid-area: 3 / 1 / 4 / -1; margin: 0; }
 
     @include break.max(md) {
-        grid-template-rows: minmax(0, 1fr) auto auto;
+        grid-template-rows: auto auto minmax(0, 1fr) auto;
+
+        > header.site { grid-area: 1 / 1 / 2 / -1; }
+        article.single > .text { grid-area: 3 / 1 / 4 / -1; }
+        > footer.site { grid-area: 4 / 1 / 5 / -1; }
 
         article.single > .head {
-            grid-area: 3 / 1 / 4 / -1;
+            grid-area: 2 / 1 / 3 / -1;
             flex-wrap: wrap;
             padding: 0 var(--edge) 0.5rem;
             h1 { flex: 1 1 100%; }
