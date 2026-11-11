@@ -1,16 +1,9 @@
 {{ define "main" }}
-<h1 class="vh">{{ site.Title }}: everything, newest first</h1>
-<div class="columns">
-  <section aria-label="Archive">
-    {{- with site.GetPage "/a" }}{{ partial "stream" (dict "pages" .Pages "compact" true) }}{{ end }}
-  </section>
-  {{- /* Code on the home page: releases and new repositories only, the commits are in /c/ */}}
-  {{- $code := slice }}
-  {{- range where site.RegularPages "Section" "c" }}
-  {{- if where .Params.events "kind" "in" (slice "release" "repository") }}{{ $code = $code | append . }}{{ end }}
-  {{- end }}
-  <section aria-label="Code">
-    {{ partial "stream" (dict "pages" $code "compact" true "highlights" true) }}
-  </section>
-</div>
+<h1 class="vh">{{ site.Title }}</h1>
+{{- /* Code on the home page: releases and new repositories only, the commits are in /c/ */}}
+{{- $code := slice }}
+{{- range where site.RegularPages "Section" "c" }}
+{{- if where .Params.events "kind" "in" (slice "release" "repository") }}{{ $code = $code | append . }}{{ end }}
+{{- end }}
+{{- with site.GetPage "/a" }}{{ partial "register" (.Pages | union $code) }}{{ end }}
 {{ end }}

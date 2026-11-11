@@ -1,171 +1,76 @@
-@use 'enron/break';
 @use 'base';
-@use 'enron/a11y';
 
-// Header: one menu line. The circle is the first item, it links home.
+body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    min-height: 100dvh;
+}
 
+// Menu: the circle sits left of the axis, A and C right on it.
 header.site {
-    // The menu is the first line of the list below it: same height as a
-    // stream item, no gap after it.
-    padding-block: var(--edge) 0;
+    @extend %data;
+    padding: 0.625rem var(--edge);
 
-    nav {
-        grid-column: meta-start / aside-end;
-
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: baseline;
-            gap: 0;
-            margin: 0;
-            padding: 0.125rem 0; // as .stream.compact .item
-            list-style: none;
-        }
-
-        // Separator: one space, the width of one character, like everywhere else.
-        li + li { margin-left: 1ch; }
-
-        // Every item is a box of exactly one line, text or circle,
-        // so a highlight has the same height for all of them.
-        a, .current {
-            display: inline-block;
-            height: calc(1em * var(--leading));
-            line-height: var(--leading);
-            vertical-align: top;
-            overflow: hidden;
-            color: var(--fg);
-        }
-        .current a { vertical-align: top; }
-
-        // The circle: a glyph a little smaller than the capitals,
-        // centered in its line box.
-        .home a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-        // Highlighted, the circle sits in a square: as wide as the band is high.
-        .home .current {
-            width: var(--band);
-            padding-inline: 0;
-        }
-        svg {
-            display: block;
-            width: 0.6em;
-            height: 0.6em;
-            fill: currentColor;
-            // center on the capitals (0.635em), not on the line box (0.7em)
-            position: relative;
-            top: -0.065em;
-        }
-
-        // Where you are: highlighted. On a content page that is
-        // SECTION/TITLE as one item.
-        // The highlight is a band tight around the capitals, not the whole line.
-        // Measured in the browser for JetBrains Mono in a 1.4 line: baseline at
-        // 1em from the top of the line, capitals 0.73em high (top at 0.27em).
-        // The band adds 0.08em above and below.
-        .current {
-            --cap-top: 0.19em;
-            --band: 0.89em;
-            padding-inline: 0.5ch;
-            background: linear-gradient(var(--fg), var(--fg)) 0 var(--cap-top) / 100% var(--band) no-repeat;
-            color: var(--bg);
-
-            a, a:visited { color: inherit; }
-        }
-    }
-}
-
-// Home: the menu spans both columns, C sits right above the code column.
-body.home header.site { grid-column: meta-start / full-end; }
-body.home header.site nav {
-    grid-column: meta-start / full-end;
-    padding-right: var(--edge);
-
-    @include break.min(md) {
-        li:last-child {
-            margin-left: auto;
-            width: calc(50% - 1ch); // half the width, less half the column gap
-        }
-    }
-}
-
-// Content pages: the menu line carries the page's data too. On desktop
-// it is one line, cut off at the right edge if it has to be. On small
-// screens the data wraps as a paragraph right below the menu.
-body.page header.site {
-    grid-column: meta-start / full-end;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    column-gap: 1ch;
-    padding-right: var(--edge);
-    padding-bottom: var(--line);
-
-    nav, dl.meta { flex: 1 1 100%; min-width: 0; }
-
-    @include break.min(md) {
-        flex-wrap: nowrap;
-        nav { flex: none; max-width: 100%; }
-        nav ul { flex-wrap: nowrap; }
-        dl.meta {
-            flex: 1 1 0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-}
-
-main {
-    padding-bottom: var(--edge);
-}
-
-// Page headers start at the page edge.
-
-header.page {
-    grid-column: meta-start / aside-end;
-    margin-bottom: var(--line);
-
-    h1 {
-        margin: 0 0 calc(var(--line) / 2);
-        max-width: var(--measure);
-    }
-
-    .lede {
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 1.5ch;
         margin: 0;
-        max-width: var(--measure);
-        color: var(--muted);
-        font-style: italic;
+        padding: 0;
+        list-style: none;
     }
+    .home { flex: none; width: calc(var(--axis) - 1.5ch); }
+    a { color: var(--muted); }
+    a.current, a:hover { color: var(--fg); text-decoration: none; }
+    svg {
+        display: block;
+        width: 0.75em;
+        height: 0.75em;
+        fill: currentColor;
+    }
+    .home a { color: var(--fg); }
 }
 
-// Footer: one line, bottom right. prev/next live here too.
-footer.site {
-    @extend %mono;
-    grid-column: meta-start / full-end;
-    display: flex;
-    gap: 2ch;
-    padding: calc(var(--line) / 2) var(--edge) calc(var(--line) / 2) 0;
-    border-top: 1px solid color-mix(in srgb, var(--fg) 15%, transparent);
-    font-size: 0.75rem; // the one exception to the one font size
-    white-space: nowrap;
-    overflow: hidden;
+// Heading of a page: a row of the register.
+.head {
+    display: grid;
+    grid-template-columns: var(--axis) minmax(0, 1fr);
+    align-items: baseline;
+    padding: 0.375rem var(--edge) calc(var(--line) * 1.5);
+    border-top: 1px solid var(--rule);
+
+    .y { @extend %data; color: var(--muted); }
+    h1 { @extend %big; margin: 0; }
+}
+
+dl.meta {
+    @extend %data;
+    grid-column: 2;
+    margin: 0.625rem 0 0;
     color: var(--muted);
 
+    dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    dd { display: inline; margin: 0; }
+    dd:not(:first-of-type)::before { content: ' \00b7  '; }
+    p { display: inline; margin: 0; }
+    ul { display: inline; margin: 0; padding: 0; list-style: none; }
+    li { display: inline; }
+    li:not(:last-child)::after { content: ', '; }
+    .tags { text-transform: uppercase; }
+}
+
+footer.site {
+    @extend %data;
+    display: flex;
+    justify-content: space-between;
+    gap: 2ch;
+    margin-top: calc(var(--line) * 2);
+    padding: 0.5rem var(--edge);
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    white-space: nowrap;
+
+    code { font-size: 1em; }
     .site-links { margin-left: auto; }
-    a, a:visited { color: inherit; }
 }
-
-.terms, .index {
-    grid-column: meta-start / aside-end;
-    padding-left: 1.5em;
-    data {
-        @extend %mono;
-        color: var(--muted);
-    }
-}
-
-// Section list pages: the title lives in the menu (see header.site).
-body.section main > header.page { @include a11y.visually-hidden; }

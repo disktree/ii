@@ -10,24 +10,13 @@
   <meta name="robots" content="noindex">
   {{- end }}
   {{ template "_internal/opengraph.html" . }}
-  <link rel="preload" href="{{ "font/jetbrains-mono/jetbrains-mono-latin-wght-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "font/archivo/archivo-latin-standard-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ "style.css" | relURL }}">
   {{- block "style" . }}{{ end }}
   {{- with site.Home.OutputFormats.Get "rss" }}
   <link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">
   {{- end }}
   <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
-  <script>
-    // Iframes are dimmed until focused. Browsers don't reliably match :focus on an
-    // iframe whose content has focus, so mark it: the window blurs, the iframe is active.
-    addEventListener('blur', () => {
-      const f = document.activeElement;
-      if (f && f.tagName === 'IFRAME') f.classList.add('focused');
-    });
-    addEventListener('focus', () => {
-      document.querySelectorAll('iframe.focused').forEach(f => f.classList.remove('focused'));
-    });
-  </script>
 </head>
 <body class="{{ .Kind }}{{ with .Section }} s-{{ . }}{{ end }}{{ with .Type }} t-{{ . }}{{ end }}">
   <a class="skip" href="#main">skip to content</a>

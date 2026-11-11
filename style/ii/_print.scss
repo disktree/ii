@@ -1,7 +1,6 @@
 @media print {
     :root { color-scheme: light; }
-    header.site nav, .skip, .bg-media, .background { display: none; }
-    .year > h2, dl.meta { position: static; }
+    header.site, footer.site, .skip, .bg-media, .background { display: none; }
     .text a[href^='http']::after {
         content: ' <' attr(href) '>';
         overflow-wrap: anywhere;

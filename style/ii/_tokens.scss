@@ -1,6 +1,6 @@
-// The palette is the browser's own: CSS system colors.
-// They already follow the OS light/dark preference through `color-scheme`.
-// The only color not taken from the user agent is --accent.
+// One axis runs down every page: years to the left of it, everything else
+// to the right. Two voices: Archivo for the works and the text, JetBrains
+// Mono, small, for all the data around them.
 
 :root {
     color-scheme: light dark;
@@ -8,32 +8,20 @@
     --fg: CanvasText;
     --bg: Canvas;
     --muted: GrayText;
-    --accent: oklch(60% 0.25 29);
+    --rule: color-mix(in srgb, var(--fg) 16%, transparent);
 
-    --serif: serif; // whatever the reader's browser calls "serif"
-    --mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-    --font: var(--mono); // the body face: switch to var(--serif) for the serif version
-    --size: 0.875rem;
+    --sans: 'Archivo Variable', system-ui, sans-serif;
+    --mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 
-    --measure: 70ch;
-    --meta: 8.5rem;
-    --aside: 11rem;
-    --gap: 2rem;
+    --text: 1.0625rem;
+    --small: 0.8125rem;
+    --big: clamp(1.75rem, 4.4vw, 4.75rem);
+
     --edge: 1rem;
+    --axis: 3.25rem;
+    --measure: 62ch;
+    --line: 1.5rem;
 
-    --leading: 1.5;
-    --line: 1.5rem; // one line of body text, the vertical unit
-
-    @media (prefers-color-scheme: dark) {
-        --bg: #080808; // darker than the user agent's Canvas
-        --accent: oklch(70% 0.2 33);
-    }
-
-    // Desktop: denser. Same type size, less air.
-    @media (min-width: 64rem) {
-        --leading: 1.4;
-        --line: 1.25rem;
-        --meta: 9rem;
-        --gap: 1.5rem;
-    }
+    @media (min-width: 48rem) { --axis: 5.5rem; }
+    @media (prefers-color-scheme: dark) { --bg: #080808; }
 }

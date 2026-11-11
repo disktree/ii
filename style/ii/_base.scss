@@ -3,76 +3,69 @@
 html {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    hanging-punctuation: first allow-end last;
-    scroll-padding-top: calc(var(--line) * 3);
-    accent-color: var(--accent);
+    scroll-padding-top: var(--line);
+    accent-color: var(--fg);
 }
 
 body {
     margin: 0;
     background: var(--bg);
     color: var(--fg);
-    font-family: var(--font);
-    font-size: var(--size);
-    line-height: var(--leading);
+    font-family: var(--sans);
+    font-size: var(--text);
+    line-height: 1.5;
     font-kerning: normal;
-    font-variant-ligatures: common-ligatures;
-    font-optical-sizing: auto;
     text-rendering: optimizeLegibility;
 }
 
-// Links: the color of the text, underlined only on hover.
 a {
-    color: var(--fg);
+    color: inherit;
     text-decoration: none;
     text-decoration-thickness: 0.08em;
     text-underline-offset: 0.18em;
-    text-decoration-skip-ink: auto;
 
-    &:visited { color: var(--fg); }
-    &:hover,
-    &:focus-visible {
-        text-decoration-line: underline;
-        text-decoration-color: currentColor;
-    }
+    &:hover, &:focus-visible { text-decoration-line: underline; }
 }
 
 :focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--fg);
     outline-offset: 2px;
 }
 
 ::selection {
-    background: var(--accent);
+    background: var(--fg);
     color: var(--bg);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    line-height: 1.15;
-    text-wrap: balance;
-}
-h1 { letter-spacing: -0.03em; }
-
-p, li, dd, figcaption, blockquote { text-wrap: pretty; }
-
-img, video, iframe, svg, canvas {
-    max-width: 100%;
-}
+img, video, iframe, svg, canvas { max-width: 100%; }
 img, video { height: auto; }
 
 code, pre, kbd, samp {
     font-family: var(--mono);
-    font-size: 1em;
+    font-size: 0.875em;
+    font-variant-numeric: slashed-zero;
 }
-pre {
-    overflow-x: auto;
-    tab-size: 4;
+pre { overflow-x: auto; tab-size: 4; }
+
+// The data voice.
+%data {
+    font-family: var(--mono);
+    font-size: var(--small);
+    font-weight: 400;
+    font-stretch: normal;
+    letter-spacing: 0;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums slashed-zero;
 }
 
-time, data, code { font-variant-numeric: tabular-nums slashed-zero; }
-
-// One size for everything. Hierarchy comes from weight, color and position.
-h1, h2, h3, h4, h5, h6, small, big, figcaption, kbd, samp, code, pre { font-size: 1em; }
+// The display voice.
+%big {
+    font-size: var(--big);
+    font-weight: 500;
+    font-stretch: 85%;
+    line-height: 1.04;
+    letter-spacing: -0.012em;
+}
 
 .vh { @include a11y.visually-hidden; }
 
@@ -82,14 +75,6 @@ h1, h2, h3, h4, h5, h6, small, big, figcaption, kbd, samp, code, pre { font-size
     inset: 0 auto auto 0;
     z-index: 10;
     padding: 0.5rem 1rem;
-    background: var(--accent);
+    background: var(--fg);
     color: var(--bg);
-}
-
-// The "small print" voice: everything that is metadata.
-%mono {
-    font-family: var(--mono);
-    font-size: inherit;
-    letter-spacing: 0.01em;
-    font-variant-numeric: tabular-nums slashed-zero;
 }

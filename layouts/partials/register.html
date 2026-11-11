@@ -1,0 +1,27 @@
+{{- /* The register: one row per year, the works set large and run in,
+       the code small behind them. Context: Pages */ -}}
+<ol class="register">
+  {{- range .GroupByDate "2006" }}
+  {{- if gt (int .Key) 1970 }}
+  <li class="year">
+    <time datetime="{{ .Key }}">{{ .Key }}</time>
+    <div class="entries">
+      {{- range where .Pages "Section" "ne" "c" }}
+      <a class="work" href="{{ .RelPermalink }}">{{ partial "label" . | upper }}{{ if .IsSection }}<sup>{{ len .Pages }}</sup>{{ end }}</a>
+      {{ end }}
+      {{- with where .Pages "Section" "c" }}
+      {{- $seen := slice }}
+      <span class="repos">
+        {{- range . }}
+        {{- if not (in $seen .Params.repo) }}
+        {{- $seen = $seen | append .Params.repo }}
+        <a href="{{ .Params.repo_url }}" rel="external" title="{{ .Params.repo }}">{{ path.Base .Params.repo }}</a>
+        {{ end }}
+        {{- end -}}
+      </span>
+      {{- end }}
+    </div>
+  </li>
+  {{- end }}
+  {{- end }}
+</ol>

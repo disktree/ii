@@ -1,7 +1,5 @@
 {{ define "main" }}
-<header class="page">
-  <h1>{{ .Title }}</h1>
-</header>
+<header class="head"><span class="y"></span><h1>{{ .Title | upper }}</h1></header>
 <ol class="index">
   {{- range .Pages.ByTitle }}
   <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>

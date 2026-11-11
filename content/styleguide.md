@@ -8,11 +8,7 @@ sitemap:
   disable: true
 ---
 
-The rule: at first glance this should look like a page without a stylesheet. On a second look it should not. The body face is a single token (`--font`), currently monospace; set it to `var(--serif)` for the serif version.
-
-Defaults kept as they are: the system colors `Canvas`, `CanvasText` and `GrayText` (so light and dark follow the OS), bold headings, bullets, the inset `<hr>`. Links have the color of the text and show an underline only on hover.
-
-Things that are not default: the grid, the measure, one line of rhythm, one font size for everything, the circle, and one accent color.
+One axis runs down every page: years to the left of it, everything else to the right. Two voices: Archivo for the works and the text, JetBrains Mono, small, for all the data around them. No color but the text and its background, which follow the OS.
 
 ## Headings
 
@@ -114,7 +110,6 @@ Embeds and figures step out of the measure into the aside column.
 <tr><td><code>--bg</code></td><td><code>Canvas</code></td><td><span class="swatch" style="background:Canvas"></span></td></tr>
 <tr><td><code>--fg</code></td><td><code>CanvasText</code></td><td><span class="swatch" style="background:CanvasText"></span></td></tr>
 <tr><td><code>--muted</code></td><td><code>GrayText</code></td><td><span class="swatch" style="background:GrayText"></span></td></tr>
-<tr><td><code>--accent</code></td><td><code>oklch(…)</code></td><td><span class="swatch" style="background:var(--accent)"></span></td></tr>
 </tbody>
 </table>
 {{< /html >}}

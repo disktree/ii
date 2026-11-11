@@ -1,18 +1,11 @@
-// ii — a stylesheet that pretends not to exist.
-//
-// Everything that is visible at first glance is a browser default:
-// the serif, the system colors (Canvas, CanvasText, LinkText, VisitedText),
-// underlined links, bold headings, bullets, <hr>, <address> in italics.
-// Everything else is there to be noticed only on the second look:
-// the grid, the measure, the rhythm, the mono metadata, the one accent.
-
+// ii: a register. The works set large against the years they were made in;
+// everything else stays small and out of the way.
 
 @use 'ii/font';
 @use 'ii/tokens';
 @use 'ii/base';
-@use 'ii/layout';
 @use 'ii/site';
-@use 'ii/stream';
-@use 'ii/single';
+@use 'ii/register';
 @use 'ii/content';
+@use 'ii/work';
 @use 'ii/print';

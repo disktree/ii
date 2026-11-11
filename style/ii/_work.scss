@@ -1,0 +1,81 @@
+@use 'enron/break';
+
+// A page that is one work (an iframe, nothing else): the work takes the whole
+// window, everything else shares one line below it.
+$work: 'article.single > .text > iframe:only-child';
+
+body:has(#{$work}) {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-rows: minmax(0, 1fr) auto;
+
+    > main, article.single { display: contents; }
+
+    article.single > .text {
+        grid-area: 1 / 1 / 2 / -1;
+        display: block;
+        min-height: 0;
+        padding: 0;
+
+        > iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 0;
+            max-width: none;
+            margin: 0;
+            border: 0;
+        }
+    }
+
+    > header.site { grid-area: 2 / 1; padding-block: 0.5rem; }
+
+    article.single > .head {
+        grid-area: 2 / 2;
+        display: flex;
+        align-items: baseline;
+        gap: 1.5ch;
+        min-width: 0;
+        padding: 0.5rem 0;
+        border: 0;
+
+        .y { display: none; }
+        h1 {
+            font: inherit;
+            font-family: var(--mono);
+            font-size: var(--small);
+            letter-spacing: 0;
+            flex: none;
+            max-width: 100%;
+        }
+        dl.meta {
+            flex: 1 1 0;
+            min-width: 0;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    > footer.site {
+        grid-area: 2 / 3;
+        margin: 0;
+        border: 0;
+        .site-links { display: none; }
+    }
+
+    @include break.max(md) {
+        grid-template-rows: minmax(0, 1fr) auto auto;
+
+        article.single > .head {
+            grid-area: 3 / 1 / 4 / -1;
+            flex-wrap: wrap;
+            padding: 0 var(--edge) 0.5rem;
+            h1 { flex: 1 1 100%; }
+            dl.meta { flex: 1 1 100%; white-space: normal; }
+        }
+    }
+}

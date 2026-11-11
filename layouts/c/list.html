@@ -1,0 +1,22 @@
+{{ define "main" }}
+<h1 class="vh">{{ .Title }}</h1>
+{{- /* Everything that happened in the code, one line per repository and day. */}}
+<ol class="register ledger">
+  {{- range .Pages.GroupByDate "2006" }}
+  <li class="year">
+    <time datetime="{{ .Key }}">{{ .Key }}</time>
+    <ol>
+      {{- range .Pages }}
+      <li>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01-02" }}</time>
+        <a class="repo" href="{{ .Params.repo_url }}" rel="external">{{ .Title }}</a>
+        {{- with .Params.parts }}
+        <span class="parts">{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ with .url }}<a href="{{ . }}" rel="external">{{ $e.text }}</a>{{ else }}{{ $e.text }}{{ end }}{{ end }}</span>
+        {{- end }}
+      </li>
+      {{- end }}
+    </ol>
+  </li>
+  {{- end }}
+</ol>
+{{ end }}

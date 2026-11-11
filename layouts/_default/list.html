@@ -1,7 +1,9 @@
 {{ define "main" }}
-<header class="page">
-  <h1>{{ if .IsSection }}{{ .Title | upper }}{{ else }}{{ .Title }}{{ end }}</h1>
-  {{ with .Content }}<div class="text">{{ . }}</div>{{ end }}
-</header>
-{{ partial "stream" (dict "pages" .Pages "compact" true) }}
+{{- if .IsSection }}
+<h1 class="vh">{{ .Title }}</h1>
+{{- else }}
+<header class="head"><span class="y"></span><h1>{{ .Title | upper }}</h1></header>
+{{- end }}
+{{ with .Content }}<div class="text">{{ . }}</div>{{ end }}
+{{ partial "register" .Pages }}
 {{ end }}

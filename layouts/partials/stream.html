@@ -1,8 +1,0 @@
-{{- /* Chronological list of pages. Context: dict "pages" Pages "compact" bool "highlights" bool */ -}}
-<ol class="stream{{ if .compact }} compact{{ end }}">
-  {{- range .pages.ByDate.Reverse }}
-  {{- if gt .Date.Year 1970 }}
-  {{ partial "item" (dict "page" . "compact" $.compact "highlights" $.highlights) }}
-  {{- end }}
-  {{- end }}
-</ol>

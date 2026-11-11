@@ -1,12 +1,10 @@
 @use 'base';
-@use 'enron/a11y';
 
-// Long-form text (content pages). Starts at the page edge like the lists;
-// text keeps its measure, media may use the full content width.
+// Long-form text, right of the axis. Text keeps its measure,
+// media may use the full width.
 
 .text {
-    grid-column: meta-start / full-end;
-    padding-right: var(--edge);
+    padding: 0 var(--edge) 0 calc(var(--edge) + var(--axis));
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -18,7 +16,8 @@
     }
     > * + * { margin-top: var(--line); }
 
-    > h2, > h3, > h4, > h5, > h6 { margin-top: calc(var(--line) * 2); }
+    h1, h2, h3, h4, h5, h6 { font-size: 1em; font-weight: 650; line-height: 1.3; }
+    > h1, > h2, > h3, > h4, > h5, > h6 { margin-top: calc(var(--line) * 2); }
     > h2 + *, > h3 + *, > h4 + * { margin-top: calc(var(--line) / 2); }
 
     // Media and wide things are not bound to the measure.
@@ -27,26 +26,14 @@
         max-width: none;
     }
 
-    // Iframes (mostly the works themselves) take all the space there is:
-    // the full width to the right edge and the height of the viewport.
+    // Iframes that share the page with text.
     iframe {
         display: block;
         width: 100%;
-        height: calc(100dvh - 2 * var(--line));
-        min-height: 12rem;
+        aspect-ratio: 16 / 9;
         border: 0;
     }
-    // Dimmed until focused (click into it, or tab to it).
-    iframe {
-        filter: brightness(0.4);
-        transition: filter 0.3s;
-        &:focus, &.focused { filter: none; outline: none; }
-        @include a11y.reduced-motion { transition: none; }
-    }
-
-    // Video players keep their format.
-    iframe[src*='youtube'], iframe[src*='vimeo'] { height: auto; min-height: 0; aspect-ratio: 16 / 9; }
-    iframe[height='600'] { aspect-ratio: auto; height: 600px; min-height: 0; }
+    iframe[height='600'] { aspect-ratio: auto; height: 600px; }
     audio { display: block; width: 100%; }
     img { display: block; }
     p > img + img { margin-top: var(--line); }
@@ -54,7 +41,7 @@
     blockquote {
         margin-inline: 0;
         padding-left: 1.5em;
-        border-left: 1px solid var(--accent);
+        border-left: 1px solid var(--rule);
         font-style: italic;
     }
 
@@ -62,6 +49,8 @@
         width: 100%;
         // the default inset rule, but exactly one line of rhythm apart
         margin-block: calc(var(--line) * 2);
+        border: 0;
+        border-top: 1px solid var(--rule);
     }
 
     table {
@@ -86,7 +75,7 @@
         padding: 0;
         list-style: none;
         time, code { color: var(--muted); margin-right: 1ch; }
-        time { @extend %mono; }
+        time { @extend %data; }
     }
 }
 
@@ -114,39 +103,3 @@
     box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fg) 25%, transparent);
 }
 .mono-sample { display: flex; gap: 1ch; align-items: baseline; }
-
-
-// Content pages that show a work in an iframe: the page is exactly one
-// viewport high. Header, metadata, title and footer stay in view, the iframe
-// takes whatever height is left; the page itself does not scroll.
-$work: "iframe:only-child:not([src*='youtube']):not([src*='vimeo']):not([height='600'])";
-
-body:has(article.single > .text > #{$work}) {
-    height: 100vh;
-    height: 100dvh;
-    min-height: 0;
-
-    > header.site { padding-bottom: calc(var(--line) / 2); }
-
-    > main {
-        min-height: 0;
-        grid-template-rows: minmax(0, 1fr);
-        align-content: stretch;
-    }
-
-    article.single {
-        min-height: 0;
-        grid-template-rows: minmax(0, 1fr);
-        align-content: stretch;
-    }
-
-    article.single > .text {
-        min-height: 0;
-        align-self: stretch;
-        > #{$work} {
-            flex: 1 1 0;
-            height: auto;
-            min-height: 0;
-        }
-    }
-}
