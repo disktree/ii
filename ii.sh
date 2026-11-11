@@ -1,6 +1,7 @@
 #!/bin/sh
 # ii — site helper
 set -e
+CALLER="$PWD" # where ii was called from, for relative paths in arguments
 cd "$(dirname "$(readlink -f "$0")")" # works through a symlink too (~/.local/bin/ii)
 
 usage() {
@@ -28,10 +29,12 @@ u)
   echo "$f"
   ;;
 s)
-  [ -f "$2" ] || { echo "image not found: $2"; exit 1; }
+  img="$2"
+  case "$img" in /*) ;; ?*) img="$CALLER/$img" ;; esac
+  [ -f "$img" ] || { echo "image not found: $2"; exit 1; }
   d="content/s/$(stamp)"
   mkdir -p "$d"
-  cp "$2" "$d/"
+  cp "$img" "$d/"
   printf -- '---\ndate: %s\n' "$(now)" >"$d/index.md"
   [ -n "$3" ] && printf 'title: "%s"\n' "$3" >>"$d/index.md"
   printf -- '---\n' >>"$d/index.md"
