@@ -13,7 +13,7 @@ Usage: ii <cmd> [args]
   dev             sass watch + hugo server
   build           build site
   clean           clean build
-  publish         deploy public/
+  publish         clean build, then deploy public/
 USAGE
 }
 
@@ -53,7 +53,8 @@ dev)
 build) npm run build ;;
 clean) npm run clean ;;
 publish)
-  [ -d public ] || { echo "Not built yet"; exit 1; }
+  npm run clean
+  npm run build
   scripts/deploy.sh
   ;;
 help | -h | --help | "") usage ;;
