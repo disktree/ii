@@ -13,6 +13,9 @@
   <link rel="preload" href="{{ "font/inter/inter-latin-opsz-normal.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ "style.css" | relURL }}">
   {{- block "style" . }}{{ end }}
+  {{- with resources.Get "js/app.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+  {{- end }}
   {{- with site.Home.OutputFormats.Get "rss" }}
   <link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">
   {{- end }}
