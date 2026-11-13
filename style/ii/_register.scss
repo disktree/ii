@@ -61,16 +61,28 @@
 // /u/: every note in full.
 .feed {
     margin: 0;
-    padding: 0 var(--edge);
+    padding: 0.375rem var(--edge) 0;
+    border-top: 1px solid var(--rule);
     list-style: none;
 
-    > li {
-        padding: 0.375rem 0 calc(var(--line) * 1.5);
-        border-top: 1px solid var(--rule);
+    // One row per post: date, then the post. Longer posts wrap in their column.
+    article {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 1ch;
+        align-items: baseline;
     }
-    .when { @extend %data; color: var(--muted); }
-    h2 { margin: 0.25rem 0 0; font-size: 1em; font-weight: 650; }
-    .text { padding: 0; margin-top: 0.5rem; }
+    .when { @extend %data; color: var(--muted); white-space: nowrap; }
+    .when:hover { color: var(--fg); text-decoration: none; }
+    h2 { grid-column: 2; margin: 0; font-size: 1em; font-weight: 600; line-height: inherit; }
+    .text {
+        grid-column: 2;
+        padding: 0;
+        > * { margin: 0; }
+        > * + * { margin-top: 0.5rem; }
+        p { overflow-wrap: anywhere; }
+    }
+    li + li { margin-top: 0.125rem; }
 }
 
 // /c/: the full activity, one line per repository and day.
@@ -103,4 +115,3 @@
     margin: 0;
     color: var(--muted);
 }
-.feed > .empty { padding-bottom: 0; }
