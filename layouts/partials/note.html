@@ -1,0 +1,6 @@
+{{- /* One u post as a row: date (linking to the post), optional title, text. Used by the /u list and the single post. */ -}}
+<article>
+  <a class="when" href="{{ .RelPermalink }}"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02 15:04" }}</time></a>
+  {{- with .Title }}<h2>{{ . }}</h2>{{ end }}
+  <div class="text">{{ .Content }}</div>
+</article>

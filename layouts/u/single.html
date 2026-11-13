@@ -1,0 +1,7 @@
+{{ define "main" }}
+<h1 class="vh">{{ partial "name" . }}</h1>
+{{- /* A single post looks like its row in the /u list. */}}
+<ol class="feed">
+  <li>{{ partial "note" . }}</li>
+</ol>
+{{ end }}
