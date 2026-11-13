@@ -48,6 +48,10 @@
     .ledger[data-focus='m'] .same :is(.y, .m),
     .ledger[data-focus='d'] .same time { color: var(--fg); }
     .ledger time span { cursor: default; }
+    .ledger :is(li, .repo, time, time span) {
+        transition: opacity 0.12s, color 0.12s;
+        @include a11y.reduced-motion { transition: none; }
+    }
 }
 
 // Notes (u) on the home page: one line each, between the works and the code.
