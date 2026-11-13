@@ -41,6 +41,9 @@
 // Point at one thing, the rest steps back.
 @media (hover: hover) {
     .register:has(.entries a:hover) .entries a:not(:hover) { opacity: 0.18; }
+    // /c/: all rows of the hovered repository (marked by app.js).
+    .ledger.focus li:not(.same) { opacity: 0.18; }
+    .ledger.focus .same .repo { color: var(--fg); }
 }
 
 // Notes (u) on the home page: one line each, between the works and the code.

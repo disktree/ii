@@ -3,7 +3,7 @@
 {{- /* Everything that happened in the code, one line per repository and day. */}}
 <ol class="ledger">
   {{- range .Pages.ByDate.Reverse }}
-  <li>
+  <li data-repo="{{ .Params.repo }}">
     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
     <a class="repo" href="{{ .Params.repo_url }}" rel="external">{{ .Title }}</a>
     {{- with .Params.parts }}
