@@ -1,5 +1,8 @@
+{{- /* Browser window title. Lists (sections, tags) go uppercase, like in the menu. */ -}}
 {{- if .IsHome -}}
   {{ site.Title }}
+{{- else if in (slice "section" "taxonomy" "term") .Kind -}}
+  {{ partial "label" . | upper }} · {{ site.Title }}
 {{- else -}}
   {{ partial "label" . }} · {{ site.Title }}
 {{- end -}}
