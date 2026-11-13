@@ -36,6 +36,12 @@ header.site {
 
     h1 { @extend %big; margin: 0; }
 
+    // Tag pages: the name alone, its capitals exactly in the middle of the band.
+    body:is(.term, .taxonomy) & {
+        padding-block: calc(var(--line) * 1.5);
+        h1 { text-box: trim-both cap alphabetic; }
+    }
+
     // The description: a line of its own below the data.
     .lede {
         max-width: var(--measure);
