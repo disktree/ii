@@ -4,19 +4,31 @@ window.addEventListener("load", _ => {
   console.info("%c⬤", "color:#fff;background:#000;padding:1em;font-size:18px;");
 }, false);
 
-// /c/: hovering a repository marks all its rows, the rest steps back.
+// /c/: hovering a repository marks all its rows; hovering the year, month
+// or day of a date marks all rows of that year, month or day. The rest steps back.
 const ledger = document.querySelector(".ledger");
 if (ledger && matchMedia("(hover: hover)").matches) {
-  let current = null;
-  const mark = repo => {
-    if (repo === current) return;
-    current = repo;
-    ledger.classList.toggle("focus", !!repo);
-    for (const li of ledger.children) li.classList.toggle("same", !!repo && li.dataset.repo === repo);
+  const len = { y: 4, m: 7, d: 10 }; // length of the date prefix to compare
+  let current = "";
+  const mark = (kind, value) => {
+    const key = kind ? kind + ":" + value : "";
+    if (key === current) return;
+    current = key;
+    ledger.dataset.focus = kind || "";
+    ledger.classList.toggle("focus", !!kind);
+    for (const li of ledger.children) {
+      const same = kind === "repo" ? li.dataset.repo === value
+        : !!kind && (li.dataset.date || "").startsWith(value);
+      li.classList.toggle("same", same);
+    }
   };
   ledger.addEventListener("pointerover", e => {
-    const a = e.target.closest("a.repo");
-    mark(a ? a.parentElement.dataset.repo : null);
+    const li = e.target.closest("li");
+    const repo = e.target.closest("a.repo");
+    const part = e.target.closest("time span");
+    if (repo) mark("repo", li.dataset.repo);
+    else if (part) mark(part.className, li.dataset.date.slice(0, len[part.className]));
+    else mark();
   });
-  ledger.addEventListener("pointerleave", () => mark(null));
+  ledger.addEventListener("pointerleave", () => mark());
 }

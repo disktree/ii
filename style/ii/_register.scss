@@ -41,9 +41,13 @@
 // Point at one thing, the rest steps back.
 @media (hover: hover) {
     .register:has(.entries a:hover) .entries a:not(:hover) { opacity: 0.18; }
-    // /c/: all rows of the hovered repository (marked by app.js).
+    // /c/: all rows of the hovered repository, year, month or day (marked by app.js).
     .ledger.focus li:not(.same) { opacity: 0.18; }
-    .ledger.focus .same .repo { color: var(--fg); }
+    .ledger[data-focus='repo'] .same .repo { color: var(--fg); }
+    .ledger[data-focus='y'] .same .y,
+    .ledger[data-focus='m'] .same :is(.y, .m),
+    .ledger[data-focus='d'] .same time { color: var(--fg); }
+    .ledger time span { cursor: default; }
 }
 
 // Notes (u) on the home page: one line each, between the works and the code.
