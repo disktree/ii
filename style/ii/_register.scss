@@ -74,12 +74,14 @@
     }
     .when { @extend %data; color: var(--muted); white-space: nowrap; }
     .when:hover { color: var(--fg); text-decoration: none; }
-    h2 { grid-column: 2; margin: 0; font-size: 1em; font-weight: 600; line-height: inherit; }
+    // The whole row in the data voice, like the /c ledger.
+    h2 { @extend %data; grid-column: 2; margin: 0; font-weight: 700; }
     .text {
+        @extend %data;
         grid-column: 2;
         padding: 0;
         > * { margin: 0; }
-        > * + * { margin-top: 0.5rem; }
+        > * + * { margin-top: 0.375rem; }
         p { overflow-wrap: anywhere; }
     }
     li + li { margin-top: 0.125rem; }
