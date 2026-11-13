@@ -1,6 +1,8 @@
-{{- /* Name of a page in the menu and as heading: untitled notes go by their date */ -}}
+{{- /* Name of a page in the menu and as heading: untitled notes go by their date, tags get a # */ -}}
 {{- if and .IsPage (eq .Section "u") (not .Title) -}}
 {{ .Date.Format "2006-01-02" }}
+{{- else if eq .Kind "term" -}}
+#{{ partial "label" . | upper }}
 {{- else -}}
 {{ partial "label" . | upper }}
 {{- end -}}

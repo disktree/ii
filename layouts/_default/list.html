@@ -2,7 +2,7 @@
 {{- if .IsSection }}
 <h1 class="vh">{{ .Title }}</h1>
 {{- else }}
-<header class="head"><h1>{{ .Title | upper }}</h1></header>
+<header class="head"><h1>{{ partial "name" . }}</h1></header>
 {{- end }}
 {{ with .Content }}<div class="text">{{ . }}</div>{{ end }}
 {{ partial "register" .Pages }}

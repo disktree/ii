@@ -2,7 +2,7 @@
 {{- if .IsHome -}}
   {{ site.Title }}
 {{- else if in (slice "section" "taxonomy" "term") .Kind -}}
-  {{ partial "label" . | upper }} · {{ site.Title }}
+  {{ partial "name" . }} · {{ site.Title }}
 {{- else -}}
   {{ partial "label" . }} · {{ site.Title }}
 {{- end -}}
