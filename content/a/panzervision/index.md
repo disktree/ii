@@ -8,7 +8,7 @@ links: [
 ]
 draft: true
 ---
-{{< iframe src="<https://panzerschokolade.klingt.org/videos/>" >}}
+{{< iframe src="https://panzerschokolade.klingt.org/videos/" >}}
 
 <!-- {{< iframe src="https://panzerschokolade.disktree.net/tv/" >}} -->
 <!-- {{< bg-iframe src="https://panzerschokolade.disktree.net/tv/" >}} -->
