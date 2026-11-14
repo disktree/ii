@@ -2,7 +2,7 @@
 title: "ZNN"
 type: "znn"
 date: 2022-08-02
-tags: [music,tape,znn]
+tags: [music,tape,znn,noise]
 # menu:
 #   main:
 #     name: ZNN
