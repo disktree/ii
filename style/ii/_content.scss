@@ -110,3 +110,10 @@
     max-width: none;
     pre { width: max-content; max-width: 100%; margin-inline: auto; }
 }
+
+// A page that is only ASCII art: the art in the middle of the space below the heading.
+body:has(article.single > .text > .ascii:only-child) {
+    main, article.single, .text { display: flex; flex-direction: column; flex: 1; }
+    .text { justify-content: center; padding-block: var(--line); }
+    footer.site { margin-top: 0; } // so the middle is between heading and footer
+}
