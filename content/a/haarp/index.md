@@ -7,5 +7,4 @@ links: [
   "https://youtu.be/RMELh1qXIgw"
 ]
 ---
-
-{{<video "haarp.mp4">}}
+{{< youtube RMELh1qXIgw >}}
