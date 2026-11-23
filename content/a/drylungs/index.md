@@ -7,9 +7,9 @@ links: [
 	https://github.com/disktree/drylungs
 ]
 ---
-```
+```text {class="ascii"}
                       ._:                               :_.
-					   \|                               |/
+                       \|                               |/
                      - -|---  -                   -  ---|- -
          ______ ________|\      DRY LUNGS RECORDS      /|________ ______
       _._\     \\       :.__                         .  :       //     /_ _

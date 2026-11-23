@@ -104,3 +104,9 @@
     box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fg) 25%, transparent);
 }
 .mono-sample { display: flex; gap: 1ch; align-items: baseline; }
+
+// ASCII art: centred on the page, as one block (```text {class="ascii"}).
+.text > .ascii {
+    max-width: none;
+    pre { width: max-content; max-width: 100%; margin-inline: auto; }
+}
