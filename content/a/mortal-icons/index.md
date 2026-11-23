@@ -2,16 +2,15 @@
 title: "Mortal Icons"
 date: 2020-10-10
 lastmod: 2021-04-01
-tags: [svg,icon,graphics]
-keywords: [vector,icon,graphics]
+tags: [svg,icon]
+keywords: [vector,icon]
 links: []
-draft: true
 ---
 {{< html >}}
 <style>
  .icon-preview {
   display: grid;
-  grid-template-columns: repeat(auto-fit,193px);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
   grid-gap: 1rem;
   width: 100%;
  }
@@ -19,7 +18,7 @@ draft: true
   width: 100%;
   display: block;
   margin: 0 !important;
-  background: white;
+  background: red;
  }
  /* .icon-preview > img:hover {
   transition: background 1s;
