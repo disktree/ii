@@ -1,5 +1,5 @@
 ---
-title: "Mortal Icons"
+title: "Mortal"
 date: 2020-10-10
 lastmod: 2021-04-01
 tags: [svg,icon]
