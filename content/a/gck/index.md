@@ -7,4 +7,4 @@ links: [
   https://youtu.be/jNGtvR37FzQ
 ]
 ---
-![](feature-essig.jpg)
+{{< youtube jNGtvR37FzQ >}}
